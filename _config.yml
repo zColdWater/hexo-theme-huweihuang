@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 年轻
-subtitle: 经历一些事看清一些人
+title: Jenny
+subtitle: 我的小丸子🍡，她叫Jenny.
 author: Henry
 language: 中文
 timezone:
@@ -25,8 +25,8 @@ SEOTitle: 朱永鹏 | Blog
 email: 1486297824@qq.com
 description: ""
 keyword: ""
-header-img: http://ozilwgpje.bkt.clouddn.com/scenery/car.jpg?imageslim
-article-img: /img/article_header/article_bg.jpg
+header-img: https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+article-img: https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
 404-img: /img/header_img/404.png
 signature: false #show signature
 signature-img: img/signature/BeanTechSign-white.png 

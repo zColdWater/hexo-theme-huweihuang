@@ -1,14 +1,14 @@
 ---
-title: "[Hexo] Theme HuWeihuang"
+title: "English Corner"
 catalog: true
 toc_nav_num: true
-date: 2017-09-18 10:51:24
+date: 2018-10-26 22:40:33
 subtitle: "This is hexo theme Demo."
-header-img: "/img/article_header/article_header.png"
+header-img: "https://upload-images.jianshu.io/upload_images/1793544-a863c1b0ff010d6e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
-- Hexo
+- English
 catagories:
-- Hexo
+- English
 
 ---
 > This HuWeihuang theme created by [HuWeihuang](http://www.huweihuang.com/) modified from the original Porter [YuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech)

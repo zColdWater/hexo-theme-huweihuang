@@ -1,38 +1,31 @@
 ---
 layout: "about"
-title: "About"
-date: 2017-10-03 10:48:33
-description: "走在成为极客的路上"
-header-img: "/img/header_img/about.jpg"
-aplayer: true
+title: "About Me"
+date: 2018-10-26 22:40:33
+description: "You can be anyone that you want to be"
+header-img: "https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+aplayer: false
 fixed: false
 ---
 
-### 一句话
-
->Just do it !    (翻译：我只是个搞 IT的！哭笑脸)
 
 ### 关于我
 
->一个莫名其妙的，喜欢敲代码，喜欢研究技术的，表面上高冷、不苟言笑的，
->
->偶尔又嬉皮笑脸，偶尔又特立独行的，双重性格的技术爱好者！
+ > 我是一名移动端应用开发者，并且也是一个热爱生活的小青年，有目标有理想，珍惜当下生活，珍惜身边的人。
 
 ### 兴趣方向
 
-> 容器云（Docker、Kubernetes等）相关生态技术研究。
+ > 移动端原生应用开发 跨平台技术移动应用开发 
 
 ### 参与社区
 
- > CSDN博客:http://blog.csdn.net/huwh_
+ > 简书:https://www.jianshu.com/u/fd1a9ea4a20e
  >
- > Github:https://github.com/huweihuang
+ > Github:https://github.com/zColdWater
  >
- > 阿里云栖社区:https://yq.aliyun.com/u/huweihuang
- >
- > DockOne社区:http://dockone.io/people/胡伟煌
+ > 掘金:https://juejin.im/user/59435c5da0bb9f006b913d54
 
 ### 联系我
 
->Email: huweihuang@foxmail.com
+ > Email: yongpenglovemimi123@gmail.com
 
