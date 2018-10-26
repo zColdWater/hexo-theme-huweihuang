@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 朱永鹏
-subtitle: 个人博客
-author: 朱永鹏
-language:
+title: 年轻
+subtitle: 经历一些事看清一些人
+author: Henry
+language: 中文
 timezone:
 
 # URL
@@ -22,7 +22,7 @@ permalink_defaults:
 
 # Site settings
 SEOTitle: 朱永鹏 | Blog
-email: huweihuang@foxmail.com
+email: 1486297824@qq.com
 description: ""
 keyword: ""
 header-img: http://ozilwgpje.bkt.clouddn.com/scenery/car.jpg?imageslim
@@ -36,10 +36,10 @@ signature-img: img/signature/BeanTechSign-white.png
 # RSS: false
 # weibo_username:     Demonbaneen
 # zhihu_username:     Demonbane
-github_username:    huweihuang
+github_username:    zColdWater
 # twitter_username:   Demonbane_x
 #facebook_username:  YenYuHsuan
-linkedin_username:  huweihuang
+# linkedin_username:  yongpeng.zhu
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -64,7 +64,7 @@ ga_domain: yoursite
 
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
-sidebar-about-description: "Stay hungry,Stay foolish"
+sidebar-about-description: "真正的大师,永远都怀着一颗学徒的心。"
 sidebar-avatar: /img/avatar/ironman.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
@@ -89,19 +89,14 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 ## Friends
 friends: [
     {
-        title: "CSDN Blog 胡伟煌",
-        href: "http://blog.csdn.net/huwh_"
+        title: "简书 一人我编程累",
+        href: "https://www.jianshu.com/u/fd1a9ea4a20e"
     },
     {
-        title: "DockOne 胡伟煌",
-        href: "http://dockone.io/people/胡伟煌"
-    },
-    {
-        title: "阿里云栖社区 胡伟煌",
-        href: "https://yq.aliyun.com/u/huweihuang"
+        title: "掘金 一人我编程累",
+        href: "https://juejin.im/user/59435c5da0bb9f006b913d54"
     }
 ]
-
 
 #Custom Setting End
 
