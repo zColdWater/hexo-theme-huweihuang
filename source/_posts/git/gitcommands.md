@@ -90,5 +90,8 @@ Git-三种状态
     * 这些命令很棒，因为你随时随地可以使用而无需联网。 如果你觉得手册或者本书的内容还不够用，你可以尝试在 Freenode IRC 服务器（ irc.freenode.net ）的 #git 或 #github 频道寻求帮助。 这些频道经常有上百人在线，他们都精通 Git 并且乐于助人。
 
 
+Reference：  
+gitdocument：https://git-scm.com/docs  
+wiki：https://zh.wikipedia.org/wiki/Git
 
 ---
