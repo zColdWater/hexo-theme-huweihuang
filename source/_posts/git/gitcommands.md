@@ -1,15 +1,21 @@
 ---
-title: "Git Commands"
+title: "了解 Git"
 catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30
-subtitle: "常用的git命令"
+subtitle: "简单的概念和配置"
 header-img: "https://upload-images.jianshu.io/upload_images/1793544-8272181ec2013baa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
 - Git
 catagories:
 - Git
 ---
+
+Git是什么?
+=======
+
+git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。应注意的是，这与GNU Interactive Tools（一个类似Norton Commander界面的文件管理器）有所不同。
+git最初的开发动力来自于BitKeeper和Monotone。git最初只是作为一个可以被其他前端（比如Cogito或Stgit）包装的后端而开发的，但后来git内核已经成熟到可以独立地用作版本控制。很多著名的软件都使用git进行版本控制，其中包括Linux内核、X.Org服务器和OLPC内核等项目的开发流程。
 
 Git-三种状态
 =======
@@ -49,7 +55,7 @@ Git-三种状态
 
 * 检查配置信息:
     * 如果想要检查你的配置，可以使用 git config --list 命令来列出所有 Git 当时能找到的配置。
-    
+
     ```
         $ git config --list
         user.name=John Doe
@@ -67,6 +73,22 @@ Git-三种状态
     $ git config user.name
     John Doe
     ```
+
+* 获取帮助:
+    * 若你使用 Git 时需要获取帮助，有三种方法可以找到 Git 命令的使用手册：
+    ```
+    $ git help <verb>
+    $ git <verb> --help
+    $ man git-<verb>
+    ```
+
+    * 例如，要想获得 config 命令的手册，执行
+    ```
+    $ git help config
+    ```
+
+    * 这些命令很棒，因为你随时随地可以使用而无需联网。 如果你觉得手册或者本书的内容还不够用，你可以尝试在 Freenode IRC 服务器（ irc.freenode.net ）的 #git 或 #github 频道寻求帮助。 这些频道经常有上百人在线，他们都精通 Git 并且乐于助人。
+
 
 
 ---
