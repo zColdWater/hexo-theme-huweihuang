@@ -1,5 +1,5 @@
 ---
-title: "VSCodeShortcuts"
+title: "[VSCode] Shortcuts"
 catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30

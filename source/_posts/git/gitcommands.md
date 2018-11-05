@@ -1,5 +1,5 @@
 ---
-title: "了解 Git"
+title: "[Git] 了解 Git"
 catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30

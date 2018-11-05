@@ -1,5 +1,5 @@
 ---
-title: "English Salon 1"
+title: "[English] Salon 1"
 catalog: true
 toc_nav_num: true
 date: 2018-10-29 22:40:33
