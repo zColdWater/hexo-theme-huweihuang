@@ -22,13 +22,14 @@ catagories:
         // 当不加 参数 -ff 默认还是 使用的 fast-forward
         git merge --ff feature
         ```
+        <img src="https://upload-images.jianshu.io/upload_images/1793544-5ffe5e2f1b69c5c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="400" height="100" />
 
     * 不使用 `fast-forward(non-fast-forward)`:
         ```
         git merge --no-ff feature
         ```
+        <img src="https://upload-images.jianshu.io/upload_images/1793544-8b09e79264d25cfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="400" height="100" />
         
-
 fast-forward
 =======
 > 
