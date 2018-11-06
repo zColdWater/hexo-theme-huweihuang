@@ -32,31 +32,16 @@ catagories:
         
 fast-forward
 =======
-> 
+> 这是git默认的执行方式，当`merge`其他分支到自己分支，它不会创建新的`commit`节点来记录`merge`的方式，表现形式: 源分支 `master` ，功能分支 `feature`，当 `feature` 分支MR 到`master`时，会将`commit`节点 同步在`master`的历史上。
 
-  * `[场景一]` 建议改变别人的项目 
-
-    使用forks提出更改的一个很好的例子是bug修复。您可以：不是为您找到的错误记录问题，而是：
-
-    1.Fork存储库。  
-    2.做出修复。  
-    3.向项目所有者提交拉取请求。(GitHub使用PullRequest/GitLab使用MergeRequest)
+我个人认为这种方式其实是对原分支的补充才会选择这种方式更为合理，比如我开一个功能分支 `feature/patch` 它只是用来完善 `master` 的。  
 
 non-fast-forward
 =======
-> Fork会创建一个仓库的副本。副本存储库允许您自由地尝试更改，而不会影响原始项目。
-> 最常见的是，Fork用于建议对其他人项目的更改或使用其他人的项目作为您自己想法的起点。
+> 这种方式会新增一个`commit`来记录MR这次历史。 
 
-  * `[场景一]` 建议改变别人的项目 
-
-    使用forks提出更改的一个很好的例子是bug修复。您可以：不是为您找到的错误记录问题，而是：
-
-    1.Fork存储库。  
-    2.做出修复。  
-    3.向项目所有者提交拉取请求。(GitHub使用PullRequest/GitLab使用MergeRequest)
+我认为这种方式的应用场景是开发一个相对于原分支，这里用`master` 独立的功能，换句话说就是类似不要耦合这种，它是单独的可拆卸的。这样用一个新增的`commit`来记录，比如卸载这个功能也会相对简单。
 
 Reference：  
-github help：https://help.github.com/articles/fork-a-repo/   
-syncing fork： https://help.github.com/articles/syncing-a-fork/  
-pullrequest： https://help.github.com/articles/about-pull-requests/  
+lemonup：http://lemonup.logdown.com/posts/166352-git-merge-fast-forward-differenc 
 ---
