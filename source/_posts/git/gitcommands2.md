@@ -11,10 +11,27 @@ catagories:
 - Git
 ---
 
+案例解释
+=======
+1. 首先，我们要新增一个功能，所以在`master`上面开一个分支`feature1`
+2. 在开发这个`feature1`的时候新增了3个commit
+3. 当开发完成的时，`checkout`回`master`，然后`merge`回`feature1`分支，这个时候有两个选择
+    
+    * 使用 `fast-forward`: 
+        ```
+        // 当不加 参数 -ff 默认还是 使用的 fast-forward
+        git merge --ff feature
+        ```
+
+    * 不使用 `fast-forward(non-fast-forward)`:
+        ```
+        git merge --no-ff feature
+        ```
+        
+
 fast-forward
 =======
-> Fork会创建一个仓库的副本。副本存储库允许您自由地尝试更改，而不会影响原始项目。
-> 最常见的是，Fork用于建议对其他人项目的更改或使用其他人的项目作为您自己想法的起点。
+> 
 
   * `[场景一]` 建议改变别人的项目 
 
