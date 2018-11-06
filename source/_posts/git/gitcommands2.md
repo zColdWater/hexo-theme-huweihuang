@@ -22,17 +22,17 @@ catagories:
         // 当不加 参数 -ff 默认还是 使用的 fast-forward
         git merge --ff feature
         ```
-        <img src="https://upload-images.jianshu.io/upload_images/1793544-5ffe5e2f1b69c5c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="400" height="100" />
+        <img src="https://upload-images.jianshu.io/upload_images/1793544-5ffe5e2f1b69c5c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" height="100" />
 
     * 不使用 `fast-forward(non-fast-forward)`:
         ```
         git merge --no-ff feature
         ```
-        <img src="https://upload-images.jianshu.io/upload_images/1793544-8b09e79264d25cfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="400" height="100" />
+        <img src="https://upload-images.jianshu.io/upload_images/1793544-8b09e79264d25cfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" height="100" />
         
 fast-forward
 =======
-> 这是git默认的执行方式，当`merge`其他分支到自己分支，它不会创建新的`commit`节点来记录`merge`的方式，表现形式: 源分支 `master` ，功能分支 `feature`，当 `feature` 分支MR 到`master`时，会将`commit`节点 同步在`master`的历史上。
+> 这是git默认的执行方式，当用这种方式`merge`时，它不会创建新的`commit`节点来记录这次`merge`，表现形式: 源分支 `master` ，功能分支 `feature`，当 `feature` 分支MR 到`master`时，会将`commit`节点 同步在`master`的历史上，也就是他们有同样的历史。
 
 我个人认为这种方式其实是对原分支的补充才会选择这种方式更为合理，比如我开一个功能分支 `feature/patch` 它只是用来完善 `master` 的。  
 
