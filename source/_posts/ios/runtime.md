@@ -13,8 +13,8 @@ catagories:
 
 交换方法 / Swizzling
 =======
-> 描述 Swizzling
+> 描述 Swizzling 待完成
 
-  * 描述 Swizzling
+  * 描述 Swizzling 待完成
 
 ---
