@@ -11,11 +11,6 @@
             <p><%= config['sidebar-about-description'] %></p>
         <% }%>
 
-        <!-- 显示个人微信二维码 -->
-        <% if(config['wx_personal_qrcode']) { %>
-            <img src="<%= config['wx_personal_qrcode'] %>" alt="">
-        <% } %>
-
         <!-- SNS Link -->
         <ul class="list-inline">
             <% if (config.RSS) { %>
@@ -118,5 +113,21 @@
                 </li>
             <% } %>
         </ul>
+
     </div>
 </section>
+
+
+<!-- 显示个人微信二维码 -->
+<% if(config['wx_personal_qrcode']) { %>
+    <!-- 微信 Section -->
+    <hr>
+    <section class="visible-md visible-lg">
+            <h5><a href="<%= config.root %>about/">MY WECHAT</a></h5>
+            <div class="short-about">
+                <img src="<%= config['wx_personal_qrcode'] %>" alt="">
+            </div>
+        </section>
+    <% } %>
+
+

@@ -44,7 +44,7 @@ juejin_userid:      59435c5da0bb9f006b913d54
 # linkedin_username:  yongpeng.zhu
 
 # 微信加好友 二维码图片地址
-# wx_personal_qrcode: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/wechat-min.png
+wx_personal_qrcode: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/wechat-min.png
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -92,16 +92,16 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 ## Friends
-friends: [
-    {
-        title: "简书 一人我编程累",
-        href: "https://www.jianshu.com/u/fd1a9ea4a20e"
-    },
-    {
-        title: "掘金 一人我编程累",
-        href: "https://juejin.im/user/59435c5da0bb9f006b913d54"
-    }
-]
+# friends: [
+#     {
+#         title: "简书 一人我编程累",
+#         href: "https://www.jianshu.com/u/fd1a9ea4a20e"
+#     },
+#     {
+#         title: "掘金 一人我编程累",
+#         href: "https://juejin.im/user/59435c5da0bb9f006b913d54"
+#     }
+# ]
 
 #Custom Setting End
 
@@ -195,6 +195,7 @@ markdown:
 
 # MeingJS support for Aplayer
 # reference: https://github.com/metowolf/MetingJS & https://github.com/MoePlayer/APlayer
+
 metingjs: false
 data-id: 2423410161
 data-server: netease  
@@ -210,10 +211,12 @@ theme: huweihuang
 sitemap:
   path: sitemap.xml
 
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 # repository: https://github.com/huweihuang/xxxxxxx.github.io.git
 # branch: master
+
 deploy:
   type: git
   repo: git@github.com:zColdWater/blog.git
