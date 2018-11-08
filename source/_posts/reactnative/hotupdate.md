@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-08 18:00:30
 subtitle: "如何接入热更新组件 CodePush？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/safecode-min.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/mug-min.png"
 tags:
 - ReactNative
 catagories:
