@@ -79,6 +79,30 @@
                     </li>
                 <% } %>
 
+                            <!-- 简书 -->
+            <% if (config.jianshu_userid) { %>
+                <li>
+                    <a target="_blank" href="https://www.jianshu.com/u/<%= config.jianshu_userid %>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">简</i>
+                        </span>
+                    </a>
+                </li>
+            <% } %>
+
+            <!-- 掘金 -->
+            <% if (config.juejin_userid) { %>
+                <li>
+                    <a target="_blank" href="https://juejin.im/user/<%= config.juejin_userid %>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">掘</i>
+                        </span>
+                    </a>
+                </li>
+            <% } %>
+
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; <%= config.author %> <%= new Date().getFullYear() %> 
@@ -128,6 +152,9 @@
     </script>
     <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
 -->
+
+<!-- 阅读 字数 统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 <!-- jquery.tagcloud.js -->
