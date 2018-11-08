@@ -65,9 +65,9 @@ anchorjs: true                          # if you want to customize anchor. check
 # H5 App Secret key: 96582d45fedd2828ff02579c50b08d33
 mta_sid: 500655555
 
-# Google Analytics
-ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
-ga_domain: yoursite
+# 评论系统 settings
+# 来必力
+livere_uid: TAyMC80MDg5Ni8xNzQyMQ==
 
 
 
