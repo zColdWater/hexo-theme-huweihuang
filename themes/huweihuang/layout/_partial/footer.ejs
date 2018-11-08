@@ -200,22 +200,22 @@
 
 <% } %>
 
-
-<!-- Baidu Tongji -->
-<% if (config.ba_track_id) { %>
-<script>
-    // dynamic User by Hux
-    var _baId = '<%= config.ba_track_id %>';
-
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+<!-- 腾讯 H5统计 -->
+<% if (config.mta_sid) { %>
+    <script>
+            var _mtac = {};
+            (function() {
+                var mta = document.createElement("script");
+                mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+                mta.setAttribute("name", "MTAH5");
+                mta.setAttribute("sid", "<%= config.mta_sid %>");
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(mta, s);
+            })();
+     </script>
 <% } %>
+
+
+
 
 

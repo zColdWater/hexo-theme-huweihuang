@@ -60,11 +60,15 @@ anchorjs: true                          # if you want to customize anchor. check
 
 
 # Analytics settings
-# Baidu Analytics
-ba_track_id: r45fhy7653897235wg5ye709d930f62e
+# 腾讯MTA H5 统计方案
+# H5 App id: 500655555
+# H5 App Secret key: 96582d45fedd2828ff02579c50b08d33
+mta_sid: 500655555
+
 # Google Analytics
 ga_track_id: 'UA-XXXXXXXX-X'          # Format: UA-xxxxxx-xx
 ga_domain: yoursite
+
 
 
 # Sidebar settings
