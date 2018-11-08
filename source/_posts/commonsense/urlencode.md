@@ -46,6 +46,9 @@ URLEncode 规则
 > 注意: URLEncode是如何给一个字符串进行编码的呢？ 比如我们使用的 `UTF-8 百分比编码的方式`
 对 `abc&+你好日本文と`进行编码，那么流程是什么呢? 
 
+    [待Encode字符串] --> [UTF8编码] --> [将未保留字符还原成原字符] --> [进行百分比编码(将`\x`替换成`%`全部大写)] --> [百分比编码完成]
+
+
 1. 首先对 `abc&+你好日本文と` 进行[UTF-8编码](https://zcoldwater.github.io/blog/article/commonsense/unicode/)得到([转码工具](https://www.browserling.com/tools/utf8-encode))  `\x61\x62\x63\x26\x2b\xe4\xbd\xa0\xe5\xa5\xbd\x08\xe6\x97\xa5\xe6\x9c\xac\xe6\x96\x87\xe3\x81\xa8`
 
 2. 其次，识别出不需要编码的字符，比如未保留字符。 程序识别到`\x61\x62\x63`是`abc`，因为`abc`是字母 是未保留字符，根据URLEncode RFC规则 是不需要编码的。
@@ -74,7 +77,7 @@ URLEncode 规则
     abc%26%2b%e4%bd%a0%e5%a5%bd%08%e6%97%a5%e6%9c%ac%e6%96%87%e3%81%a8
     ```
 
-    
+
 在线转码工具:  
 UTF8 Convert to Unicode Tools： https://www.branah.com/unicode-converter  
 UTF8 Online Encode： https://www.browserling.com/tools/utf8-encode 
