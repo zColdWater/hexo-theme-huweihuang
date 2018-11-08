@@ -11,6 +11,11 @@
             <p><%= config['sidebar-about-description'] %></p>
         <% }%>
 
+        <!-- 显示个人微信二维码 -->
+        <% if(config['wx_personal_qrcode']) { %>
+            <img src="<%= config['wx_personal_qrcode'] %>" alt="">
+        <% } %>
+
         <!-- SNS Link -->
         <ul class="list-inline">
             <% if (config.RSS) { %>
@@ -33,12 +38,37 @@
                     </a>
                 </li>
             <% } %>
+            
             <% if (config.zhihu_username) { %>
                 <li>
                     <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
                         <span class="fa-stack fa-lg">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            <i class="fa fa-stack-1x fa-inverse">知</i>
+                        </span>
+                    </a>
+                </li>
+            <% } %>
+
+            <!-- 简书 -->
+            <% if (config.jianshu_userid) { %>
+                <li>
+                    <a target="_blank" href="https://www.jianshu.com/u/<%= config.jianshu_userid %>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">简</i>
+                        </span>
+                    </a>
+                </li>
+            <% } %>
+
+            <!-- 掘金 -->
+            <% if (config.juejin_userid) { %>
+                <li>
+                    <a target="_blank" href="https://juejin.im/user/<%= config.juejin_userid %>">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">掘</i>
                         </span>
                     </a>
                 </li>
@@ -76,7 +106,6 @@
                     </a>
                 </li>
             <% } %>
-            
             
             <% if (config.linkedin_username) { %>
                 <li>
