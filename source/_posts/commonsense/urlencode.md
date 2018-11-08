@@ -26,7 +26,21 @@ URI所允许的字符分作保留与未保留。保留字符是那些具有特�
     0	1	2	3	4	5	6	7	8	9	-	_	.	~	
     URI中的其它字符必须用百分号编码。
 
----
+例如:  https://host/path/queryString   
+
+`path:` 对 （非保留字 非未保留字） 例如中文，日文等 进行 URLEncode  
+
+    对于path部分，我们要对 像中文这种字符Encode 不用对 保留字符进行Encode
+    例子: https://www.zhihu.com/question/1957?/%E4%BD%A0%E5%A5%BD705
+
+
+`queryString(key 和 value):` 对 保留字 和 （非保留字 非未保留字）进行 URLEncode 
+    
+    对于query部分，我们要对 保留字进行Encode 还要对 像中文这种字符Encode
+    例子: https://www.zhihu.com/question?password=%26abc%E4%BD%A0%E5%A5%BD705
+
+
+
 
 URLEncode 背景
 =======
