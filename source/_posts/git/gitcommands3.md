@@ -133,6 +133,10 @@ catagories:
 六、标签
 =======
 
+    # 从远端更新tag到本地
+    git tag -l | xargs git tag -d 删除本地所有tags
+    git fetch --tags 拉取服务器所有tags
+
     # 列出所有tag
     $ git tag
 
