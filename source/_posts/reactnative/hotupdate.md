@@ -307,5 +307,3 @@ code-push release-react <AppName> ios
 ```
 
 >在命令行输入 code-push release-react 回车，可以查看更多参数，诸如 -des 更新内容描述、-d 推送环境
-
----

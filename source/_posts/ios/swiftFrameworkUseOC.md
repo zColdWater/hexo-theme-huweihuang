@@ -30,5 +30,3 @@ Demo: https://github.com/zColdWater/SwiftSwizzlingOC
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/SwiftSwizzlingOC1.png" height="250" />
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/SwiftSwizzlingOC2.png" height="250" />
-
----

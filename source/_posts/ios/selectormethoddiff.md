@@ -36,6 +36,3 @@ catagories:
 
 Reference：   
 Stackoverflow:  https://stackoverflow.com/questions/5608476/whats-the-difference-between-a-method-and-a-selector
-
-
----

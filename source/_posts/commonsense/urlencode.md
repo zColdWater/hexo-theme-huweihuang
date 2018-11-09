@@ -100,5 +100,3 @@ Reference：
 RFC3986协议：http://www.ietf.org/rfc/rfc3986.txt  
 WiKi： https://en.wikipedia.org/wiki/Percent-encoding  
 ruanyifeng： http://www.ruanyifeng.com/blog/2010/02/url_encoding.html
-
----

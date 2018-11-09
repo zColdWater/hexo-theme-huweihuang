@@ -27,5 +27,3 @@ catagories:
   * 保存文件: Command + S
   * 当前Tab查询关键字: Command + F
   * 所有项目查询关键字: Command + Shift + F
-
----

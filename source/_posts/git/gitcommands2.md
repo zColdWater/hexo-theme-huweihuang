@@ -44,4 +44,3 @@ non-fast-forward
 
 Reference：  
 lemonup：http://lemonup.logdown.com/posts/166352-git-merge-fast-forward-differenc 
----
