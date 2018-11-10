@@ -1,5 +1,5 @@
 ---
-title: "[Config] 网站配置"
+title: "[Config] 博客配置"
 catalog: true
 toc_nav_num: true
 date: 2018-11-09 21:00:30
