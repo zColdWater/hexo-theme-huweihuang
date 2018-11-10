@@ -27,12 +27,12 @@ layout: layout
                 <ul class="pager">
                     <% if (page.prev){ %>
                         <li class="previous">
-                            <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
+                            <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; 上一篇 文章</a>
                         </li>
                     <% } %>
                     <% if (page.next){ %>
                         <li class="next">
-                            <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
+                            <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">下一篇 文章 &rarr;</a>
                         </li>
                     <% } %>
                 </ul>
