@@ -19,7 +19,7 @@ catagories:
 
 框架: [HEXO](https://hexo.io/zh-cn/)  
 评论: [来必力](https://www.livere.com/)  
-统计: [腾讯MT](https://mta.qq.com/)  
+统计: [腾讯MTA](https://mta.qq.com/)  
 页面浏览统计: [不蒜子](http://ibruce.info/2015/04/04/busuanzi/)
 
 
