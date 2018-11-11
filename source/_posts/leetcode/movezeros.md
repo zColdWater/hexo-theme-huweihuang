@@ -40,6 +40,36 @@ Note:
 解法:
 =======
 
+> 解决方法有很多种 这里有两个参数考虑 `时间复杂度` 和 `空间复杂度`，此文章还未完成，待续。
+
+```swift
+class Solution {
+
+    func moveZeroes(_ nums: inout [Int]) {
+        
+        var count: Int = 0
+        var unemptyNums: [Int] = []
+        
+        for el in nums {
+            if el != 0 {
+                unemptyNums.append(el)
+            }
+            else {
+                count += 1
+            }
+        }
+        
+        if count <= 0 {
+            return
+        }
+        
+        for _ in 0...(count-1) {
+            unemptyNums.append(0)
+        }
+        nums = unemptyNums
+    }
+}
+```
 
 
 
