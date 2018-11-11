@@ -86,6 +86,57 @@ Don't call me, honey!
     5.That's `our` cake. It belongs to `us`. It's `ours`.  
     6.That's `their` paper. It belongs to `them`. It's `theirs`. 
 
+* 频率
+    
+    always  adv. 永远，一直；总是；常常  
+    never  adv. 从未；决不  
+    normally  adv. 正常地；通常地，一般地  
+    occasionally  adv. 偶尔；间或  `美  [o'keʒənəli]`  
+    often  adv. 常常，时常  
+    rarely  adv. 很少地；难得；罕有地  `美  ['rɛrli]`
+
+    seldom    adv. 很少，不常  
+    sometimes  adv. 有时，间或  
+    usually  adv. 通常，经常  
+
+    语法介绍:  
+    1.We usually put adverbials of frequency in `front` of the main verb:  
+    We `often` spend Christmas with friends.  
+    I have `never` enjoyed myself so much.  
+
+    2.They usually come `after` the verb be:  
+    He was `always` tired in the evening.  
+    We are `never` late for work.
+
+    3.We use the adverbial `a lot` to mean `often` or `frequently`. It comes at the end of the clause:  
+    We go to the cinema `a lot`.  
+
+    4.`Before` another time adverbial:  
+    We go to the cinema `a lot` at the weekend.  
+
+    5.We use `much` with a `negative` to mean not often:  
+    We don’t go out much. (= We don’t go out often)  
+
+    6.We use `how often` or ever to ask questions about `frequency`. `How often` comes at the `beginning` of the clause:   
+    `How often` do you go to the cinema?  
+    `How often` have you been here?  
+
+    7.`Ever` comes `before` the main verb:  
+    Do you `ever` go to the cinema at the weekend?  
+    Have you `ever` been there?  
+
+    8.Longer frequency phrases, like `every year` or `three times a day` usually come at the end of the clause:  
+    I have an English lesson `twice a week`.  
+    She goes to see her mother `every day`.
+
+
+
+
+
+
+
+
+
 
 
 
