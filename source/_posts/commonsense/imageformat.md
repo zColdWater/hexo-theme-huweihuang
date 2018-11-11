@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-11 4:24:30
 subtitle: "那么多种的图片格式，区别是什么，我该如何选择？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/woman-min.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/woman-min.jpg"
 tags:
 - Basic
 catagories:
