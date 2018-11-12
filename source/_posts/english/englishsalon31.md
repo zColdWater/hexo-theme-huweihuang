@@ -11,6 +11,12 @@ catagories:
 - English
 ---
 
+> 此文章用于 基础的英语学习
+
+Comparative and superlative adjectives
+=======
+
+
 
 
 
