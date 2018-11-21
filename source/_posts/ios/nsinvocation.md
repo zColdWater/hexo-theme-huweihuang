@@ -137,7 +137,7 @@ NSInvocation怎么用?
 1. 创建demo类 `FooObject` 
 
     FooObject.h 文件
-    ```
+    ``` ObjectiveC
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
@@ -155,7 +155,7 @@ NSInvocation怎么用?
 
     ```
     FooObject.m 文件
-    ```
+    ``` ObjectiveC
     #import "FooObject.h"
     #import <UIKit/UIKit.h>
 
