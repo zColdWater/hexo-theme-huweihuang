@@ -130,6 +130,91 @@ NSInvocation怎么用?
 @end
 ```
 
+补充
+=======
+> 通过类名，创建类对象并且调用其内部方法。该如何实现呢?
+
+1. 创建demo类 `FooObject` 
+
+    FooObject.h 文件
+    ```
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    NS_ASSUME_NONNULL_BEGIN
+
+    @interface FooObject : NSObject
+
+    - (instancetype)initWithWebView:(UIView *)view;
+
+    - (void)sayHello;
+
+    @end
+
+    NS_ASSUME_NONNULL_END
+
+    ```
+    FooObject.m 文件
+    ```
+    #import "FooObject.h"
+    #import <UIKit/UIKit.h>
+
+    @implementation FooObject
+
+    - (instancetype)initWithWebView:(UIView *)view
+    {
+        self = [super init];
+        if(self) {
+            NSLog(@"initWithWebView_init: %@", self);
+        }
+        return self;
+    }
+
+    - (void)sayHello {
+        NSLog(@"sayHello");
+    }
+
+    @end
+
+    ```
+
+2. 在外部通过类名调用 `FooObject` 对象
+    > 这里有个插曲 再动态拿这个函数的返回结果的时候Crash了，经过Google找到了解决办法，下面给了答案地址和解释。
+    ``` ObjectiveC
+
+    // Invoke method
+    id expectInstance = [self dynamicCreateInstance];
+    SEL sayhello = NSSelectorFromString(@"sayHello");
+    [expectInstance performSelector:sayhello withObject:nil];
+
+
+    - (id)dynamicCreateInstance {
+        
+        id fooClass = [NSClassFromString(@"FooObject") alloc];
+        SEL fooInitSel = NSSelectorFromString(@"initWithWebView:");
+        NSMethodSignature *fooSign = [fooClass methodSignatureForSelector:fooInitSel];
+        NSInvocation *fooInvocation = [NSInvocation invocationWithMethodSignature:fooSign];
+        fooInvocation.selector = fooInitSel;
+        UIView *webview = [[UIView alloc] init];
+        [fooInvocation setArgument:&webview atIndex:2];
+        [fooInvocation invokeWithTarget:fooClass];
+        
+        // prevent crash
+        // stackoverflow: https://stackoverflow.com/questions/22018272/nsinvocation-returns-value-but-makes-app-crash-with-exc-bad-access
+        id __unsafe_unretained tempResultSet;
+        [fooInvocation getReturnValue:&tempResultSet];
+        id resultSet = tempResultSet;
+        
+        //    id fooResult = nil;
+        //    [fooInvocation getReturnValue:&fooResult];
+        //    NSLog(@"FooObject 对象实例:%@",fooResult);
+        
+        return resultSet;
+    }
+    ```
+
+
+
 Reference：  
 Appple Doc：https://developer.apple.com/documentation/foundation/nsinvocation?language=objc  
 Stackoverflow:  https://stackoverflow.com/questions/5608476/whats-the-difference-between-a-method-and-a-selector
