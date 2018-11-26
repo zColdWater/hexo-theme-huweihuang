@@ -1,9 +1,9 @@
 ---
-title: "[WKWebView] Native与JS交互"
+title: "[WKWebView] 了解WKWebView"
 catalog: true
 toc_nav_num: true
 date: 2018-11-22 16:29:30
-subtitle: "WKWebView如何实现Native与JS交互呢?"
+subtitle: "了解WKWebView相关方法。"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/thegoldengatebridg.jpg"
 tags:
 - iOS
