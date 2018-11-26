@@ -135,16 +135,62 @@ WKNavigationDelegate 协议
 ```
 
 
-WKUIDelegate 协议
+WKUIDelegate 协议【Javascript -> Native】
 =======
 > Web视图用户界面委托实现此协议以控制新窗口的打开，增强用户单击元素时显示的默认菜单项的行为，以及执行其他与用户界面相关的任务。可以在处理JavaScript或其他插件内容时调用这些方法。默认Web视图实现假定每个Web视图有一个窗口，因此非传统用户界面可能实现用户界面委托。 
 
+```Swift
+
+    // 创建新的webView时调用的方法
+    // 内部实现根据实际需求写
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        return nil
+    }
+
+    // 关闭webView时调用的方法
+    // 内部实现根据实际需求写
+    func webViewDidClose(_ webView: WKWebView) {
+        print("webViewDidClose:\(webView)")
+    }
+    
+    // 警告框
+    // Javascript中调用 alert("any") 触发
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+    }
+
+    // 确认框    
+    // Javascript中调用 confirm("any") 触发
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+    }
+    
+    // 输入框
+    // Javascript中调用 prompt("param1", "param2")
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+    }
+
+    // 能否预览用户触摸的元素
+    // 根据需要实现下面协议
+    func webView(_ webView: WKWebView, shouldPreviewElement elementInfo: WKPreviewElementInfo) -> Bool {
+        return true
+    }
+```
+
+WKWebView 必要方法【Native -> Javascript】
+=======
+> 如何我们要实现Native调用Javascript的时候就必须要知道下面这个方法了
+
+```Swift
+    /* @abstract Evaluates the given JavaScript string.
+     @param javaScriptString The JavaScript string to evaluate.
+     @param completionHandler A block to invoke when script evaluation completes or fails.
+     @discussion The completionHandler is passed the result of the script evaluation or an error.
+    */
+    open func evaluateJavaScript(_ javaScriptString: String, completionHandler: ((Any?, Error?) -> Void)? = nil)
+```
 
 
-
-
-
-
-
+总结
+=======
+我们了解`WKWebView`的几个普遍的方法，和几个常用的协议，这时候我们会发现，其实Apple已经给我们提供了 Javascript 与 Native 的桥梁，通过 `evaluateJavaScript [Native -> Javascript]`, `WKUIDelegate [Javascript->Native]`，通过这两种方式 我们可以获得，Native 与 JS 互相通信的能力。
 
 
