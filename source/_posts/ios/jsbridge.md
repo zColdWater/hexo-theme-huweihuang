@@ -12,6 +12,7 @@ catagories:
 ---
 > 当前环境: Xcode10.0 Swift4.2 iOS SDK 12.1
 
+下面是原理实现代码，可以查看参考文章 + Demo查看。
 Demo: https://github.com/zColdWater/wkwebviewdemo
 
 前提掌握
