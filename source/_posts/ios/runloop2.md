@@ -356,4 +356,6 @@ RunLoop 的核心就是一个 mach_msg() (见上面代码的第7步)，RunLoop �
 4. RunLoop 线程休眠等待外部唤醒，使用的是底层Mach框架实现。
 
 Reference:
-https://blog.ibireme.com/2015/05/18/runloop/
+https://blog.ibireme.com/2015/05/18/runloop/  
+https://developer.apple.
+com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html

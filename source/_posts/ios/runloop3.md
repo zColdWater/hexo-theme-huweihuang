@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-9 19:50:30
 subtitle: "RunLoop是什么，它在iOS系统中起什么用？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/lick.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/feet1.jpg"
 tags:
 - iOS
 catagories:
@@ -292,4 +292,6 @@ NSURLConnectionLoader 中的 RunLoop 通过一些基于 mach port 的 Source 接
 
 
 Reference:
-https://blog.ibireme.com/2015/05/18/runloop/
+https://blog.ibireme.com/2015/05/18/runloop/  
+https://developer.apple.
+com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html

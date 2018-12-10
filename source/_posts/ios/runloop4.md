@@ -78,4 +78,6 @@ RunLoop 的实际应用举例
 
 
 Reference:
-https://blog.ibireme.com/2015/05/18/runloop/
+https://blog.ibireme.com/2015/05/18/runloop/  
+https://developer.apple.
+com/library/archive/documentation/Cocoa/Conceptual/Multithreading/RunLoopManagement/RunLoopManagement.html
