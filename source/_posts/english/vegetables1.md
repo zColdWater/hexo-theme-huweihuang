@@ -134,4 +134,7 @@ catagories:
 57. 黄豆 Soybean
 58. 绿豆 Mung bean
 59. 毛豆 Green soybean
+60. 豇豆 Long bean
+61. 芸豆 Green bean 
+62. 芋头 Taro
 
