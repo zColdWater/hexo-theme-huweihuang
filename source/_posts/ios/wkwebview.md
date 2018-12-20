@@ -189,6 +189,18 @@ WKUIDelegate 协议【Javascript -> Native】
 ```
 
 
+补充 
+=======
+
+1. 打开本地沙盒目录下的 HTML 如何打开?
+    
+    ```swift
+    // 使用下面的方法来加载本地沙盒下的本地路径 
+    // 这里有个小贴士，第一个参数是本地html的地址，第二个参数是可以访问的范围地址，一般要写前面html的根路径，因为有些时候我们的本地不光有html还有一些css/js包也在同一个目录下。
+    webview.loadFileURL(<#T##URL: URL##URL#>, allowingReadAccessTo: <#T##URL#>) 
+    ```
+
+
 总结
 =======
 我们了解`WKWebView`的几个普遍的方法，和几个常用的协议，这时候我们会发现，其实Apple已经给我们提供了 Javascript 与 Native 的桥梁，通过 `evaluateJavaScript [Native -> Javascript]`, `WKUIDelegate [Javascript->Native]`，通过这两种方式 我们可以获得，Native 与 JS 互相通信的能力。
