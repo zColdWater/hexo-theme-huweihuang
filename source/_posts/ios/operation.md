@@ -225,4 +225,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
 }
 ```
 
+补充
+=======
+1. `OperationQueue`有`waitUntilAllOperationsAreFinished`这个方法的，这个方法可以阻塞当前线程直到所有任务标记为完成，等同于`queue.addOperations([operation1,operation2,operation3,operation4], waitUntilFinished: true)`
 
