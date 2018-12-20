@@ -21,7 +21,7 @@ H5本地包下载: https://github.com/zColdWater/OfflinePack
 
 使用的技术点: 
 
-1. **常驻线程** 
+1. **[常驻线程](https://zcoldwater.github.io/blog/article/ios/backgroundThread/)** 
 2. **[多线程(Operation)](https://zcoldwater.github.io/blog/article/ios/operation/)**
 3. **[JSBridge](https://zcoldwater.github.io/blog/article/ios/jsbridge/)**
 4. **文件管理**

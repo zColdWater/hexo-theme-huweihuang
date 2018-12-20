@@ -73,5 +73,12 @@ class ViewController: UIViewController {
     }
 
 }
+
+// 控制台打印:::::::
+// unlanchRunloop
+// lanchRunloop
+// foo!
+// 控制台打印:::::::
+
 ```
 
