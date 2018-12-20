@@ -23,9 +23,9 @@ H5本地包下载: https://github.com/zColdWater/OfflinePack
 
 1. **常驻线程** 
 2. **[多线程(Operation)](https://zcoldwater.github.io/blog/article/ios/operation/)**
-3. **JSBridge**
+3. **[JSBridge](https://zcoldwater.github.io/blog/article/ios/jsbridge/)**
 4. **文件管理**
-5. **压缩解压缩**
+5. **[压缩解压缩](https://github.com/marmelroy/Zip)**
 6. **文件下载**
 
 整体流程:
