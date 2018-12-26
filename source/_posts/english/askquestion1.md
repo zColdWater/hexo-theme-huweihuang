@@ -72,9 +72,6 @@ I'm good
 例子四:
 Let's eatice cream for dinner!
 Let's not and say we did 或者 no no no 大人对小孩说
-
-Let's eatice cream for dinner!
-Let's not and say we did 或者 no no no 大人对小孩说
 ```
 
 疑问句小知识
