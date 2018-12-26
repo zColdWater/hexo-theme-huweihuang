@@ -33,19 +33,19 @@ Brain Phrases
     ```
 5. brainstorm 形容头脑风暴
     ```
-    It's his brainchild
+    let's go have a brainstorm
     ```
 6. braindrain 人们外出去其他国家 让生活变得更好 赚钱
     ```
-    It's his brainchild
+    India has faced big brain drain in recent years
     ```
 7. brainwash 强制灌输信息给某人相信
     ```
-    It's his brainchild
+    you are brainwashing his mind
     ```
 8. brainteaser 问题太难无法解决
     ```
-    It's his brainchild
+    this puzzle is such a brain teaser
     ```
 
 
