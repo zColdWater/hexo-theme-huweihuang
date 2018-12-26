@@ -122,4 +122,27 @@ adj. 用砖做的；似砖的
 vt. 用砖砌
 n. (Brick)人名；(英、法、瑞典)布里克
 
+pressure ['preʃə]  
+n. 压力；压迫，[物] 压强
+vt. 迫使；密封；使……增压
+
+gorgeous ['ɡɔ:dʒəs]  
+adj. 华丽的，灿烂的；极好的
+
+auxiliary [ɔ:ɡ'ziljəri]  
+n. 助动词；辅助者，辅助物；附属机构
+adj. 辅助的；副的；附加的
+
+tricky  
+adj. 狡猾的；机警的；棘手的
+
+intonation [,intəu'neiʃən]  
+n. 声调，语调；语音的抑扬
+
+decline [di'klain]  
+n. 下降；衰退；斜面
+vt. 谢绝；婉拒
+vi. 下降；衰落；谢绝
+
+
 
