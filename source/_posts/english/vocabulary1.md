@@ -153,3 +153,46 @@ manner ['mænə]
 n. 方式；习惯；种类；规矩；风俗
 n. (Manner)人名；(德、芬、瑞典)曼纳
 
+
+slightly ['slaitli]  
+adv. 些微地，轻微地；纤细地
+
+reserve  
+n. 保护区；禁猎地；加工成的食品；（某人或群体的）专门活动
+vt. 保存；保护；维持；腌；禁猎
+
+status  
+n. 地位；状态；情形；重要身份
+
+statue 
+ 英  [ˈstætʃu:]   美  ['stætʃu]
+n. 雕像，塑像
+vt. 以雕像装饰
+
+holes 
+ 英  [həulz]   美  [hol]
+n. 小孔；破洞（hole的复数）
+n. (Holes)人名；(匈)霍莱什
+
+sand [sænd]  
+n. 沙；沙地；沙洲；沙滩；沙子
+vt. 撒沙于；以沙掩盖；用砂纸等擦平或磨光某物；使撒沙似地布满；给…掺沙子
+vi. 被沙堵塞
+
+whale [hweil]  
+n. 鲸；巨大的东西
+vt. 猛揍；使惨败
+vi. 捕鲸
+n. (Whale)人名；(英)惠尔
+
+introductory [,intrə'dʌktəri]  
+adj. 引导的，介绍的；开端的
+
+serve [sə:v]  
+n. 发球，轮到发球
+vi. 服役，服务；适合，足够；发球；招待，侍候
+vt. 招待，供应；为…服务；对…有用；可作…用
+n. (Serve)人名；(法)塞尔夫
+
+principle ['prinsəpl]  
+n. 原理，原则；主义，道义；本质，本义；根源，源泉
