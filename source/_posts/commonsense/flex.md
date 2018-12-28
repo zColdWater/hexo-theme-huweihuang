@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-28 23:16:30
 subtitle: "什么是Flex布局"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/flex.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
 tags:
 - Basic
 catagories:
@@ -36,6 +36,10 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
         flex-direction: row | row-reverse | column | column-reverse;
     }
     ```
+
+    <iframe height='265' scrolling='no' title='Flex 介紹 (flex-direction)' src='//codepen.io/zcoldwater/embed/yGzggM/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/yGzggM/'>Flex 介紹 (flex-direction)</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
+
     在线[Demo](https://codepen.io/zcoldwater/pen/yGzggM)点击试试看!
 
 2. **flex-wrap**:
@@ -53,6 +57,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
         flex-wrap: nowrap | wrap | wrap-reverse;
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:wrap' src='//codepen.io/zcoldwater/embed/bOogMe/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/bOogMe/'>flex:wrap</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/bOogMe)点击试试看!
 
 3. **justify-content**:
@@ -72,6 +78,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
     justify-content: flex-start | flex-end | center | space-between | space-around;
     }
     ```
+    <iframe height='265' scrolling='no' title='flex: justify-content' src='//codepen.io/zcoldwater/embed/vvegbB/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/vvegbB/'>flex: justify-content</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/vvegbB)点击试试看!
 
 4. **align-items**:
@@ -91,6 +99,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
     align-items: flex-start | flex-end | center | baseline | stretch;
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:align-items' src='//codepen.io/zcoldwater/embed/LMzxoo/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/LMzxoo/'>flex:align-items</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/LMzxoo)点击试试看!
 
 5. **align-content**:
@@ -111,6 +121,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
     align-content: flex-start | flex-end | center | space-between | space-around | stretch;
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:align-content' src='//codepen.io/zcoldwater/embed/oJGBKr/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/oJGBKr/'>flex:align-content</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/oJGBKr)点击试试看!
 
 内部元素
@@ -126,6 +138,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
         order: <integer>;
     }
     ```
+    <iframe height='265' scrolling='no' title='flex: order' src='//codepen.io/zcoldwater/embed/QzqpjO/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/QzqpjO/'>flex: order</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/QzqpjO)点击试试看!
 
 2. **flex-grow**:
@@ -134,12 +148,13 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
     如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 
-
     ```CSS
     .item {
-        flex-grow: <number>; /* default 0 */
+        flex-grow: 任意number  //default 0
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:flex-grow' src='//codepen.io/zcoldwater/embed/wRrJWe/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/wRrJWe/'>flex:flex-grow</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/wRrJWe)点击试试看!
 
 3. **flex-shrink**:
@@ -148,9 +163,11 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
     ```CSS
     .item {
-        flex-shrink: <number>; /* default 1 */
+        flex-shrink: 任意number  //default 1
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:flex-shrink' src='//codepen.io/zcoldwater/embed/WLZpGX/?height=265&theme-id=0&default-tab=html,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/WLZpGX/'>flex:flex-shrink</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/WLZpGX)点击试试看!
 
 4. **flex-basis**:
@@ -162,6 +179,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
         flex-basis: <length> | auto; /* default auto */
     }
     ```
+    <iframe height='265' scrolling='no' title='flex:flex-basis' src='//codepen.io/zcoldwater/embed/WLZppd/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/zcoldwater/pen/WLZppd/'>flex:flex-basis</a> by Henry (<a href='https://codepen.io/zcoldwater'>@zcoldwater</a>) on <a href='https://codepen.io'>CodePen</a>.
+    </iframe>
     在线[Demo](https://codepen.io/zcoldwater/pen/WLZppd)点击试试看!
     
     **注意:**当总items的`mainsize`大于屏幕总宽的时候按比例进行分配所占总屏幕宽。
@@ -177,6 +196,3 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
     align-self: auto | flex-start | flex-end | center | baseline | stretch;
     }
     ```
-    
-    无Demo
-
