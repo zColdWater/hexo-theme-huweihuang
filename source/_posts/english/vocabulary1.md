@@ -196,3 +196,62 @@ n. (Serve)人名；(法)塞尔夫
 
 principle ['prinsəpl]  
 n. 原理，原则；主义，道义；本质，本义；根源，源泉
+
+alternatively [ɔ:l'tə:nətivli]  
+adv. 非此即彼；二者择一地；作为一种选择
+
+ant [ænt]  
+n. 蚂蚁
+n. (Ant)人名；(土、芬)安特
+
+research  
+n. 研究；调查
+vt. 研究；调查
+vi. 研究；调查
+
+mineral ['minərəl]  
+n. 矿物；（英）矿泉水；无机物；苏打水（常用复数表示）
+adj. 矿物的；矿质的
+
+political [pə'litikəl]  
+adj. 政治的；党派的
+
+erosion [i'rəuʒən]  
+n. 侵蚀，腐蚀
+
+colonial [kə'ləunjəl]  
+n. 殖民地居民
+adj. 殖民地的，殖民的
+
+statue ['stætju:, -tʃu]  
+n. 雕像，塑像
+vt. 以雕像装饰
+
+geometry [dʒi'ɔmitri]  
+n. 几何学
+几何结构
+
+unusual 
+ 英  [ʌnˈju:ʒl]   美  [ʌnˈjuʒəl]
+adj. 不寻常的；与众不同的；不平常的
+
+constant 
+ 英  ['kɒnst(ə)nt]   美  ['kɑnstənt]
+adj. 不变的；恒定的；经常的
+n. [数] 常数；恒量
+n. (Constant)人名；(德)康斯坦特
+
+plain 
+ 英  [pleɪn]   美  [plen]
+adj. 平的；简单的；朴素的；清晰的
+n. 平原；无格式；朴实无华的东西
+adv. 清楚地；平易地
+n. (Plain)人名；(英)普莱恩；(法)普兰
+
+insufficient 
+ 英  [ɪnsə'fɪʃ(ə)nt]   美  [,ɪnsə'fɪʃnt]
+n. 不足；缺乏
+adj. 不足的，不充足的；不胜任的；缺乏能力的
+
+sufficient [sə'fiʃənt] 
+adj. 足够的；充分的
