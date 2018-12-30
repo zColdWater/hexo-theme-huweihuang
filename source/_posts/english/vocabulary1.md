@@ -255,3 +255,88 @@ adj. 不足的，不充足的；不胜任的；缺乏能力的
 
 sufficient [sə'fiʃənt] 
 adj. 足够的；充分的
+
+variant 
+ 英  ['veərɪənt]   美  ['vɛrɪənt]
+adj. 不同的；多样的
+n. 变体；转化
+
+tiny 
+ 英  ['taɪnɪ]   美  ['taɪni]
+adj. 微小的；很少的
+n. (Tiny)人名；(葡、印)蒂尼
+
+troubleshooting 
+ 英  ['trʌbl,ʃuːtɪŋ]   美  ['trʌbl,ʃu:tiŋ]
+n. 解决纷争；发现并修理故障
+v. 检修（troubleshoot的ing形式）；当调解人
+
+stripe 
+ 英  [straɪp]   美  [straɪp]
+n. 条纹，斑纹；种类
+vt. 加条纹于…
+
+wrapped 
+ 英  [ræpt]   美  [ræpt]
+adj. 有包装的
+v. 包裹；覆盖（wrap的过去分词）
+
+moral 
+ 英  ['mɒr(ə)l]   美  ['mɔrəl]
+adj. 道德的；精神上的；品性端正的
+n. 道德；寓意
+
+plentiful  
+adj. 丰富的；许多的；丰饶的；众多的
+
+scarce [skεəs]  
+adj. 缺乏的，不足的；稀有的
+adv. 仅仅；几乎不；几乎没有
+
+compromise ['kɔmprəmaiz]  
+n. 妥协，和解；折衷
+vt. 妥协；危害
+vi. 妥协；让步
+
+perverse [pə'və:s, 'pə:və:s]  
+adj. 堕落的，不正当的；倔强的；违反常情的
+
+comply [kəm'plai]  
+vi. 遵守；顺从，遵从；答应
+
+split 
+ 英  [splɪt]   美  [splɪt]
+vt. 分离；使分离；劈开；离开；分解
+vi. 离开；被劈开；断绝关系
+n. 劈开；裂缝
+adj. 劈开的
+
+descendant 
+ 英  [dɪ'send(ə)nt]   美  [dɪ'sɛndənt]
+adj. 下降的；祖传的
+n. 后裔；子孙
+
+enclosing 
+v. 封闭；围合（enclose的现在分词）
+
+take up 
+拿起；开始从事；占据(时间,地方)
+
+proportional 
+ 英  [prə'pɔːʃ(ə)n(ə)l]   美  [prə'pɔrʃənl]
+adj. 比例的，成比例的；相称的，均衡的
+n. [数] 比例项
+
+catalog 
+ 英  ['kætəlɒɡ]   美  ['kætəlɔg]
+n. [图情][计] 目录；登记
+vt. 登记；为…编目录
+vi. 编目录；按确定价格收入目录（等于catalogue）
+
+gradient 
+ 英  ['greɪdɪənt]   美  ['ɡredɪənt]
+n. [数][物] 梯度；坡度；倾斜度
+
+upright ['ʌprait, ,ʌp'r-]  
+n. 垂直；竖立
+adj. 正直的，诚实的；垂直的，直立的；笔直的；合乎正道的
