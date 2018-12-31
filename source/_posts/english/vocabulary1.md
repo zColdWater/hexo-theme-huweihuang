@@ -340,3 +340,158 @@ n. [数][物] 梯度；坡度；倾斜度
 upright ['ʌprait, ,ʌp'r-]  
 n. 垂直；竖立
 adj. 正直的，诚实的；垂直的，直立的；笔直的；合乎正道的
+
+sliver ['slivə]  
+n. 梳毛，梳棉；裂片
+vt. 使成薄片；使裂成小片
+vi. 成为薄片；裂成小片
+
+dimensional [di'menʃənəl, dai-]  
+adj. 空间的；尺寸的
+
+here we go
+我们开始吧
+
+sting [stiŋ]  
+n. 刺痛；讽刺，刺激；刺毛
+vt. 刺；驱使；使…苦恼；使…疼痛
+vi. 刺痛；被刺痛；感到剧痛
+n. (Sting)人名；(英)斯廷；(德)施廷
+
+fair [fεə]  
+n. 展览会；市集；美人
+adj. 公平的；美丽的，白皙的；[气象] 晴朗的
+vi. 转晴
+adv. 公平地；直接地；清楚地
+n. (Fair)人名；(英、芬)费尔
+
+intentional [in'tenʃənəl]  
+adj. 故意的；蓄意的；策划的
+
+fearless ['fiəlis]  
+adj. 无畏的；大胆的
+
+fear [fiə]  
+n. 害怕；恐惧；敬畏；担心
+vt. 害怕；敬畏；为…担心
+vi. 害怕；敬畏；为…担心
+
+crawl [krɔ:l]  
+n. 爬行；养鱼池；匍匐而行
+vt. 爬行；缓慢地行进
+vi. 爬行；匍匐行进
+
+toe [təu]  
+n. 脚趾；足尖
+vt. 用脚尖走；以趾踏触
+vi. 动脚尖；用足尖跳舞
+n. (Toe)人名；(布基)托埃；(缅)梭；(朝)堆；(日)土江 (姓)
+
+creature ['kri:tʃə]  
+n. 动物，生物；人；创造物
+
+alien ['eiljən]  
+n. 外国人，外侨；外星人
+adj. 外国的；相异的，性质不同的；不相容的
+vt. 让渡，转让
+n. (Alien)人名；(法)阿利安
+
+inflicted  
+把…强加给
+使承受（inflict的过去式和过去分词）
+
+needle ['ni:dl]  
+n. 针；指针；刺激；针状物
+vt. 刺激；用针缝
+vi. 缝纫；做针线
+n. (Needle)人名；(英)尼德尔
+
+rostrum ['rɔstrəm, 'rɔ:-]  
+n. 讲坛；演讲者；嘴；喙
+
+aftermath  
+n. 后果；余波
+n. （Aftermath）《空难余波》（电影名）
+
+episode ['episəud]  
+n. 插曲；一段情节；插话；有趣的事件
+
+poetic [pəu'etik]  
+n. 诗学，诗论
+adj. 诗的，诗歌的；诗意的；诗人的
+
+fashion ['fæʃən]  
+n. 时尚；时装；样式；时髦人物
+vt. 使用；改变；做成…的形状
+
+latch [lætʃ]  
+n. 门闩
+vt. 闩上；纠缠住某人
+vi. 占有，抓住；闭锁
+n. (Latch)人名；(英)拉奇
+
+conquer ['kɔŋkə]  
+vt. 战胜，征服；攻克，攻取
+vi. 胜利；得胜
+
+desert ['dezət]  
+n. 沙漠；荒原；应得的赏罚
+vt. 遗弃；放弃；逃跑
+adj. 沙漠的；荒凉的；不毛的
+vi. 遗弃；开小差；逃掉
+
+centipede 
+ 英  ['sentɪpiːd]   美  ['sɛntɪpid]
+n. [无脊椎][中医] 蜈蚣
+
+stumble ['stʌmbl]  
+n. 绊倒；蹒跚而行
+vi. 踌躇，蹒跚；失足；犯错
+vt. 使…困惑；使…绊倒
+
+upon [ə'pɔn]  
+prep. 根据；接近；在…之上
+
+burrow ['bʌrəu, 'bə:rəu]  
+n. （兔、狐等的）洞穴，地道；藏身处，住处
+vt. 挖掘，挖出；在…挖洞（或通道）；使躲入洞穴
+vi. 探索，寻找；挖地洞，挖通道；住入地洞，躲藏起来；钻进某处；偎依著
+n. (Burrow)人名；(英)伯罗
+
+terror 
+ 英  ['terə]   美  ['tɛrɚ]
+n. 恐怖；恐怖行动；恐怖时期；可怕的人
+n. (Terror)人名；(南非)特罗尔
+
+fanged 
+[fæŋd] 
+adj. 有牙根的；有毒牙的，有尖牙的
+
+venomous 
+ 英  ['venəməs]   美  ['vɛnəməs]
+adj. 有毒的；恶毒的；分泌毒液的；怨恨的
+
+ominous 
+ 英  ['ɒmɪnəs]   美  ['ɑmɪnəs]
+adj. 预兆的；不吉利的
+
+strictly 
+ 英  ['strɪk(t)lɪ]   美  ['strɪktli]
+adv. 严格地；完全地；确实地
+
+nocturnal 
+ 英  [nɒk'tɜːn(ə)l]   美  [nɑk'tɝnl]
+adj. 夜的；夜曲的；夜间发生的
+
+intense [in'tens]  
+adj. 强烈的；紧张的；非常的；热情的
+
+pensive ['pensiv]  
+adj. 沉思的，忧郁的；悲伤的，哀愁的
+
+ordeal [ɔ:'di:l, 'ɔ:di:l]  
+n. 折磨；严酷的考验；痛苦的经验
+
+porn [pɔ:n]  
+n. 色情描写，色情文学；黄色书刊，色情照片（等于pornography）
+n. (Porn)人名；(泰、柬)蓬
