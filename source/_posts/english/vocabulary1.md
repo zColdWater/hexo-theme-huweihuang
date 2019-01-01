@@ -495,3 +495,61 @@ n. 折磨；严酷的考验；痛苦的经验
 porn [pɔ:n]  
 n. 色情描写，色情文学；黄色书刊，色情照片（等于pornography）
 n. (Porn)人名；(泰、柬)蓬
+
+dimension  
+n. 方面;[数] 维；尺寸；次元；容积 vt. 标出尺寸
+adj. 规格的
+
+trailer ['treilə]  
+n. 拖车；[电视] 预告片；追踪者
+vt. 用拖车载运
+vi. 乘拖车式活动房屋旅行f
+
+disappoint 
+ 英  [dɪsə'pɒɪnt]   美  ['dɪsə'pɔɪnt]
+vt. 使失望
+
+wisdom 
+ 英  ['wɪzdəm]   美  ['wɪzdəm]
+n. 智慧，才智；明智；学识；至理名言
+n. (Wisdom)人名；(英)威兹德姆
+
+suburb ['sʌbə:b]  
+n. 郊区；边缘
+
+flash [flæʃ]  
+n. 闪光，闪现；一瞬间
+adj. 闪光的，火速的
+vt. 使闪光；反射
+vi. 闪光，闪现；反射
+n. (Flash)人名；(西)弗拉什
+
+lash 
+ 英  [læʃ]   美  [læʃ]
+vt. 鞭打；冲击；摆动；扎捆；煽动；讽刺
+vi. 鞭打；猛击；急速甩动
+n. 鞭打；睫毛；鞭子；责骂；讽刺
+n. (Lash)人名；(英)拉希
+
+strap 
+ 英  [stræp]   美  [stræp]
+vt. 用带捆绑；用皮条抽打；约束
+n. 带；皮带；磨刀皮带；鞭打
+vi. 精力旺盛地工作；受束缚
+
+panting 
+['pæntiŋ] 
+v. 脉动；晃动（pant的ing形式）
+adj. 喘气的
+n. 气促；脉动
+n. (Panting)人名；(西)潘廷
+
+prevail 
+ 英  [prɪ'veɪl]   美  [pri'vel]
+vi. 盛行，流行；战胜，获胜
+
+glimpse 
+ 英  [glɪm(p)s]   美  [ɡlɪmps]
+n. 一瞥，一看
+vi. 瞥见
+vt. 瞥见
