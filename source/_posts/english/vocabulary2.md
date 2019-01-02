@@ -1,5 +1,5 @@
 ---
-title: "[English] Vocabulary 1"
+title: "[English] Vocabulary 2"
 catalog: true
 toc_nav_num: true
 date: 2019-01-02 14:49:33
