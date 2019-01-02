@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-26 12:48:33
 subtitle: "Vocabulary"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/blur2.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/street-1209401.jpg"
 tags:
 - English
 catagories:
