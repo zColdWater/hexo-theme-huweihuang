@@ -91,4 +91,16 @@ n. 重聚；（班级或学校的）同学会，同窗会
 Pick up line
 搭讪台词
 
+Black Pepper
+黑胡椒
+
+ketchup ['ketʃəp]  
+n. 蕃茄酱
+
+spinach ['spinidʒ, -itʃ]  
+n. 菠菜
+
+spaghetti [spə'ɡeti]  
+n. 意大利式细面条
+n. (Spaghetti)人名；(意)斯帕盖蒂
 
