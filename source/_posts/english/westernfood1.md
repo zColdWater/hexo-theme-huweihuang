@@ -78,4 +78,7 @@ catagories:
 结账
 =======
 
+Check Please(Pay the bill) 结账
+
+Tip 通常是消费的 10% ~ 15%
 

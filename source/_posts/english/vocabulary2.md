@@ -104,3 +104,27 @@ spaghetti [spə'ɡeti]
 n. 意大利式细面条
 n. (Spaghetti)人名；(意)斯帕盖蒂
 
+bun [bʌn]  
+n. 小圆面包 或者 包子
+
+crab [kræb]  
+n. 螃蟹；蟹肉；脾气乖戾的人；起重机
+
+kebab [kə'bɔb]  
+n. （印）烤肉串；烤腌羊肉串（等于kabob）
+
+frying ['fraiiŋ]  
+n. 油炸，油煎
+v. 煎（fry的ing形式）；油炸
+
+pan  
+n. 平底锅；盘状的器皿；淘盘子，金盘，秤盘
+
+set fire
+开火 （做菜）
+
+tough 
+adj. 艰苦的，困难的；坚强的，不屈不挠的；坚韧的，牢固的；强壮的，结实的
+
+
+
