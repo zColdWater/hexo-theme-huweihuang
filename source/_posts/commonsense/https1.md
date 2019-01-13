@@ -3,7 +3,7 @@ title: "[Basic] 理解SSL/TLS协议"
 catalog: true
 toc_nav_num: true
 date: 2019-01-10 11:06:30
-subtitle: "什么是SSL/TLS协议？"
+subtitle: "什么是SSL/TLS协议？如何在HTTPS中运作的？"
 header-img: "https://upload-images.jianshu.io/upload_images/1793544-35a59cc66546fe40.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
 tags:
 - Basic
@@ -12,6 +12,15 @@ catagories:
 ---
 
 > 当前环境: Xcode10.0 Swift4.2 iOS SDK 12.1
+
+[数字证书 传送门]()
+
+[HTTP 传送门]() 
+
+[TCP/UDP 传送门]() 
+
+[Socket 传送门]()
+
 
 前言
 =======
@@ -62,12 +71,12 @@ TCP
 
 1. 如何保证公钥不被篡改？
 
-    解决方法：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的。
+        解决方法：将公钥放在数字证书中。只要证书是可信的，公钥就是可信的。
     
 
 2. 公钥加密计算量太大，如何减少耗用的时间？
 
-    解决方法：每一次对话（session），客户端和服务器端都生成一个"对话密钥"（session key），用它来加密信息。由于"对话密钥"是对称加密，所以运算速度非常快，而服务器公钥只用于加密"对话密钥"本身，这样就减少了加密运算的消耗时间。
+        解决方法：每一次对话（session），客户端和服务器端都生成一个"对话密钥"（session key），用它来加密信息。由于"对话密钥"是对称加密，所以运算速度非常快，而服务器公钥只用于加密"对话密钥"本身，这样就减少了加密运算的消耗时间。
    
 
 因此，SSL/TLS协议的基本过程是这样的：
@@ -87,10 +96,10 @@ TCP
 
 **下面用自己的话在总结一下`HTTPS协议（不同于HTTP）`建立链接和传输过程:"**  
 
-### **(一) 开始握手阶段( 明文传输阶段 ):**  
+### **(一) 开始握手阶段( `明文传输阶段` ):**  
 
 下图是握手阶段流程
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/shakehand.png" height="300" /> 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/handshake.png" height="300" /> 
 
 1. **客户端发出请求（ClientHello）**
 
@@ -141,7 +150,7 @@ TCP
     ```
         
 
-### **(二) 基于握手阶段生成的`对话密钥`进行后续的加密通信。( 非明文传输阶段 )**  
+### **(二) 基于握手阶段生成的`对话密钥`进行后续的加密通信。( `非明文传输阶段` )**  
 
 1.  至此，整个握手阶段全部结束。接下来，客户端与服务器进入加密通信，就完全是使用普通的`HTTP协议`，只不过用"`会话密钥`"加密内容。
 
@@ -151,6 +160,8 @@ TCP
 =======
 
 `HTTP`是`HTTP协议`运行在`TCP`之上。所有传输的内容都是明文，客户端和服务器端都无法验证对方的身份。`HTTPS`是`HTTP`运行在`SSL/TLS`之上，`SSL/TLS`运行在`TCP`之上。所有传输的内容都经过加密，加密采用对称加密，但对称加密的密钥用服务器方的证书进行了非对称加密。此外客户端可以验证服务器端的身份，如果配置了客户端验证，服务器方也可以验证客户端的身份。
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/handshake1.gif" height="300" /> 
 
 
 
