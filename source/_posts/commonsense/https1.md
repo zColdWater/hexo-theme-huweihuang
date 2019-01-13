@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-01-10 11:06:30
 subtitle: "什么是SSL/TLS协议？如何在HTTPS中运作的？"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-35a59cc66546fe40.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/camper.jpg"
 tags:
 - Basic
 catagories:
@@ -13,7 +13,7 @@ catagories:
 
 > 当前环境: Xcode10.0 Swift4.2 iOS SDK 12.1
 
-[数字证书 传送门]()
+[数字证书 传送门](https://zcoldwater.github.io/blog/article/commonsense/dc1/)
 
 [HTTP 传送门]() 
 
