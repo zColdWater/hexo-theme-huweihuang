@@ -77,3 +77,47 @@ HTTP 定义了在与服务器交互的不同方式，最常用的方法有 4 种
 > 每一个用户都有一个不同的 session，各个用户之间是不能共享的，是每个用户所独享的，在 session 中可以存放信息。
 
 > Session的实现依赖于Cookie，如果Cookie被禁用，那么session也将失效。
+
+
+在 HTTP 1.1 版本中，默认情况下所有连接都被保持，如果加入 "Connection: close" 才关闭。目前大部分浏览器都使用 HTTP 1.1 协议，也就是说默认都会发起 Keep-Alive 的连接请求了，所以是否能完成一个完整的 Keep-Alive 连接就看服务器设置情况。
+
+**HTTP Keep-Alive 简单说就是保持当前的TCP连接，避免了重新建立连接。HTTP 是一个无状态无连接的协议，那么这是不是与 Keep-Alive 冲突？**
+
+1. Keep-Alive 与无连接的特性冲突，而对于无状态的特性两者并无矛盾，HTTP 无状态无连接是在 1.0 版本中就规定的，而 Keep-Alive 则是在 1.1 版本中才被添加入规范。
+
+2. 无连接的意思是限制每个连接只有一个请求的意思，在服务器处理完客户的请求，并收到客户的反应，即断开。通过这种方式可以节省传输时间。
+
+3. Keep-Alive 确实破坏了这一特性，而无状态协议则意味着每个请求都是独立的，互不干扰的，互相没有记忆的。所以才需要有会话跟踪这种机制来识别用户。
+
+
+
+
+HTTP Keep-Alive & TCP Keep-Alive
+=======
+
+1. **HTTP Keep-Alive:**
+
+    在http早期，每个http请求都要求打开一个tpc socket连接，并且使用一次之后就断开这个tcp连接。
+
+    使用keep-alive可以改善这种状态，即在一次TCP连接中可以持续发送多份数据而不会断开连接。通过使用keep-alive机制，可以减少tcp连接建立次数，也意味着可以减少TIME_WAIT状态连接，以此提高性能和提高httpd服务器的吞吐率(更少的tcp连接意味着更少的系统内核调用,socket的accept()和close()调用)。
+
+    但是，keep-alive并不是免费的午餐,长时间的tcp连接容易导致系统资源无效占用。配置不当的keep-alive，有时比重复利用连接带来的损失还更大。所以，正确地设置keep-alive timeout时间非常重要。
+
+    **当httpd守护进程发送完一个响应后，理应马上主动关闭相应的tcp连接，设置 `keepalive_timeout`后，httpd守护进程会想说：”`再等等吧，看看浏览器还有没有请求过来`”，这一等，便是`keepalive_timeout`时间。如果守护进程在这个等待的时间里，一直没有收到浏览发过来http请求，则关闭这个http连接。**
+
+
+
+2. **TCP Keep-Alive:**
+
+    http keep-alive与tcp keep-alive，不是同一回事，意图不一样。http keep-alive是为了让tcp活得更久一点，以便在同一个连接上传送多个http，提高socket的效率。而tcp keep-alive是TCP的一种检测TCP连接状况的保鲜机制。
+
+    keepalive是TCP保鲜定时器，当网络两端建立了TCP连接之后，闲置idle（双方没有任何数据流发送往来）了tcp_keepalive_time后，服务器内核就会尝试向客户端发送侦测包，来判断TCP连接状况(有可能客户端崩溃、强制关闭了应用、主机不可达等等)。如果没有收到对方的回答(ack包)，则会在 tcp_keepalive_intvl后再次尝试发送侦测包，直到收到对对方的ack,如果一直没有收到对方的ack,一共会尝试 tcp_keepalive_probes次，每次的间隔时间在这里分别是15s, 30s, 45s, 60s, 75s。如果尝试tcp_keepalive_probes,依然没有收到对方的ack包，则会丢弃该TCP连接。TCP连接默认闲置时间是2小时，一般设置为30分钟足够了。
+    
+    也就是说，仅当nginx的keepalive_timeout值设置高于tcp_keepalive_time，并且距此tcp连接传输的最后一个http响应，经过了tcp_keepalive_time时间之后，操作系统才会发送侦测包来决定是否要丢弃这个TCP连接。一般不会出现这种情况，除非你需要这样做。
+
+
+
+参考:  
+
+http://www.nowamagic.net/academy/detail/23350305  
+
