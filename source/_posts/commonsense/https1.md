@@ -17,9 +17,9 @@ catagories:
 
 [HTTP 传送门](https://zcoldwater.github.io/blog/article/commonsense/http1/) 
 
-[TCP/UDP 传送门]() 
+[TCP协议 传送门]() 
 
-[Socket 传送门](https://zcoldwater.github.io/blog/article/commonsense/socket1/)
+[Socket(套接字) 传送门](https://zcoldwater.github.io/blog/article/commonsense/socket1/)
 
 
 前言
