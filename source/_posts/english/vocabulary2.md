@@ -145,3 +145,14 @@ adj. 生锈的，腐蚀的；铁锈色的，锈色的；迟钝的
 
 gymnastics [dʒim'næstiks]  
 n. 体操；体育；体操运动
+
+Bumblebee
+n. 大黄蜂
+
+Sequel
+n. 续集
+
+knight [nait]  
+n. 骑士，武士；爵士
+vt. 授以爵位
+n. (Knight)人名；(英)奈特

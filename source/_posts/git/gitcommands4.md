@@ -1,5 +1,5 @@
 ---
-title: "[Git] 使用Rebase"
+title: "[Git] Rebase"
 catalog: true
 toc_nav_num: true
 date: 2019-01-23 10:46:30
