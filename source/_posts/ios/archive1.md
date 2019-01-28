@@ -54,9 +54,10 @@ catagories:
 
 `BuildConfiguration`是在`Project`级别上的配置，所以他对下面所有`Target`都生效 。
 
-基础命令
+核心命令
 =======
 
+> 执行下面命令的时候`请确保你的证书和你的ID都是正确的`。
 
 **xcodebuild archive:**  
 xcodebuild -workspace `<Workspace名字>` -scheme `<Scheme名字>` -configuration `<BuildConfiguration名字>` -archivePath `<导出路径>` archive
@@ -71,10 +72,14 @@ xcodebuild -exportArchive -archivePath `<Archive路径>` -exportPath `<Export路
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/xcarchive.png" height="150" />
 
 
-第二步: 再执行`XcodeBuild Export`命令
+第二步: 再执行`XcodeBuild Export`命令，有一个选项 `archivePath`，将第一步生成的`xcarchive`文件路径输入进去，还有一个注意的是，`exportOptionsPlist`，这个参数文件，就是我们平时使用`Xcode`打包出来的文件夹里面包含的文件，表明你导出这个ipa的具体配置。
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/exportoption1.png" height="150" />
 
+把之前成功导出的`ExportOptions.plist`文件路径给上面的命令，就可以导出和上次一模一样的ipa包。
 
+`ExportOptions.plist:`  
+记录这你的导出参数，你是`AppStore`还是`Development`还是`AdHoc`等等。 
 
 
 
