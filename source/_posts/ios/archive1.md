@@ -2,7 +2,7 @@
 title: "[iOS] Xcodebuild的使用"
 catalog: true
 toc_nav_num: true
-date: 2018-12-28 10:10:30
+date: 2019-01-28 10:10:30
 subtitle: "如何使用Xcodebuild工具来自动化生成ipa"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
 tags:
@@ -12,8 +12,6 @@ catagories:
 ---
 
 > 当前环境: Xcode10.0 Swift4.2 iOS SDK 12.1
-
-Demo: 
 
 前言
 =======
@@ -37,7 +35,7 @@ Demo:
 因为一套`Target`对应一套配置，比如我们的项目中，有两个`Target`分别对应不同的`BundleId`，这个场景下，我们就有必要用两个`Target`来区分一下。 再者说两套配置不一样，一套给生产一套给其他环境，里面包含不同的加固配置等等，都可以用多个Target区分。
 
 **3. scheme:**  
-一个`Target`可以对应多个`Scheme`，当你创建`Scheme`的时候，是可以选择你的`Target`的。
+一个`Target`可以对应多个`Scheme`，当你创建`Scheme`的时候，是可以选择你的`Target`的，当创建`Scheme`的时候还有一个选项，`Shared`，当你创建的`Scheme`需要其他人也能看到的时候需要打勾，如果不需要其他人看到 不需要打勾。
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/scheme.png" height="150" />
 
@@ -59,12 +57,21 @@ Demo:
 基础命令
 =======
 
+
 **xcodebuild archive:**  
 xcodebuild -workspace `<Workspace名字>` -scheme `<Scheme名字>` -configuration `<BuildConfiguration名字>` -archivePath `<导出路径>` archive
 
 **xcodebuild export:**  
 xcodebuild -exportArchive -archivePath `<Archive路径>` -exportPath `<Export路径>` -exportOptionsPlist `<ExportOptionsPlist文件路径>`
 
+解释:  
+
+第一步: 先执行`XcodeBuild Archive`命令，生成`.xcarchive`文件。  
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/xcarchive.png" height="150" />
+
+
+第二步: 再执行`XcodeBuild Export`命令
 
 
 
