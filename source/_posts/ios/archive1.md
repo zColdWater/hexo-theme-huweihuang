@@ -81,5 +81,23 @@ xcodebuild -exportArchive -archivePath `<Archive路径>` -exportPath `<Export路
 `ExportOptions.plist:`  
 记录这你的导出参数，你是`AppStore`还是`Development`还是`AdHoc`等等。 
 
+
+最后
+=======
 
+`In general:`
 
+**Development profile** allows you to test your apps on your physical devices  
+
+**App Store Distribution profile** allows you to sign your apps for App Store distribution  
+
+**Ad Hoc Distribution profile** allows you to sign your apps for Ad Hoc distribution  
+
+If you want to test your app with debugger and everything what Xcode provides, you have to use the development profile.  
+
+It is possible to install apps for testing purposes using distribution profiles, but you can't take advantage of the Xcode testing tools.
+
+`Summary:`
+
+Use development profile for testing and debugging your app
+Use distribution profile for signing and distribution of your finished and ready-to-use app.
