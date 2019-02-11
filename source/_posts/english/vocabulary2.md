@@ -156,3 +156,35 @@ knight [nait]
 n. 骑士，武士；爵士
 vt. 授以爵位
 n. (Knight)人名；(英)奈特
+
+persuasive [pə'sweisiv, -ziv]  
+adj. 有说服力的；劝诱的，劝说的
+
+phrases 
+ 英  ['freɪzɪz]   美  ['frezɪz]
+n. [语] 短语；词组；乐句；措词（phrase的复数）
+v. 用话表示；把…分成短句；用短语描述（phrase的三单形式）
+
+radiation  
+n. 辐射；放射物
+
+cite 
+ 英  [saɪt]   美  [saɪt]
+vt. 引用；传讯；想起；表彰
+
+progress ['prəuɡres, 'prɔ-, prəu'ɡres]  
+n. 进步，发展；前进
+vi. 前进，进步；进行
+n. (Progress)人名；(赞)普罗格雷斯
+
+conjugation 
+ 英  [kɒndʒʊ'geɪʃ(ə)n]   美  [,kɑndʒə'ɡeʃən]
+n. 结合，配合；动词的词形变化
+
+compromise ['kɔmprəmaiz]  
+n. 妥协，和解；折衷
+vt. 妥协；危害
+vi. 妥协；让步
+
+episode ['episəud] 
+n. 插曲；一段情节；插话；有趣的事件
