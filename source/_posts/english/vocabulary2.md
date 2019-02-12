@@ -188,3 +188,24 @@ vi. 妥协；让步
 
 episode ['episəud] 
 n. 插曲；一段情节；插话；有趣的事件
+
+mystery [英 [ˈmɪstri] 美 [ˈmɪstəri]]  
+n. 秘密，谜；神秘，神秘的事物；推理小说，推理剧；常作 mysteries 秘技，秘诀
+
+persuade [pə'sweid]  
+vt. 说服，劝说；使某人相信；劝某人做（不做）某事
+adj. 空闲的，有闲的
+vi. 说服；被说服
+
+haggling  
+n. 讨价还价；争论
+v. 讨价还价；争辩（haggle的ing形式）
+
+bargain  
+n. 交易；便宜货；契约
+v. 讨价还价；议价；(谈价钱后)卖
+
+a bargain 意思为 一个合适的价格
+
+to bargain == to haggle 去讲价 same meaning
+
