@@ -157,6 +157,148 @@ if (status != Z_OK) {
     6) 有一点需要注意，当输出空间不足，也就是`avail_out`为空的时候，再次调用deflate()的时候必须提供更多输出空间，以及保持`flush`标志不变。
     与`defalte`类似，`inflate`也有对应的：`inflateInit()`，`inflate()`和`inflateEnd()`。
 
+7) FLUSH的类型  
+    #define Z_NO_FLUSH      0   
+    #define Z_PARTIAL_FLUSH 1  
+    #define Z_SYNC_FLUSH    2   
+    #define Z_FULL_FLUSH    3   
+    #define Z_FINISH        4   
+    #define Z_BLOCK         5   
+    #define Z_TREES         6   
+
+    Normally the parameter flush is set to Z_NO_FLUSH, which allows deflate to decide how much data to accumulate before producing output, in order to maximize compression.
+
+    If the parameter flush is set to Z_SYNC_FLUSH, all pending output is flushed to the output buffer and the output is aligned on a byte boundary, so that the decompressor can get all input data available so far. Flushing may degrade compression for some compression algorithms and so it should be used only when necessary. This completes the current deflate block and follows it with an empty stored block that is three bits plus filler bits to the next byte, followed by four bytes (00 00 ff ff).
+
+    If flush is set to Z_PARTIAL_FLUSH, all pending output is flushed to the output buffer, but the output is not aligned to a byte boundary. All of the input data so far will be available to the decompressor, as for Z_SYNC_FLUSH.
+    This completes the current deflate block and follows it with an empty fixed codes block that is 10 bits long. This assures that enough bytes are output in order for the decompressor to finish the block before the empty fixed codes block.
+
+    If flush is set to Z_BLOCK, a deflate block is completed and emitted, as for Z_SYNC_FLUSH, but the output is not aligned on a byte boundary, and up to seven bits of the current block are held to be written as the next byte after the next deflate block is completed. In this case, the decompressor may not be provided enough bits at this point in order to complete decompression of the data provided so far to the compressor. It may need to wait for the next block to be emitted. This is for advanced applications that need to control the emission of deflate blocks.
+
+    If flush is set to Z_FULL_FLUSH, all output is flushed as with Z_SYNC_FLUSH, and the compression state is reset so that decompression can restart from this point if previous compressed data has been damaged or if random access is desired. Using Z_FULL_FLUSH too often can seriously degrade compression.
+
+    If deflate returns with avail_out == 0, this function must be called again with the same value of the flush parameter and more output space (updated avail_out), until the flush is complete (deflate returns with non-zero avail_out). In the case of a Z_FULL_FLUSH or Z_SYNC_FLUSH, make sure that avail_out is greater than six to avoid repeated flush markers due to avail_out == 0 on return.
+
 除了`deflate`和`inflate`对应的函数接口以外，`zlib`还提供了一些封装了这些接口的实用函数，比如：`compress()`和`uncompress()`。这些函数简化了`deflate`和`inflate`函数接口的使用。
+
+
+下面是使用ZLIB来压缩成GZIP
+```C
+#define CHUNK 16384  // 16 * 1024
+
+int def(FILE *source, FILE *dest)
+{
+    int ret, flush;
+    unsigned have;
+    z_stream strm;
+    unsigned char in[CHUNK];
+    unsigned char out[CHUNK];
+    
+    /* allocate deflate state */
+    strm.zalloc = Z_NULL;
+    strm.zfree = Z_NULL;
+    strm.opaque = Z_NULL;
+    ret = deflateInit2(&strm, Z_BEST_COMPRESSION, Z_DEFLATED, (15 + 16), 8,
+                       Z_DEFAULT_STRATEGY);
+    if (ret != Z_OK)
+        return ret;
+    
+    /* compress until end of file */
+    do {
+        strm.avail_in = fread(in, 1, CHUNK, source);
+        if (ferror(source)) {
+            (void)deflateEnd(&strm);
+            return Z_ERRNO;
+        }
+        flush = feof(source) ? Z_FINISH : Z_SYNC_FLUSH; //Z_NO_FLUSH;
+        
+        strm.next_in = in;
+        
+        /* run deflate() on input until output buffer not full, finish
+         compression if all of source has been read in */
+        do {
+            strm.avail_out = CHUNK;
+            strm.next_out = out;
+            ret = deflate(&strm, flush);    /* no bad return value */
+            assert(ret != Z_STREAM_ERROR);  /* state not clobbered */
+            have = CHUNK - strm.avail_out;
+            if (fwrite(out, 1, have, dest) != have || ferror(dest)) {
+                (void)deflateEnd(&strm);
+                return Z_ERRNO;
+            }
+        } while (strm.avail_out == 0);
+        assert(strm.avail_in == 0);     /* all input will be used */
+        
+        /* done when last data in file processed */
+    } while (flush != Z_FINISH);
+    assert(ret == Z_STREAM_END);        /* stream will be complete */
+    
+    /* clean up and return */
+    (void)deflateEnd(&strm);
+    return Z_OK;
+}
+```
+
+
+下面是使用ZLIB来解压缩成GZIP
+```C
+int inf(FILE *source, FILE *dest)
+{
+    int ret;
+    unsigned have;
+    z_stream strm;
+    unsigned char in[CHUNK];
+    unsigned char out[CHUNK];
+    
+    /* allocate inflate state */
+    strm.zalloc = Z_NULL;
+    strm.zfree = Z_NULL;
+    strm.opaque = Z_NULL;
+    strm.avail_in = 0;
+    strm.next_in = Z_NULL;
+    ret = inflateInit(&strm);
+    if (ret != Z_OK)
+        return ret;
+    
+    /* decompress until deflate stream ends or end of file */
+    do {
+        strm.avail_in = fread(in, 1, CHUNK, source);
+        if (ferror(source)) {
+            (void)inflateEnd(&strm);
+            return Z_ERRNO;
+        }
+        if (strm.avail_in == 0)
+            break;
+        strm.next_in = in;
+        
+        /* run inflate() on input until output buffer not full */
+        do {
+            strm.avail_out = CHUNK;
+            strm.next_out = out;
+            ret = inflate(&strm, Z_NO_FLUSH);
+            assert(ret != Z_STREAM_ERROR);  /* state not clobbered */
+            switch (ret) {
+                case Z_NEED_DICT:
+                    ret = Z_DATA_ERROR;     /* and fall through */
+                case Z_DATA_ERROR:
+                case Z_MEM_ERROR:
+                    (void)inflateEnd(&strm);
+                    return ret;
+            }
+            have = CHUNK - strm.avail_out;
+            if (fwrite(out, 1, have, dest) != have || ferror(dest)) {
+                (void)inflateEnd(&strm);
+                return Z_ERRNO;
+            }
+        } while (strm.avail_out == 0);
+        
+        /* done when inflate() says it's done */
+    } while (ret != Z_STREAM_END);
+    
+    /* clean up and return */
+    (void)inflateEnd(&strm);
+    return ret == Z_STREAM_END ? Z_OK : Z_DATA_ERROR;
+}
+```
 
 
