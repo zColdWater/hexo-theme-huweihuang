@@ -35,6 +35,18 @@ catagories:
 很多压缩方式基于deflate算法的压缩库。实际上还存在别的算法：bzip2、LZMA等，他们有的甚至是完胜deflate。但很可惜，在互联网中要更替一种标准是非常困难的。deflate已经广泛运用到web的方方面面，难以取代。
 所以还是学习deflate先吧。并且，阅读zlib库最佳。
 
+
+**关于 gzip, zlib 和 zip**
+
+`gzip`是UNIX下的一种数据格式. `gzip`是在`zlib`之上，包了一层，在头和尾添加了一些额外的信息. `gzip`是一种文件压缩工具（或该压缩工具产生的压缩文件格式），它的设计目标是处理单个的文件。`gzip`在压缩文件中的数据时使用的就是`zlib`。为了保存与文件属性有关的信息，`gzip`需要在压缩文件`（.gz）`中保存更多的头信息内容，而`zlib`不用考虑这一点。但`gzip`只适用于单个文件，所以我们在`UNIX/Linux`上经常看到的压缩包后缀都是`.tar.gz`或`.tgz`，也就是先用`tar`把多个文件打包成单个文件，再用`gzip`压缩的结果。  
+
+`zlib` 是一个开源库, 提供了在内存中压缩和解压的函数. `zlib` 的设计目标是处理单纯的数据.
+`zip` 只是一种数据结构，跟`rar`同级别的。 `zip`是适用于压缩多个文件的格式（相应的工具有`PkZip`和`WinZip`等），因此，`zip`文件还要 进一步包含文件目录结构的信息，比`gzip`的头信息更多。但需要注意，`zip`格式可采用多种 压缩算法，我们常见的`zip`文件大多不是用`zlib`的算法压缩的，其压缩数据的格式与`gzip`大 不一样。  
+
+`gzip`, `zlib`以及图形格式`png`，使用的压缩算法都是`deflate`算法。  
+  
+`gzip` 对于要压缩的文件，首先使用`LZ77`算法的一个变种进行压缩，对得到的结果再使用`Huffman`编码的方法进行压缩.
+
 zlib基本介绍
 =======
 
@@ -145,7 +157,6 @@ if (status != Z_OK) {
     6) 有一点需要注意，当输出空间不足，也就是`avail_out`为空的时候，再次调用deflate()的时候必须提供更多输出空间，以及保持`flush`标志不变。
     与`defalte`类似，`inflate`也有对应的：`inflateInit()`，`inflate()`和`inflateEnd()`。
 
-除了deflate和inflate对应的函数接口以外，zlib还提供了一些封装了这些接口的实用函数，比如：compress()和uncompress()。这些函数简化了deflate和inflate函数接口的使用。
-
+除了`deflate`和`inflate`对应的函数接口以外，`zlib`还提供了一些封装了这些接口的实用函数，比如：`compress()`和`uncompress()`。这些函数简化了`deflate`和`inflate`函数接口的使用。
 
 
