@@ -31,9 +31,12 @@ catagories:
 1) zip和gzip(gz)不兼容，虽然它们都是使用相同的deflate压缩算法
 2) zip更像一个打包器，能把多个多件放到一个zip中；gzip一次只对一个文件压缩，通常与tar命令一起用
 
-使用zlib压缩
-=======
 
+很多压缩方式基于deflate算法的压缩库。实际上还存在别的算法：bzip2、LZMA等，他们有的甚至是完胜deflate。但很可惜，在互联网中要更替一种标准是非常困难的。deflate已经广泛运用到web的方方面面，难以取代。
+所以还是学习deflate先吧。并且，阅读zlib库最佳。
+
+zlib基本介绍
+=======
 
 **zlib 的z_stream结构 如下:**
 ```C
@@ -47,11 +50,6 @@ typedef struct z_stream_s {
     uInt     avail_out;// 输出缓冲区next_out的剩余空间 
     uLong    total_out;// 当前已输出多少输入字节
 
-
-
-
-
-
     z_const char   *msg;// 存放最近的错误信息，NULL表示没有错误
     struct internal_state FAR *state;// 暂时不用管这个
 
@@ -64,4 +62,27 @@ typedef struct z_stream_s {
     uLong             reserved;//reserved for future use
 }  z_stream;
 ```
+
+
+**zlib常用函数**
+
+| 函数名        | 介绍           |
+| ------------- |:-------------:|
+| deflateInit      | 参数比较少,里面的实现其实是调用的deflateInit2 |
+| deflateInit2      | 压缩初始化的基础函数,有很多参数,下面会重点介绍 |
+| deflate | 压缩函数 |
+| deflateEnd | 压缩完成以后,释放空间,但是注意,仅仅是释放deflateInit中申请的空间,自己申请的空间还是需要自己释放 |
+| inflateInit | 解压初始化函数,内部调用的inflateInit2. |
+| inflateInit2 | 解压初始化的基础函数.后面重点介绍. |
+| infalte | 解压函数 |
+| inflateEnd | 同deflateEnd作用类似 |
+| compress | 全部附加选项默认压缩,内部调用compress2 |
+| compress2 | 带level的压缩方式. |
+| uncompress | 解压缩 |
+
+上面是常用的一些函数，我们会着重讲解几个函数，因为小编能力有限也只接使用过几个API。
+
+
+zlib常用函数
+=======
 
