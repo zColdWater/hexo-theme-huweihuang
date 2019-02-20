@@ -34,7 +34,34 @@ catagories:
 使用zlib压缩
 =======
 
-> 使用 zlib 库实现压缩
+
+**zlib 的z_stream结构 如下:**
+```C
+// 压缩控制器
+typedef struct z_stream_s {
+    z_const Bytef  *next_in;// 将要压缩数据的首地址
+    uInt                 avail_in;// 待压缩数据next_in的长度
+    uLong             total_in;// 当前已读取多少输入字节
+
+    Bytef    *next_out;// 指向输出缓冲区，只需要在一开始赋值一次
+    uInt     avail_out;// 输出缓冲区next_out的剩余空间 
+    uLong    total_out;// 当前已输出多少输入字节
 
 
+
+
+
+
+    z_const char   *msg;// 存放最近的错误信息，NULL表示没有错误
+    struct internal_state FAR *state;// 暂时不用管这个
+
+    alloc_func        zalloc;// 初始化要设置为 Z_NULL 压缩过程会分配新内存（internal state），用户可以设置自己的alloc函数给z_stream
+    free_func         zfree;// 初始化要设置为 Z_NULL   释放内存
+    voidpf              opaque;// 初始化要设置为 Z_NULL  zalloc、zfree的第一个参数，默认设0即可
+
+    int                data_type;// 表示数据类型，文本或者二进制 
+    uLong             adler;//未压缩数据的检验和 （Adler-32 or CRC-32)
+    uLong             reserved;//reserved for future use
+}  z_stream;
+```
 
