@@ -86,3 +86,66 @@ typedef struct z_stream_s {
 zlib常用函数
 =======
 
+> zlib的核心数据结构是z_stream，用来表示比特流，同时用于deflate或者inflate过程。以deflate过程为例，z_stream必须使用deflateInit()函数初始化。但是值得注意的是，在调用deflateInit()之前，需要先把z_stream数据结构中的三个属性初始化，分别是：zalloc, zfree和opaque。这三个参数是给zlib的应用程序制定内存分配器用的，如果想让zlib使用系统默认的内存分配器，将这三个参数设为无效值即可，比如Z_NULL。
+
+> 当z_stream不再使用的时候，要使用deflateEnd()来释放内部的数据结果。
+
+
+**deflateInit2:**
+
+```C
+z_streamp strm: z_stream 指针；
+
+int level: 压缩等级，必需为 Z_DEFAULT_COMPRESSION 或者 0 ~ 9 的整数，1为最快，9为最大限度压缩，0为不压缩，数字越大越耗时；
+
+int method: 压缩算法，只支持 Z_DEFLATED；
+
+int windowBits: 历史缓冲区最大尺寸，值为 2^windowBits, windowBits 的值为 8~15 时，deflate() 方法生成 zlib 格式的数据，当 windowBits 为 31 时 deflate() 方法生成 gzip 格式。当取值为 -15 ~ -8 时，deflate() 生成纯 deflate 算法压缩数据（不包含 zlib 和 gzip 格式头和尾）
+
+int strategy: 用于调整压缩算法，一般使用 Z_DEFAULT_STRATEGY
+
+ZEXTERN int ZEXPORT deflateInit2 OF((z_streamp strm,
+                                     int  level,
+                                     int  method,
+                                     int  windowBits,
+                                     int  memLevel,
+                                     int  strategy));
+```
+
+以生成 gzip 格式输出为例：
+
+```C
+OSStatus status = deflateInit2(&zStream, Z_DEFAULT_COMPRESSION, Z_DEFLATED, 31, MAX_MEM_LEVEL, Z_DEFAULT_STRATEGY);
+    
+if (status != Z_OK) {
+    return nil;
+}
+```
+
+
+**deflate:**
+
+> deflate()函数是deflate过程中的核心函数，经常需要多次调用，这个函数带两个参数z_stream和flush，使用的时候有以下注意点：
+
+1) 调用deflate()前要初始化z_stream的以下属性：
+    1) `next_in`， 下一个输入字节之所在
+    2) `avail_in`， next_in还有多少字节可以输入
+    3) `next_out`， 能够存储下一个输出字节的起始地址
+    4) `avail_out`， next_out还有多少字节空间可以用来保存输出字节
+2) 应用程序必须确保deflate()可以从`next_in`中读到数据，或者从`next_out`中写入数据，否则会返回`Z_STREAM_ERROR`
+3) 如果deflate()无法读取或者写入数据，会返回`Z_BUF_ERROR`
+4) 正常的情况下，当`deflate()`处理了一些数据后会返回`Z_OK`
+5) 当deflate()读取了所有输入数据，然后这些数据都写入输出了之后，deflate()会返回`Z_STREAM_END`。
+6) 通过flush参数可以控制deflate()的输出过程
+    1) 设为`Z_NO_FLUSH`的话，输出多少数据由deflate()决定
+    2) 设为`Z_FULL_FLUSH`的话，deflate()会把所有的处理好的数据输出，并且重置状态。经常使用
+    3) `Z_FULL_FLUSH`会影响性能。
+    4) 设为`Z_FINISH`的话，告诉deflate()所有输入数据都已经提供，可以结束处理了。deflate()会把剩余的结果输出，然后结束处理过程。之后，只能调用deflateReset来重置内部状态，或者deflateEnd来释放内部状态。
+    5) 其他选项，比如：`Z_SYNC_FLUSH`，`Z_PARTIAL_FLUSH`，`Z_BLOCK`属于高级用法，就不描述了，可以参考文档
+    6) 有一点需要注意，当输出空间不足，也就是`avail_out`为空的时候，再次调用deflate()的时候必须提供更多输出空间，以及保持`flush`标志不变。
+    与`defalte`类似，`inflate`也有对应的：`inflateInit()`，`inflate()`和`inflateEnd()`。
+
+除了deflate和inflate对应的函数接口以外，zlib还提供了一些封装了这些接口的实用函数，比如：compress()和uncompress()。这些函数简化了deflate和inflate函数接口的使用。
+
+
+
