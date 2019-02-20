@@ -182,7 +182,7 @@ if (status != Z_OK) {
 除了`deflate`和`inflate`对应的函数接口以外，`zlib`还提供了一些封装了这些接口的实用函数，比如：`compress()`和`uncompress()`。这些函数简化了`deflate`和`inflate`函数接口的使用。
 
 
-下面是使用ZLIB来压缩成GZIP
+**压缩:**
 ```C
 #define CHUNK 16384  // 16 * 1024
 
@@ -240,7 +240,7 @@ int def(FILE *source, FILE *dest)
 ```
 
 
-下面是使用ZLIB来解压缩成GZIP
+**解压缩:**
 ```C
 int inf(FILE *source, FILE *dest)
 {
@@ -300,5 +300,4 @@ int inf(FILE *source, FILE *dest)
     return ret == Z_STREAM_END ? Z_OK : Z_DATA_ERROR;
 }
 ```
-
 
