@@ -76,7 +76,7 @@ catagories:
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/log_cache_struct.png" height="350" />
 
 **`日志文件`**
-1. 日志文件也拥有日志文件的协议格式。
+1. 日志文件也拥有日志文件的协议格式，日志文件从缓存文件中来，当缓存文件大小到达预设置的值时就会将日志信息存入日志文件。
 2. 需要上传到服务器的日志文件。
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/log_struct.png" height="350" />
 
