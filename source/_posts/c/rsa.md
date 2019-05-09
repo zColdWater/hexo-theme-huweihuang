@@ -13,12 +13,12 @@ catagories:
 
 示例代码Demo: https://github.com/zColdWater/rsa-demo
 
+生成RSA对称密钥对: http://travistidwell.com/blog/2013/09/06/an-online-rsa-public-and-private-key-generator/
+
 > 如何在C中使用mbedtls库进行RSA加密解密。
 
 前言
 =======
-
-> 在C中我们使用 mbedtls 提供给我们的RSA加密方法来进行标准的RSA的加密解密，这里需要说的一点是，mbedtls 方法加密后得到的是一个字节流，需要进行 Base64 编码才会变成大家常见到的加密后的格式。
 
 注意: 
 
