@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-07 00:46:30
 subtitle: "我们真的了解NSObject类型么?"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-d66634f6e076026e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - iOS
 catagories:

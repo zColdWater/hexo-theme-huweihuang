@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-10-29 18:58:30
 subtitle: "Chinatown"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-1b2ac489bf841342.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - English
 catagories:

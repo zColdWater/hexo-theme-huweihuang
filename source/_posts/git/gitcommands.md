@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30
 subtitle: "简单的概念和配置"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-8272181ec2013baa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - Git
 catagories:

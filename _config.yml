@@ -25,11 +25,11 @@ SEOTitle: 朱永鹏 | Blog
 email: 1486297824@qq.com
 description: ""
 keyword: ""
-header-img: https://upload-images.jianshu.io/upload_images/1793544-0a2a35a450e4d593.gif?imageMogr2/auto-orient/strip
-article-img: https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
-404-img: https://upload-images.jianshu.io/upload_images/1793544-47b919dc9696fb2b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+header-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
+article-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
+404-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
 signature: true #show signature
-signature-img: https://upload-images.jianshu.io/upload_images/1793544-47b919dc9696fb2b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 
+signature-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg 
 
 
 # SNS settings
@@ -44,7 +44,7 @@ juejin_userid:      59435c5da0bb9f006b913d54
 # linkedin_username:  yongpeng.zhu
 
 # 微信加好友 二维码图片地址
-wx_personal_qrcode: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/wechat-min.png
+wx_personal_qrcode: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/addMe.jpeg
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
@@ -75,7 +75,7 @@ livere_uid: TAyMC80MDg5Ni8xNzQyMQ==
 # Sidebar settings
 sidebar: true                       # whether or not using Sidebar.
 sidebar-about-description: "侠客行 \n赵客缦胡缨，吴钩霜雪明。\n银鞍照白马，飒沓如流星。\n十步杀一人，千里不留行。\n事了拂衣去，深藏身与名。"
-sidebar-avatar: https://upload-images.jianshu.io/upload_images/1793544-f9689d2f20140b0b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/me.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 - featured-tags
 - short-about
@@ -86,7 +86,7 @@ widgets:
 
 # widget behavior
 ## Archive
-archives-img: https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+archives-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
 archive_type: 'monthly'
 show_count: true
 

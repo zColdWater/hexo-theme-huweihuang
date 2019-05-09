@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-06 00:06:30
 subtitle: "fast-forward non-fast-forward 区别在哪？ 如何使用？"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-318f7bb67d0cb61f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - Git
 catagories:

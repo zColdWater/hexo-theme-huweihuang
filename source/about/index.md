@@ -3,7 +3,7 @@ layout: "about"
 title: "About Me"
 date: 2018-10-26 22:40:33
 description: "You can be anyone that you want to be"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-20594f91db13f6ba.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 aplayer: false
 fixed: false
 ---

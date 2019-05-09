@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-07 23:46:30
 subtitle: "什么是NSInvocation，我们该如何使用它？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/mask.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - iOS
 catagories:

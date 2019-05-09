@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-06 00:06:30
 subtitle: "Fork的用处是什么？"
-header-img: "https://upload-images.jianshu.io/upload_images/1793544-35a59cc66546fe40.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - Git
 catagories:
