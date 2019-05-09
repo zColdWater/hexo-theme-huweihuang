@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-08 16:00:30
 subtitle: "如何使用mbedtls库RSA加密解密。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/knowledge-min.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - C
 catagories:
