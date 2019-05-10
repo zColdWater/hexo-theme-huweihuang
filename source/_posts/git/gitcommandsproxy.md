@@ -13,4 +13,4 @@ catagories:
 
 设置Proxy `git config --global http.proxy 'socks5://127.0.0.1:7070'`
 
-取消Proxy git config --global --unset http.proxy
+取消Proxy `git config --global --unset http.proxy`
