@@ -109,6 +109,10 @@ Step3
    2. `mysql.server status` (查看MySql数据库状态，运行还是关闭等)
    3. `mysql.server start` (启动数据库)
    4. `mysql.server start` (关闭数据库)
+4. 启动MySql遇到 MySQL is running but PID file could not be found 
+   1. ps aux | grep mysql 查看mysql正在运行的进程号
+   2. kill -9 <进程号> 
+   3. `mysql.server status` 查看 显示 ERROR! MySQL is not running 代表已经OK了，可以执行`mysql.server start`运行了。 
 
 总结
 =======
@@ -117,3 +121,6 @@ Step3
 
 
 
+参考:   
+https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.6    
+http://wiki.jikexueyuan.com/project/maven/external-dependencies.html  
