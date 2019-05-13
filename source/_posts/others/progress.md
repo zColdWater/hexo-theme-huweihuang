@@ -11,7 +11,7 @@ catagories:
 - Basic
 ---
 
-查看进程
+一.查看进程
 =======
 Linux中的ps命令是Process Status的缩写。ps命令用来列出系统中当前运行的那些进程。ps命令列出的是当前那些进程的快照，就是执行ps命令的那个时刻的那些进程，如果想要动态的显示进程信息，就可以使用top命令。
 
@@ -168,9 +168,66 @@ root        56  0.0  0.0      0     0 ?        S<   Nov02   0:00 [kacpid]
 ```
 
 
-Kill进程
+二.Kill进程
 =======
+在 Windows 中如果有程式執行到一半當掉或沒有回應，可以使用 Ctrl + Alt + Delete 開啟工作管理員，砍掉當掉的程式，而在 Linux 中如果程式當掉，也有類似的方式可以直接砍掉指定行程（process）。
 
+## 使用 kill 指令 
+在 Linux 若要中止程式的執行，最常見的方式就是使用 kill 指令，此指令可以將指定的行程（process）強迫中止，其使用方式如下：
+```
+kill PID
+```
+其中 PID 就是要中止的行程 ID（Process ID），這個 PID 可以從 ps 指令的輸出中得到。
+
+而有時候程式當掉時，這樣的方式如果沒辦法停止程式的執行，可以試試看以不同的訊號（signal）試試看：
+
+```
+kill -9 PID
+```
+
+這樣會強迫程式馬上中止。kill 指令常用的訊號有幾個：
+
+* -2：這個訊號與鍵盤輸入 Ctrl + C 是同樣的動作，也是通知程式停止執行。
+* -9：立刻強制停止程式執行。
+* -15：以正常的程序通知程式停止執行，這是預設的訊號。
+* -l：列出所有可用的訊號。
+
+以下是一些 kill 指令的使用範例：
+
+將行程 ID 為 12932 的程式終止：
+
+```
+kill 12932
+```
+
+強制中止行程 ID 為 12932 的程式：
+
+```
+kill -9 12932
+```
+
+
+## 使用 killall 指令
+大家應該會發現基本的 kill 指令有些缺點，每次要中止某個程式時，都要用 ps 指令先查詢該程式的行程 ID（Process ID），才能再用 kill 指令中止程式，有點麻煩，這種狀況就可以改用 killall 指令，這個指令個功能與 kill 指令幾乎相同，但是他是直接使用程式的名稱來指定要中止的程式，這樣只要知道程式名稱即可直接使用。
+
+
+killall 指令常用的參數有：
+
+* -e, --exact：在程式名稱完全比對成功時，才中止程式。如果程式的名稱超過 15 個字元，其餘的字元在系統中會被捨去，這時候在預設的狀況下，killall 會把所有符合前 15 個字元的程式都中止掉，如果加上 -e 參數的話，killall 指令就會跳過這種名稱過長的程式。
+* -I, --ignore-case：在比對程式名稱時，英文大小寫視為相同（ignore case）。
+* -i, --interactive：在中止程式之前，先以互動式的方式詢問。
+* -l, --list：列出所有的訊號（signal）名稱。
+* -r, --regexp：使用常規表示法（regular expression）指定程式名稱。
+* -s, --signal：指定送出的訊號（signal）。
+* -u, --user：只中止指定使用者所執行的程式。
+* -o, --older-than：指定程式的開始執行時間點，必須在此時間點之前。
+* -y, --younger-than：指定程式的開始執行時間點，必須在此時間點之後。
+
+以下是一些 kill 指令的使用範例：
+中止執行 xclock 這個程式：
+```
+killall xclock
+```
 
 总结
 =======
@@ -180,4 +237,4 @@ Kill进程
 参考:  
 https://blog.gtwang.org/linux/linux-kill-killall-xkill/  
 https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/ps.html   
-
+http://linux.vbird.org/linux_basic/0440processcontrol.php#kill
