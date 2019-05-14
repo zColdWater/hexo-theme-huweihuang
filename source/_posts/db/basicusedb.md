@@ -44,9 +44,10 @@ catagories:
 2. `SELECT <表单里面的属性名字1>,<表单里面的属性名字2> FROM <表单名字> ORDER BY <表单里面的属性名字1>;` 对表单属性1进行排序，属性2不进行排序。（(默认升序)）
 3. `SELECT <表单里面的属性名字1>,<表单里面的属性名字2> FROM <表单名字> ORDER BY <表单里面的属性名字1> DESC;` 对表单属性1进行排序，属性2不进行排序。 参数DESC降序排序 从Z->A
 4. `SELECT <表单里面的属性名字1>,<表单里面的属性名字2>,<表单里面的属性名字3> FROM <表单名字> ORDER BY <表单里面的属性名字1> DESC, <表单里面的属性名字2>;` 对属性1进行倒序，属性2进行正序。
-5. `SELECT <表单里面的属性名字1> FROM <表单名字> ORDER BY <表单里面的属性名字1> DESC LIMIT 1` 使用ORDER和LIMIT的组合进行检索
+5. `SELECT <表单里面的属性名字1> FROM <表单名字> ORDER BY <表单里面的属性名字1> DESC LIMIT 1` 使用ORDER和LIMIT的组合进行检索 (`如果使用LIMIT它必须位于ORDER BY之后`)
 
-
+### SELECT 过滤数据
+等待更新
 
 
 
