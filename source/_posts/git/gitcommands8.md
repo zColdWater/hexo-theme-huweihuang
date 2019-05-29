@@ -24,6 +24,18 @@ Cherry Pick
 官方文档: https://git-scm.com/docs/git-cherry-pick 
 
 下面是怎么用?
+
+合并branch的最新commit节点/合并指定commit节点  
+`git cherry-pick <branch_name>`  
+`git cherry-pick <commit_id>`
+
+合并一个范围，开始节点 结束节点  左开右闭 区间
+`git cherry-pick <start_commit_id>..<end_commit_id>`
+
+合并一个范围，开始节点 结束节点  左闭右闭 区间  
+`git cherry-pick <start_commit_id>^..<end_commit_id>`
+
+
 ```git
 单独合并一个提交 如果是分支名字，则合并那个分支的最新的节点
 当你`cherry pick`上次合完的节点，因为没有不同的内容 需要执行 `git commit --allow-empty` 或者 执行 `git status` 根据提示操作
