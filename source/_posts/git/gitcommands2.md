@@ -42,5 +42,15 @@ non-fast-forward
 
 我认为这种方式的应用场景是开发一个相对于原分支，这里用`master` 独立的功能，换句话说就是类似不要耦合这种，它是单独的可拆卸的。这样用一个新增的`commit`来记录，比如卸载这个功能也会相对简单。
 
+
+注意
+=======
+1. 例如 `branch A` 是从 `Master` 抽离出来的分支，它领先于 `Master` 两个节点， `Master` 没有任何更新，这个时候，你合并 `branch A` 到 `Master` 默认 fast-forward 是不会产生新的节点的，`Master`会增加两个节点，就是 `branch A` 的两个节点。
+
+2.  例如 `branch A` 是从 `Master` 抽离出来的分支，它领先于 `Master` 两个节点， 如何 `Master` 也有更新，这个时候，你合并 `branch A` 到 `Master` 默认虽然是 fast-forward 但是还是会产生新的节点，`Master`会增加三个节点，2个节点是 `branch A` 新增的， 1个节点是 Merge的信息节点。
+
+`不是所有的 fast-forward 都不会产生新的节点，如果被合并的分支和等待被合并的分支都有节点更新，不论是否是 fast-forward 都会产生新的 Merge 节点`
+
+
 Reference：  
 lemonup：http://lemonup.logdown.com/posts/166352-git-merge-fast-forward-differenc 
