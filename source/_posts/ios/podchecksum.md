@@ -112,4 +112,14 @@ catagories:
 上面我对`Podfile.lock`文件每个字段都介绍了一下，其实它最主要的功能就是告诉你，你当前的app使用的三方库的版本，来源，和他们生成的hash值，用在多人协作中，来确定版本是否被更改等等。 因为这份文件才是 你真正在app当中的三方库版本，而不是Podfile文件里面写的。 `Podfile`更像是一个版本约束，而Podfile.lock才是你真正使用的版本。 如果让你去确定你app使用某一个三方库的版本，你不应该找Podfile，而是应该找Podfile.lock文件。 即使你Podfile使用的定死版本的方式。 
 
 
+补充
+=======
+1. 本地源版本管理地址: **例如:`/Users/yongpeng.zhu/.cocoapods/repos/`**
+   1. 存放着各个源的版本，对应的`Podspec`文件
+2. 本地源缓存地址: **例如:`/Users/yongpeng.zhu/Library/Caches/CocoaPods/Pods`**
+   1. External文件夹: 存放外部源的代码，例如，你引用的Pod模块是直接用 Commit/Tag 去引用的，它并没有上传到源上，`pod 'ABCKit', :git => 'git@git.nevint.com:ios-libs/ABCKit.git', :commit => '76a7c550c98030e606477f4506d1060846253b3b'` 或者 `pod 'libwebp', :git => 'git@git.nevint.com:ios-libs/libwebp.git', :tag => 'v0.6.0'`像这种引用方式 其实这个Pod并没有上传到源上，而是直接从git上拉的，所以算作外部源上面，你可以参考上面`Podfile.lock`文件里面的`External`字段就知道了。
+   2. Release文件夹: 上传到源上面版本的Pod源代码
+   3. Specs文件夹: 存放这些`外部的`或者`发布在源伤的` 的`Podspec`文件的`JSON`文件，这个JSON文件其实就是把Podspec文件解析然后组成的。
+   4. VERSION文件:存放着当前的cocoapods版本
 
+上面两个地址，第一个是记录 发布到源上面的版本，和Podspec文件，第二个是记录 缓存，内容包括 源代码 和 Podspec 配置文件 和 Cocoapods版本。
