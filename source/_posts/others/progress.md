@@ -137,7 +137,7 @@ root        56    49  0 Nov02 ?        00:00:00 [kacpid]
 ```
 ### 实例4： ps 与grep 组合使用，查找特定进程[](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/ps.html#ps-grep "永久链接至标题")
 ```
-[root@localhost test6]# ps -ef|grep ssh
+[root@localhost test6]# ps -ef | grep ssh
 root      2720     1  0 Nov02 ?        00:00:00 /usr/sbin/sshd
 root     17394  2720  0 14:58 ?        00:00:00 sshd: root@pts/0
 root     17465 17398  0 15:57 pts/0    00:00:00 grep ssh
@@ -232,6 +232,10 @@ killall xclock
 总结
 =======
 文章内容基本全部来自参考，这里作为记录和分享。
+
+补充
+=======
+1. 例如: 关闭Java服务器 先`ps -ef | grep java`, 然后查看PID通过 `sudo kill -9 <pid>` 即可。
 
 
 参考:  
