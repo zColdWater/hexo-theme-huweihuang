@@ -1,0 +1,49 @@
+# 指定环境语言
+language: node_js
+# 指定sudo权限
+sudo: required
+# 指定node版本
+node_js: stable
+# 指定缓存模块，缓存可以加速编译
+cache:
+  directories:
+    - node_modules
+
+# 邮件通知，这里配置不管成功或是失败都通知
+notifications:
+  email:
+    recipients:
+      - yongpeng.zhu@nio.com
+    on_success: always # default: change
+    on_failure: always # default: always
+
+# 构建的分支
+branches:
+  only:
+    - master 
+
+# 调整时区 安装hexo
+before_install:
+  - export TZ='Asia/Shanghai'
+  - npm install -g hexo-cli  
+
+# 安装环境
+install:
+  - npm install
+  - npm install hexo-deployer-git --save
+
+# 执行清缓存，生成网页操作
+script:
+  - hexo clean
+
+# 生成文件后，进入静态文件目录，部署到指定仓库，需要填写用户名，邮件
+after_script:
+  - git config user.name "yongpeng.zhu"
+  - git config user.email "1486297824@qq.com"
+  - sed -i "s/gh_password/${GH_PASSWORD}/g" ./_config.yml
+  - hexo generate --deploy
+# 环境变量
+env:
+ global:
+   # Github Pages 
+   - GH_REF: github.com/zColdWater/springlearning.git
