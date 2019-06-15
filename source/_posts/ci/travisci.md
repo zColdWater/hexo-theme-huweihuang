@@ -16,6 +16,8 @@ catagories:
 
 作为代码写的不咋地，倒是喜欢写博客记东西的我，肯定不会放过把刚学到的东西记录下来，希望能对有同样问题的同学有所帮助。
 
+`提前准备: 先在本地搭建一次GitBook项目，再往下看文章，因为文章并没有讲如何构建GitBook项目。`
+
 ### **`Travis CI:`** 
 
     Travis CI是一个托管的 持续集成服务，用于构建和测试在GitHub上托管的软件项目。
@@ -133,3 +135,13 @@ catagories:
         ```
     然后提交这些内容到你的仓库里面，当你执行完 `git push` ，`Travis`里面默认设置监听的 `Master` 分支，如果你推了代码到服务端，你再去 `Travis` 后台看下状态。
     <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/travis_running.png" height="350" />
+
+8. 查看结果:
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/travis_gitbook_result.png" height="350" />
+
+
+结论
+=======
+搞了小半天，终于搞好了，现在我们只需要编辑GitBook的内容库的内容再上传到服务器就可以了，然后Travis会触法脚本，将GitBook Build成静态文件，然后部署在另一个我们GitHub的仓库。
+
+这里没有将如何构建GitBook的项目，这里需要大家先自行在本地构建一下GitBook再来看文章会更好。
