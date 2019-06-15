@@ -133,6 +133,11 @@ catagories:
          * [前端规范](./frontend/README.md)
          * [js规范](./frontend/jsStandard.md)
         ```
+    ```git
+    git add .
+    git commit -m"init"
+    git push origin master:master
+    ```
     然后提交这些内容到你的仓库里面，当你执行完 `git push` ，`Travis`里面默认设置监听的 `Master` 分支，如果你推了代码到服务端，你再去 `Travis` 后台看下状态。
     <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/travis_running.png" height="350" />
 
