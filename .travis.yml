@@ -34,7 +34,6 @@ install:
 
 # 执行清缓存，生成网页操作
 script:
-  - hexo clean
 
 # 生成文件后，进入静态文件目录，部署到指定仓库，需要填写用户名，邮件
 after_script:
