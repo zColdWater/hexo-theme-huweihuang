@@ -224,6 +224,5 @@ sitemap:
 
 deploy:
   type: git
-  repo: git@github.com:zColdWater/blog.git
   repo: https://zColdWater:gh_password@github.com:zColdWater/blog.git
   branch: master
