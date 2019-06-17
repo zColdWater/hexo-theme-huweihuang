@@ -290,5 +290,17 @@ catagories:
     $ git stash
     $ git stash pop
 
+十、查看/删除/添加 Git源
+=======
+
+    # 查看当前仓库的源
+    git remote -v
+
+    # 删除名字叫origin的源
+    git remote rm origin
+
+    # 添加名字叫origin的源 源地址 是后面参数
+    git remote add origin git@github.com:zColdWater/ios-daichao.git
+
 Reference：  
 ruanyifeng：http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html 
