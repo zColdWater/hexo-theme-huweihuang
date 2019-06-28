@@ -2,7 +2,7 @@
 title: "[Nginx] Nginx常用命令"
 catalog: true
 toc_nav_num: true
-date: 2018-06-28 19:00:30
+date: 2019-06-28 19:00:30
 subtitle: "使用Nginx的常用命令"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/girl-min.png"
 tags:
@@ -25,8 +25,14 @@ catagories:
 
 常用小命令:
 =======
-1. 查看Linux版本: `uname -a`
-2. 
+1. 查看Linux版本: `uname -a` 
+    ```
+    例如MacOS上: Darwin MBC02RK2FQG8WP.local 18.6.0 Darwin Kernel Version 18.6.0: Thu Apr 25 23:16:27 PDT 2019; root:xnu-4903.261.4~2/RELEASE_X86_64 x86_64
+    ```
+2. 安装GCC编译器 `yum install -y gcc` 因为Nginx是C代码编写的
+3. 安装G++编译器 `yum install -y gcc-c++` 安装C++可以编写 Nginx HTTP模块
+4. 安装PCRE库 正则表达式 `yum install -y pcre pcre-devel` 如果在nigin.conf的文件内使用了正则表达式，那么需要引入这个PCRE库才可以使用正则。 pcre-devel 是二次开发所需要的库。
+5. 
 
 
 
