@@ -44,6 +44,32 @@ ZSH中读取环境变量
 2. 设置PATH **中间用冒号隔开** `export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>:------:<PATH N>`
 
 
+简单Demo
+=======
+> 我有个需求，就是执行一个shell将我当前的改动 全部上传到 master，并且 message 是 "update"，要么我每次都需做一遍 `git add .` `git commit -m"update"` `git push origin -u master`，那么有没有可能，我输入一行命令，用脚本帮我去跑剩下的命令呢。
+
+第一步: 编写shell脚本 名字叫做 auto_push.sh
+ ```
+    #!/bin/bash
+    echo "==Start=="
+    cd /Users/yongpeng.zhu/Desktop/Blog/myblog
+    git add .
+    git commit -m"update"
+    git push origin master
+    echo "==End=="
+ ```
+
+第二步: 添加到本地环境变量里 vi ~/.bash_profile 在这个文件
+```
+    // 备注: /Users/yongpeng.zhu/Desktop/Blog/myblog 是 auto_push.sh 的根目录
+    export PATH="$PATH:/Users/yongpeng.zhu/Desktop/Blog/myblog"
+```
+
+第三步: 使.bash_profile文件立即生效 执行 `source ~/.bash_profile`
+
+第四步: 在任意目录下执行 `auto_push.sh` 看看效果.
+
+
 遇到的问题
 =======
 
