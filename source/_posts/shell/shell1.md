@@ -58,17 +58,19 @@ ZSH中读取环境变量
     git push origin master
     echo "==End=="
  ```
+ <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/shell1.png" height="350" />
 
 第二步: 添加到本地环境变量里 vi ~/.bash_profile 在这个文件
 ```
     // 备注: /Users/yongpeng.zhu/Desktop/Blog/myblog 是 auto_push.sh 的根目录
     export PATH="$PATH:/Users/yongpeng.zhu/Desktop/Blog/myblog"
 ```
+ <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/shell2.png" height="350" />
 
 第三步: 使.bash_profile文件立即生效 执行 `source ~/.bash_profile`
 
 第四步: 在任意目录下执行 `auto_push.sh` 看看效果.
-
+ <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/shell3.jpeg" height="350" />
 
 遇到的问题
 =======
@@ -79,10 +81,15 @@ ZSH中读取环境变量
     Password:
     sudo: /Users/yongpeng.zhu/Desktop/Blog/myblog/auto_push.sh: command not found
     ```
-    解决办法: ` chmod +x /Users/yongpeng.zhu/Desktop/Blog/myblog/auto_push.sh` 授予权限，再执行shell脚本即可。
+    解决办法: ` chmod +x /Users/yongpeng.zhu/Desktop/Blog/myblog/auto_push.sh` 授予权限，再执行 `/Users/yongpeng.zhu/Desktop/Blog/myblog/auto_push.sh` shell脚本即可。
   
 2. 这个问题的源头是这样的，我的终端是 iTerm2，安装了 zsh 和 oh-my-zsh，自此，我打开命令行的时候不在执行 ~/.bash_profile，如果要想让这个文件有效，那么修改 zsh 的配置文件： 编辑 ~/.zshrc，在文件里加入一行： `source ~/.bash_profile`
 
+总结
+=======
+写这篇文章的初衷: 
 
+第一: 记录这一切，分享给其他人，并且以后自己也可以快速找到之前的笔记。
 
+第二: 作为一名写程序的工作的人员，尽量用自己的聪明才智，减少重复的工作，节省劳动力。
 
