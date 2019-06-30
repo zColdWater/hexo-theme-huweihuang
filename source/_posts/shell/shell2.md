@@ -145,7 +145,8 @@ echo `expr index "$string" io`  # 输出 4
 
 ### **定义数组**
 ```java
-array_name=(value0 value1 value2 value3)
+1.array_name=(value0 value1 value2 value3)
+2.my_array=(A B "C" D)
 
 或者
 
@@ -167,7 +168,8 @@ array_name[n]=valuen
 ### **读取数组**
 
 ```java
-valuen=${array_name[n]}
+1.valuen=${array_name[n]}
+2.${array_name[index]}
 
 或者
 
@@ -199,9 +201,108 @@ $$	 | 脚本运行的当前进程ID号
 $!	 | 后台运行的最后一个进程的ID号
 $@	 | 与$*相同，但是使用时加引号，并在引号中返回每个参数。如"$@"用「"」括起来的情况、以"$1" "$2" … "$n" 的形式输出所有参数。
 $-	 | 显示Shell使用的当前选项，与set命令功能相同。
-$?	 | 显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
+$?	 | 显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。  
 
 
+### **实例**
+> 获取传入的参数
+```java
+// Shell脚本
+#!/bin/bash
+echo "Shell 传递参数实例！";
+echo "执行的文件名：$0";
+echo "第一个参数为：$1";
+echo "第二个参数为：$2";
+echo "第三个参数为：$3";
+```
 
+```java
+// 执行以下命令
+$ chmod +x test.sh 
+$ ./test.sh 1 2 3
+Shell 传递参数实例！
+执行的文件名：./test.sh
+第一个参数为：1
+第二个参数为：2
+第三个参数为：3
+```
 
+基本运算符
+=======
+
+> 普及 Linux expr 命令 
+
+ 1、**`计算字串长度`**  
+ expr length “this is a test”  
+ 2、**`抓取字串`**  
+ expr substr “this is a test” 3 5  
+ 3、**`抓取第一个字符数字串出现的位置`**  
+ expr index "sarasara"  a  
+ 4、**`整数运算`**  
+
+    > expr 14 % 9
+    5
+    > expr 10 + 10
+    20
+    > expr 1000 + 900
+    1900
+    > expr 30 / 3 / 2
+    5
+    > expr 30 \* 3 (使用乘号时，必须用反斜线屏蔽其特定含义。因为shell可能会误解显示星号的意义)
+    90
+    > expr 30 * 3
+    expr: Syntax error  
+
+### **算术运算符**
+
+运算符	| 说明 | 举例 
+--- | --- | ---
++	 | 加法 | `expr $a + $b` 结果为 30。
+-	 | 减法 | `expr $a - $b` 结果为 -10。
+*	 | 乘法 | `expr $a \* $b` 结果为  200。
+/	 | 除法 | `expr $b / $a` 结果为 2。
+%	 | 取余	| `expr $b % $a` 结果为 0。
+=	 | 赋值	| a=$b 将把变量 b 的值赋给 a。
+==	 | 相等。用于比较两个数字，相同则返回 true | [ $a == $b ] 返回 false。
+!=	 | 不相等。用于比较两个数字，不相同则返回 true | [ $a != $b ] 返回 true。
+
+例子: 
+```java
+#!/bin/bash
+
+a=10
+b=20
+
+val=`expr $a + $b`
+echo "a + b : $val"
+
+val=`expr $a - $b`
+echo "a - b : $val"
+
+val=`expr $a \* $b`
+echo "a * b : $val"
+
+val=`expr $b / $a`
+echo "b / a : $val"
+
+val=`expr $b % $a`
+echo "b % a : $val"
+
+if [ $a == $b ]
+then
+   echo "a 等于 b"
+fi
+if [ $a != $b ]
+then
+   echo "a 不等于 b"
+fi
+
+//输出
+a + b : 30
+a - b : -10
+a * b : 200
+b / a : 2
+b % a : 0
+a 不等于 b
+```
 
