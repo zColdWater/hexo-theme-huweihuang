@@ -532,4 +532,159 @@ Hello, Shell
 echo `date`
 ```
 
+8.流程控制
+=======
+
+### **if else**
+```
+例子一:
+if condition
+then
+    command1 
+    command2
+    ...
+    commandN
+else
+    command
+fi
+
+例子二:
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+
+例子三:
+a=10
+b=20
+if [ $a == $b ]
+then
+   echo "a 等于 b"
+elif [ $a -gt $b ]
+then
+   echo "a 大于 b"
+elif [ $a -lt $b ]
+then
+   echo "a 小于 b"
+else
+   echo "没有符合的条件"
+fi
+```
+
+### **for 循环**
+
+```java
+例子1:
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+
+```
+
+
+### **while 语句**
+
+```
+例子一:
+#!/bin/bash
+int=1
+while(( $int<=5 ))
+do
+    echo $int
+    let "int++"
+done
+
+例子二: 无限循环
+while true
+do
+    command
+done
+
+或者
+
+```
+
+
+### **Case 语句**
+
+```java
+echo '输入 1 到 4 之间的数字:'
+echo '你输入的数字为:'
+read aNum
+case $aNum in
+    1)  echo '你选择了 1'
+    ;;
+    2)  echo '你选择了 2'
+    ;;
+    3)  echo '你选择了 3'
+    ;;
+    4)  echo '你选择了 4'
+    ;;
+    *)  echo '你没有输入 1 到 4 之间的数字'
+    ;;
+esac
+
+//输出
+输入 1 到 4 之间的数字:
+你输入的数字为:
+3
+你选择了 3
+```
+
+### **跳出循环**
+1. break
+2. continue
+
+
+9.函数
+=======
+
+### **函数参数**
+```java
+#!/bin/bash
+
+funWithParam(){
+    echo "第一个参数为 $1 !"
+    echo "第二个参数为 $2 !"
+    echo "第十个参数为 $10 !"
+    echo "第十个参数为 ${10} !"
+    echo "第十一个参数为 ${11} !"
+    echo "参数总数有 $# 个!"
+    echo "作为一个字符串输出所有参数 $* !"
+}
+funWithParam 1 2 3 4 5 6 7 8 9 34 73
+
+// 输出
+第一个参数为 1 !
+第二个参数为 2 !
+第十个参数为 10 !
+第十个参数为 34 !
+第十一个参数为 73 !
+参数总数有 11 个!
+作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
+```
+
+注意，$10 不能获取第十个参数，获取第十个参数需要${10}。当n>=10时，需要使用${n}来获取参数。
+另外，还有几个特殊字符用来处理参数
+
+参数处理 | 说明 
+--- | --- 
+$#	 | 传递到脚本的参数个数
+$*	 | 以一个单字符串显示所有向脚本传递的参数 
+$$	 | 脚本运行的当前进程ID号
+$!	 | 后台运行的最后一个进程的ID号 
+$@	 | 与$*相同，但是使用时加引号，并在引号中返回每个参数 
+$-	 | 显示Shell使用的当前选项，与set命令功能相同。 
+$?	 | 显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
+ 
+
 
