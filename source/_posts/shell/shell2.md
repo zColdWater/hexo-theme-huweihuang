@@ -36,7 +36,7 @@ catagories:
 =======
 > 使用一个定义过的变量，只要在变量名前面加美元符号即可，如：
 
-## **赋值**
+### **赋值**
 ```java
 例子一: 
 your_name="qinjx"
@@ -55,7 +55,7 @@ your_name="alibaba" // 赋值again
 echo $your_name
 ```
 
-## **只读变量**
+### **只读变量**
 ```java
 #!/bin/bash
 myUrl="http://www.google.com"
@@ -65,7 +65,7 @@ myUrl="http://www.runoob.com"
 执行结果: /bin/sh: NAME: This variable is read only.
 ```
 
-## **删除变量**
+### **删除变量**
 ```java
 unset variable_name
 ```
@@ -79,7 +79,7 @@ echo $myUrl
 以上实例执行将没有任何输出。
 ```
 
-## **变量类型**
+### **变量类型**
 1. **局部变量** 局部变量在脚本或命令中定义，仅在当前shell实例中有效，其他shell启动的程序不能访问局部变量。
 2. **环境变量** 所有的程序，包括shell启动的程序，都能访问环境变量，有些程序需要环境变量来保证其正常运行。必要的时候shell脚本也可以定义环境变量。
 3. **shell变量** shell变量是由shell程序设置的特殊变量。shell变量中有一部分是环境变量，有一部分是局部变量，这些变量保证了shell的正常运行
@@ -89,12 +89,12 @@ echo $myUrl
 字符串
 =======
 
-## **单引号**
+### **单引号**
 ```java
 str='this is a string'
 ```
 
-## **双引号**
+### **双引号**
 ```java
 your_name='runoob'
 str="Hello, I know you are \"$your_name\"! \n"
@@ -103,7 +103,7 @@ echo -e $str
 // 输出结果 Hello, I know you are "runoob"! 
 ```
 
-## **拼接字符串**
+### **拼接字符串**
 ```java
 your_name="runoob"
 # 使用双引号拼接
@@ -120,19 +120,19 @@ echo $greeting_2  $greeting_3
 // hello, runoob ! hello, ${your_name} !
 ```
 
-## **获取字符串长度**
+### **获取字符串长度**
 ```java
 string="abcd"
 echo ${#string} #输出 4
 ```
 
-## **提取子字符串**
+### **提取子字符串**
 ```java
 string="runoob is a great site"
 echo ${string:1:4} # 输出 unoo
 ```
 
-## **查找子字符串**
+### **查找子字符串**
 ```java
 string="runoob is a great site"
 echo `expr index "$string" io`  # 输出 4
@@ -143,7 +143,7 @@ echo `expr index "$string" io`  # 输出 4
 数组
 =======
 
-## **定义数组**
+### **定义数组**
 ```java
 array_name=(value0 value1 value2 value3)
 
@@ -164,7 +164,7 @@ array_name[n]=valuen
 
 ```
 
-## **读取数组**
+### **读取数组**
 
 ```java
 valuen=${array_name[n]}
@@ -174,7 +174,7 @@ valuen=${array_name[n]}
 echo ${array_name[@]} // 使用 @ 符号可以获取数组中的所有元素，例如：
 ```
 
-## **获取数组的长度**
+### **获取数组的长度**
 ```java
 # 取得数组元素的个数
 length=${#array_name[@]}
@@ -184,6 +184,10 @@ length=${#array_name[*]}
 lengthn=${#array_name[n]}
 ```
 
+
+
+传递参数
+=======
 
 
 
