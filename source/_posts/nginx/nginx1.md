@@ -137,8 +137,11 @@ Nginx配置文件:
     }
    ```
 5. 需要修改nginx.conf里的user，比如user root;
-
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/Nginx1.png" height="350" />
 
 总结:
 =======
 文章大部分内容都是参考其他文章和书本，仅作为记录。如有错误请留言指正。 
+
+下面附上一个自己的小项目的Nginx配置仅作记录:  
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/Nginx2.png" height="350" />
