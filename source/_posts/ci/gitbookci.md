@@ -22,18 +22,22 @@ catagories:
 分析需求
 =======
 
-1. 搭建gitbook 
+1. 搭建`gitbook`
 2. 多人编辑后提交并且 push 代码到远端，自动触发构建部署任务。
 3. 其他组小伙伴提MR，也要自动触发构建部署任务。 
 
 解决需求
 =======
 
-1. 
+1. 搭建`gitbook`到本地服务器，我想这是最简单的了。 
+   1. npm install gitbook-cli -g
+   2. gitbook init
+   3. gitbook build  # 执行这个命令后 会生成 _book目录，进入_book目录 然后打开index.html文件，就是我们文档。 
+
+2. 当 git `Push` `MergeRequest` 的时候触发自动构建。 这里就用到了 `Webhook`工具，一句话 `Webhook`工具就是 hook 各种git操作的工具，比如 hook 住`git push`的操作，然后回调给你服务器的API。 举个例子，A同学操作仓库1 ->push 仓库1-> gitlab hook -> 调用你填入的API -> 你的Server接到了调用，知道是仓库有push的操作了，然后执行一些事情。 **备注: webhook的工具，gitlab，github 都有集成，所以如果您在这两个上面维护代码，配置下就可以使用了。** 
+   
 
 
 结论
 =======
-搞了小半天，终于搞好了，现在我们只需要编辑GitBook的内容库的内容再上传到服务器就可以了，然后Travis会触法脚本，将GitBook Build成静态文件，然后部署在另一个我们GitHub的仓库。
 
-这里没有将如何构建GitBook的项目，这里需要大家先自行在本地构建一下GitBook再来看文章会更好。
