@@ -48,8 +48,8 @@ catagories:
 
         Node服务项目的 app.js 文件，我的这个项目中需要使用两个JS库，一个是用来接收 Git Hook 之后发来的请求的，一个是用来记录日志的。
 
-        1. `npm install log4js`   #日志
-        2. `npm install node-gitlab-webhook --save` #webhook-gitlab
+        1. `npm install log4js`   #日志 https://github.com/log4js-node/log4js-node
+        2. `npm install node-gitlab-webhook --save` #webhook-gitlab https://github.com/excaliburhan/node-gitlab-webhook
 
         ```js
         #### app.js 文件内容 ####
@@ -139,3 +139,4 @@ catagories:
 结论
 =======
 经过我们的努力，终于达到我们的需求了，现在小伙伴们，只需要提交代码，就可以自动触发 `build`，然后过一会刷新下 服务器上的静态`gitbook`博客就被刷新了，是不是很省力气呢。
+
