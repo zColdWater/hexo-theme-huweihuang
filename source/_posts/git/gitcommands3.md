@@ -24,6 +24,12 @@ catagories:
     # 下载一个项目和它的整个代码历史
     $ git clone [url]
 
+    # 下载一个项目 到指定的文件夹
+    $ git clone [url] [your_special_documents_path]
+
+    # 下载一个项目 Https URL 通过 账户密码
+    $ git clone https://username:password@git.oschina.net/wdm/familycloud.git
+
 二、配置
 =======
 
