@@ -13,6 +13,8 @@ catagories:
 
 > 当前环境: Xcode10.0 Swift4.2 iOS SDK 12.1
 
+Demo: https://github.com/zColdWater/BackgroundLogDemo  (包含背后线程持续输出当前时间)
+
 前言
 =======
 
