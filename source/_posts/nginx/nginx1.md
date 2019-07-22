@@ -75,6 +75,7 @@ Nginx常用命令:
 5. 查看进程 `ps -ef | grep nginx`
 6. 查看错误日志 `tail -n30 /var/log/nginx/error.log`
 7. 查看nginx.conf配置文件位置 `nginx -t`
+8. `service nginx status` 查看状态
 
 Nginx配置文件:
 =======
