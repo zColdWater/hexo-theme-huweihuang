@@ -1,14 +1,14 @@
 ---
-title: "[CI] 使用Travis持续部署GitBook"
+title: "[CI/CD] 使用Travis持续部署GitBook"
 catalog: true
 toc_nav_num: true
 date: 2019-06-15 13:00:30
 subtitle: "如何使用Travis持续部署GitBook"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
-- CI
+- CI/CD
 catagories:
-- CI
+- CI/CD
 ---
 
 前言

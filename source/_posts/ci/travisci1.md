@@ -1,14 +1,14 @@
 ---
-title: "[CI] 使用Travis持续部署Hexo项目"
+title: "[CI/CD] 使用Travis持续部署Hexo项目"
 catalog: true
 toc_nav_num: true
 date: 2019-06-15 16:30:30
 subtitle: "如何使用Travis持续部署Hexo的项目"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
-- CI
+- CI/CD
 catagories:
-- CI
+- CI/CD
 ---
 
 前言
