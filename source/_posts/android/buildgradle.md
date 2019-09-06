@@ -7,7 +7,7 @@ subtitle: "了解Gradle基本字段意思"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/knowledge-min.png"
 tags:
 - Android
-catagories:
+catagories:****
 - Android
 ---
 
@@ -20,6 +20,7 @@ catagories:
 # 了解Gradle
 
 ## 1. As生成有关的Gradle的几个文件
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle1.png" height="350" />
 如上图, 标准的 As 项目中, 包含三大部分:
 
 * Top-level Gradle:用于配置所有的 Module 属性
@@ -27,7 +28,7 @@ catagories:
 * Gradle Wrapper: 用于统一编译环境, 一般供 CI 使用
 
 ### Top-level Build Script
-
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle2.png" height="350" />
 有几个概念, 都来自于 [Gradle Reference](https://docs.gradle.org/current/dsl/):
 
 gradle script 都是 configuration scripts. 这话的意思是说, 运行起来后, 每个脚本文件最终都会对应到一个程序中的对象, 这个对象叫做 delegate object. 比如, build.gradle 对应为程序中的 Project. 整个 Gradle 有三种类型的代理对象
@@ -106,7 +107,7 @@ task clean(type: Delete) {
 
 
 ## Module-level Build Script
-
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle3.png" height="350" />
 模块级 script 用于描述该模块的编译过程. 一般而言, Android 能用到的一共有三种:
 
 * Application: 对应 com.android.application. 编译的结果是一个 apk
@@ -264,7 +265,92 @@ repositories {
 ```
 
 #### Build Variant
-
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle4.png" height="350" />
 简单的说, 就是为了不同的渠道或者版本自动生成相应的 apk. 其算法是 `buildType` * `productFlavor` * `density` * `abi` 做一个笛卡尔积.
 
+## 2. As里的Gradle
+
+
+### 1.自动下载
+
+每一次重新导入工程时, 因为默认会使用 `Use default gradle wrapper (recommended)` 设置, 所以 As 会下载 `gradle-wrapper.properties` 中 `distributionUrl` 所指定的 gradle 版本. 这个过程在国内普遍巨慢无比. 我的建议是找到上述文件, 动手修改 distributionUrl 为已下载过的 gradle 版本(比如你之前已经下载过 gradle-2.14.1 了), 这样就能直接打开了.
+
+实际上, 这个配置项位于 As 自动生成的配置文件(`.idea/gradle.xml`), 我们来看看:
+
+对于新建 (‘File -> New -> New Project’)的项目,  As 是这样给我们生成的:
+
+它在设置中的表现是这样的:
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle5.png" height="350" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle6.png" height="350" />
+可见, As 帮我限定了 gradle 版本. 当然, 如果这个指定的 gradle 版本不存在的话, 一样会去下载.
+
+再来看看被 ‘File -> Open’ (注意, 不是 Reopen) 打开的项目:
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle7.png" height="350" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/gradle8.png" height="350" />
+
+也就是说, 每次你 Open 一个项目的时候, As 会忽略你之前设置的 gradle 版本, 而使用 wrapper 文件中所指定的版本. 所以你 clone 下来的代码第一次打开都会卡很久的原因, 就是因为他们在下载 wrapper 中的 gradle 啊…
+
+
+### 2.gradle-wrapper.properties
+
+AS 创建的工程, 在根目录下有 `gradlew.bat` 和 `gradlew.sh` 文件. 这两个文件会读取 `gradle/wrapper/gradle-wrapper.properties` 并使用其中指定的 gradle 版本进行编译. 一般而言这套机制用于 CI 服务器中来保障每次编译都在同样的环境下.
+
+```gradle
+#Wed Nov 11 21:08:45 CST 2015
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
+```
+
+
+`GRADLE_USER_HOME` 默认值是你的 `USER_HOME/.gradle` (win 下是 `c:\Users\\.gradle`, linux 下是 `~/.gradle` ).
+
+对于 `gradlew` 而言, 如果上述路径没有找到可执行的 gradle 文件, 则会使用 `distributionUrl` 中所指定的 url 下载后在执行.
+
+
+### 3.gradle.properties
+
+主要作用配置一些与当前机器 gradle 编译相关的属性. 这些属性是每个编译机器根据自己情况决定的(比如, 分配多大内存), 因此不适合放在 git 中.
+
+
+#### 3.1 gradle.properties
+类似于系统的环境变量. 作为 jvm 启动参数.
+
+`org.gradle.daemon`  
+是否开启 daemon. 一般来说, 本机编译建议打开, CI 上建议关闭.
+
+`org.gradle.java.home`  
+指定 gradle 进程的 java home. 没什么卵用.
+
+`org.gradle.jvmargs`  
+daemon 进程的 jvm 参数. 当你编译报错 OOM 的时候, 可以调整这个参数 (见后面的例子)
+
+`org.gradle.configureondemand`  
+自行 google. 没卵用
+
+`org.gradle.parallel`  
+project 之间并行编译
+
+#### 3.2.设置代理
+
+```gradle
+systemProp.https.proxyHost=www.proxyhost.org
+systemProp.https.proxyPort=8080
+systemProp.https.proxyUser=userid
+systemProp.https.proxyPassword=password
+systemProp.https.nonProxyHosts=*.nonproxyrepos.com|localhost
+```
+
+
+# 常见的 ‘这是什么玩意儿’
+transitive = true
+
+```gradle
+compile('com.crashlytics.sdk.android:answers:1.3.10@aar') {
+    transitive = true;
+}
+```
+简单地说, 由于该语句使用 `@aar` notation, 所以 gradle 只会下载这一个 aar 文件, 而不会顺带着下载这个 aar 所需要的依赖文件. 所以需要 `transitive` 让依赖能够自动被下载. 一般而言, 去掉 `@aar` 以及 `{ transitive = true }` 不会有任何问题.
 
