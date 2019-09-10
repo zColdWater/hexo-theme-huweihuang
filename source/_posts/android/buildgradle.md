@@ -3,7 +3,7 @@ title: "[Android] Gradle"
 catalog: true
 toc_nav_num: true
 date: 2019-09-06 13:00:30
-subtitle: "了解Gradle基本字段意思"
+subtitle: "理解一个简单Gradle配置"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
 tags:
 - Android
