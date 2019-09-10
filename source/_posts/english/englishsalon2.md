@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-10 15:00:33
 subtitle: "Holidays and Celebrations"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/knowledge-min.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
 tags:
 - English
 catagories:

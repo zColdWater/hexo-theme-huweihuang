@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-09-06 13:00:30
 subtitle: "了解Gradle基本字段意思"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/knowledge-min.png"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
 tags:
 - Android
 catagories:
