@@ -7,7 +7,7 @@ subtitle: "了解Gradle基本字段意思"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/knowledge-min.png"
 tags:
 - Android
-catagories:****
+catagories:
 - Android
 ---
 
