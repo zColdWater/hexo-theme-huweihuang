@@ -222,8 +222,7 @@ sitemap:
 # repository: https://github.com/huweihuang/xxxxxxx.github.io.git
 # branch: master
 
-#gh_password
 deploy:
   type: git
-  repo: https://zColdWater:88722408a@github.com/zColdWater/blog.git
+  repo: https://zColdWater:gh_password@github.com/zColdWater/blog.git
   branch: master
