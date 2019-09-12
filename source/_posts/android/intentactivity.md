@@ -124,29 +124,114 @@ Toast.makeText(this, String.format("staff name:%s",staff.name), Toast.LENGTH_SHO
 
 ```
 
-
-
 ## 隐式Intent跳转 携带Action
+```Java
+// Activity 标签的 IntentFliter 除了添加指定的Action还必须要有Category默认的Default值
+Intent intent = new Intent("action_intent_activity");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 携带Action+Category
+```Java
+// Activity 标签的 IntentFliter 除了添加指定的Action还必须要有Category默认的Default值
+Intent intent = new Intent("action_intent_activity1");
+// add的Category(android.intent.custom) 不是必须参数,即使没有添加这个类别也是可以跳转的。
+intent.addCategory("android.intent.custom");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 使用Data模式
+```Java
+//创建一个隐式的 Intent 对象，方法四：Date 数据
+Intent intent = new Intent();
+Uri uri = Uri.parse("content://com.example.intentdemo：8080/abc.pdf");
+//注：setData、setDataAndType、setType 这三种方法只能单独使用，不可共用
+//单独以 setData 方法设置 URI
+//intent.setData(uri);
+//单独以 seType 方法设置 Type
+//intent.setType("text/plain");
+//上面分步骤设置是错误的，要么以 setDataAndType 方法设置 URI 及 mime type
+intent.setDataAndType(uri, "text/plain");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 浏览器网页
+```Java
+//web浏览器
+Uri uri= Uri.parse("http://www.baidu.com");
+Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+startActivity(intent);
+```
+
+## 隐式Intent跳转 系统应用 地图
+```Java
+//打开地图查看经纬度
+Uri uri = Uri.parse("geo:38.899533,-77.036476");
+Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用电话拨号（不需要拨号权限）
+```Java
+Uri uri = Uri.parse("tel:10086");
+Intent intent = new Intent(Intent.ACTION_DIAL, uri);//注意区别于下面4.4的action
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用电话直接拨号（需要拨号权限）
+```Java
+Uri uri = Uri.parse("tel:15980665805");
+Intent intent = new Intent(Intent.ACTION_CALL, uri);//注意区别于上面4.3的aciton
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用短信程序（无需发送短信权限，接收者自填）
+```Java
+Intent intent = new Intent(Intent.ACTION_VIEW);
+intent.putExtra("sms_body", "这里写短信内容");
+intent.setType("vnd.android-dir/mms-sms");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用短信程序（无需发送短信权限）
+```Java
+Uri uri = Uri.parse("smsto:10086");//指定接收者
+Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+intent.putExtra("sms_body", "你这个黑心运营商");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用邮件程序
+```Java
+Intent intent = new Intent(Intent.ACTION_SENDTO);
+intent.setData(Uri.parse("mailto:xxx@gmail.com"));
+intent.putExtra(Intent.EXTRA_SUBJECT, "这是标题");
+intent.putExtra(Intent.EXTRA_TEXT, "这是内容");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用音乐播放器
+```Java
+Intent intent = new Intent(Intent.ACTION_VIEW);
+//Uri uri = Uri.parse("file:///sdcard/xiong_it.mp4");
+Uri uri = Uri.parse("file:///sdcard/xiong_it.mp3");
+intent.setDataAndType(uri, "audio/mp3");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用视频播放器
+```Java
+Intent intent = new Intent(Intent.ACTION_VIEW);
+//Uri uri = Uri.parse("file:///sdcard/xiong_it.mp3");
+Uri uri = Uri.parse("file:///sdcard/xiong_it.mp4");
+intent.setDataAndType(uri, "video/mp4");
+startActivity(intent);
+```
 
 ## 隐式Intent跳转 系统应用 调用搜索
-
+```Java
+Intent intent = new Intent();
+intent.setAction(Intent.ACTION_WEB_SEARCH);
+intent.putExtra(SearchManager.QUERY, "android");
+startActivity(intent);
+```
