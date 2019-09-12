@@ -15,6 +15,9 @@ catagories:
 
 Demo放在: https://github.com/zColdWater/activity-intent-demo 
 
+效果图:   
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/Android-Intent.png"  width="300" />
+
 # Intent 
 
 意图(Intent)是要执行的操作的抽象描述。它可用于Context#startActivity(Intent)启动Activity， broadcastIntent将其发送到任何感兴趣的BroadcastReceiver组件，和/ Context.startService(Intent)或 Context.bindService(Intent, ServiceConnection, int)与后台通信Service。  
