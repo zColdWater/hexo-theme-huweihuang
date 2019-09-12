@@ -26,11 +26,105 @@ Demo放在: https://github.com/zColdWater/activity-intent-demo
 
 ## 显式Intent跳转
 
+```java
+
+··· MainActivity
+// 从 MainActivity 跳转到 IntentActivityOne
+Intent intent = new Intent(MainActivity.this,IntentActivityOne.class);
+startActivity(intent);
+···
+
+```
+
 ## 显式Intent跳转 携带参数
 
+```java
+
+··· MainActivity
+// 从 MainActivity 跳转到 IntentActivityOne 并且携带参数 Key:Value
+Intent intent = new Intent(MainActivity.this, IntentActivityTwo.class);
+intent.putExtra("name","henry");
+startActivity(intent);
+···
+
+··· IntentActivityTwo
+// 获取参数
+Intent intent = getIntent();
+Bundle bundle = intent.getExtras();
+if (null != bundle) {
+    String name = bundle.getString("name");
+    Toast.makeText(this, String.format("Name is %s",name), Toast.LENGTH_SHORT).show();
+}
+···
+
+```
+
 ## 显式Intent跳转 携带参数 并且 回调参数
+```java
+
+··· MainActivity
+// 从 MainActivity 跳转到 IntentActivityTree 传参数 并且 接收IntentActivityTree发来的回调
+Intent intent = new Intent(MainActivity.this, IntentActivityTree.class);
+intent.putExtra("name","henry");
+startActivityForResult(intent,1);
+
+// 重写系统接收Activity回调方法
+@Override
+protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+    Log.d("Activity","onActivityResult");
+    switch (resultCode) {
+        case 1:
+            Toast.makeText(this, String.format("接收到回调参数:%s",data.getStringExtra("name")), Toast.LENGTH_SHORT).show();
+            break;
+        default:
+            break;
+    }
+}
+···
+
+··· IntentActivityTree
+Intent intent = new Intent();
+intent.putExtra("name", "Henry");
+IntentActivityTree.this.setResult(1, intent);
+IntentActivityTree.this.finish();
+···
+
+```
 
 ## 显式Intent跳转 携带Model数据结构参数
+
+```java
+
+··· MainActivity
+
+// Staff Model Define
+public class Staff implements Serializable {
+    public String name;
+    public void setName(String name) { this.name = name; }
+    public String getName() { return name; }
+}
+
+
+// 从MainActivity跳转到IntentActivityFour 携带Model数据结构参数
+Staff staff = new Staff();
+staff.setName("Henry");
+Intent intent = new Intent(MainActivity.this, IntentActivityFour.class);
+intent.putExtra("staff",staff);
+startActivity(intent);
+···
+
+··· IntentActivityFour
+// 获取参数MainActivity传来的参数
+Intent intent = getIntent();
+Bundle bundle = intent.getExtras();
+Staff staff = (Staff)bundle.getSerializable("staff");
+Toast.makeText(this, String.format("staff name:%s",staff.name), Toast.LENGTH_SHORT).show();
+···
+
+```
+
+
 
 ## 隐式Intent跳转 携带Action
 
