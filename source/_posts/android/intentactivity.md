@@ -24,6 +24,8 @@ Demo放在: https://github.com/zColdWater/activity-intent-demo
 
 # 使用方式
 
+这里需要注意的，隐式的Intent唤醒Activity需要配置在Manifest文件里面的Activity标签下配置`Intent-fliter`标签，才可以唤醒指定的Activity，一般用于唤醒其他App的应用。
+
 ## 显式Intent跳转
 
 ```java
@@ -126,22 +128,50 @@ Toast.makeText(this, String.format("staff name:%s",staff.name), Toast.LENGTH_SHO
 
 ## 隐式Intent跳转 携带Action
 ```Java
+··· MainActivity
 // Activity 标签的 IntentFliter 除了添加指定的Action还必须要有Category默认的Default值
 Intent intent = new Intent("action_intent_activity");
 startActivity(intent);
+···
+
+··· Manifest
+<activity android:name=".Activitys.IntentActivityOne" >
+    <intent-filter>
+        <action android:name="action_intent_activity" ></action>
+        <category android:name="android.intent.category.DEFAULT"></category>
+    </intent-filter>
+</activity>
+···
+
 ```
 
 ## 隐式Intent跳转 携带Action+Category
 ```Java
+
+··· MainActivity
 // Activity 标签的 IntentFliter 除了添加指定的Action还必须要有Category默认的Default值
 Intent intent = new Intent("action_intent_activity1");
 // add的Category(android.intent.custom) 不是必须参数,即使没有添加这个类别也是可以跳转的。
 intent.addCategory("android.intent.custom");
 startActivity(intent);
+··· 
+
+··· Manifest
+<activity android:name=".Activitys.IntentActivityTwo" >
+    <intent-filter>
+        <action android:name="action_intent_activity1" ></action>
+        <category android:name="android.intent.custom"></category>
+        <category android:name="android.intent.category.DEFAULT"></category>
+    </intent-filter>
+</activity>
+···
+
 ```
 
 ## 隐式Intent跳转 使用Data模式
 ```Java
+
+··· MainActivity
 //创建一个隐式的 Intent 对象，方法四：Date 数据
 Intent intent = new Intent();
 Uri uri = Uri.parse("content://com.example.intentdemo：8080/abc.pdf");
@@ -153,6 +183,22 @@ Uri uri = Uri.parse("content://com.example.intentdemo：8080/abc.pdf");
 //上面分步骤设置是错误的，要么以 setDataAndType 方法设置 URI 及 mime type
 intent.setDataAndType(uri, "text/plain");
 startActivity(intent);
+··· 
+
+··· Manifest
+<activity android:name=".Activitys.IntentActivityFour">
+            <intent-filter>
+                <data
+                    android:scheme="content"
+                    android:host="com.example.intentdemo"
+                    android:port="8080"
+                    android:pathPattern=".*pdf"
+                    android:mimeType="text/plain"/>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+</activity>
+···
+
 ```
 
 ## 隐式Intent跳转 系统应用 浏览器网页
