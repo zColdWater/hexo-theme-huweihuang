@@ -36,6 +36,8 @@ Service有三种写法
 
 #### 1.后台运行模式 无法与App进行交互
 
+> 此种模式，一旦服务开启了，就和App没有关系了，就会一直后背运行，除非你手动停止服务。
+
 1. 先创建MyService继承Service
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/service3.png" height="350" />
 
@@ -99,6 +101,8 @@ btn2.setOnClickListener(new View.OnClickListener() {
 ```
 
 #### 2.后台绑定模式 可以与App进行交互
+
+> 此种模式，服务绑定后，服务可以给App回调，App可以通知服务做一些逻辑。 
 
 1. 在之前的MyService里面再添加一些方法，例如我们假设要做一个后台下载的抽象类的功能。
 
@@ -177,7 +181,7 @@ btn3.setOnClickListener(new View.OnClickListener() {
 
 ## 类型二: IntentService
 
-> IntentService 是更加方便的Service的用法，开启这个Service，Service回调在一个子线程，并且执行完这个子现成的任务，就会自动销毁。 非常适合一些需要在子线程处理的任务，处理完自己自己关闭的场景。
+> IntentService是Service的子类，对Service做了一些方便的封装。 是更加方便的Service的用法，开启这个Service，Service回调在一个子线程，并且执行完这个子现成的任务，就会自动销毁。 非常适合一些需要在子线程处理的任务，处理完自己自己关闭的场景。
 
 1. 创建一个MyIntentService继承IntentService
 ```Java
