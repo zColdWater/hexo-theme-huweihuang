@@ -83,3 +83,42 @@ Android当中的广播分
 
 ## App内广播(只支持动态注册)
 
+1. 创建广播子类
+```Java
+    class LocalBroadCastReceiver extends  BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d("LocalBroadCastReceiver","接到通知");
+            Toast.makeText(context, "接到通知", Toast.LENGTH_SHORT).show();
+        }
+    }
+```
+
+2. 注册部分
+```Java
+        // 创建动态本地通知
+        localBroadcastManager = LocalBroadcastManager.getInstance(this);
+        localBroadCastReceiver = new LocalBroadCastReceiver();
+        localIntentFilter = new IntentFilter("localBroadcast.static.demo.action");
+        localBroadcastManager.registerReceiver(localBroadCastReceiver, localIntentFilter);
+```
+
+3. 取消注册部分
+```Java
+        //取消注册应用内广播接收器
+        localBroadcastManager.unregisterReceiver(localBroadCastReceiver);
+```
+
+4. 调用部分
+```Java
+        Button button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("本地静态通知","发送通知");
+                Intent intent = new Intent();
+                intent.setAction("localBroadcast.static.demo.action");
+                localBroadcastManager.sendBroadcast(intent);
+            }
+        });
+```
