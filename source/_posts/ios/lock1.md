@@ -417,10 +417,17 @@ class ViewController: UIViewController {
 
 }
 
-
 ```
 
+# 总结
 
+看完上面的“锁”再问你如何把任务在各个线程中按照一定顺序执行你会说有多少种。
 
-
-
+1. GCD Group 
+2. NSOperation
+3. GCD Barrier
+4. 串行任务队列 一个一个顺序执行
+5. NSLockCondition 条件锁
+6. NSCondition 条件锁
+   
+等等 是不是太多，下回在遇到多线程中处理任务就不会慌张了。
