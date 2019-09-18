@@ -22,11 +22,11 @@ SEOTitle: 朱永鹏 | Blog
 email: 1486297824@qq.com
 description: ""
 keyword: ""
-header-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
-article-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
-404-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
+header-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg
+article-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg
+404-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg
 signature: true #show signature
-signature-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg 
+signature-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg 
 
 
 # SNS settings
@@ -83,7 +83,7 @@ widgets:
 
 # widget behavior
 ## Archive
-archives-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg
+archives-img: https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg
 archive_type: 'monthly'
 show_count: true
 
