@@ -2,7 +2,7 @@
 title: "[iOS] Float Double 失精问题"
 catalog: true
 toc_nav_num: true
-date: 2019-09-17 16:54:30
+date: 2019-09-18 10:04:30
 subtitle: "为什么会失去精度 怎么办"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
