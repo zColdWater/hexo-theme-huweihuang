@@ -150,7 +150,7 @@ catagories:
 
 #### 特殊寄存器
 
-**PC:(Program Counter)**   
+**`PC:(Program Counter)`**   
 1. 为指令指针寄存器，它指示了CPU当前要读取指令的地址
 2. 在内存或者磁盘上，指令和数据没有任何区别，都是二进制信息  
 3. CPU在工作的时候把有的信息看做指令，有的信息看做数据，为同样的信息赋予了不同的意义。
@@ -166,7 +166,7 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly18.png" height="300" />   
 
 
-**SP/FP:**   
+**`SP/FP`**   
 1. sp寄存器在任意时刻会保存我们栈顶的地址
 2. sp寄存器指向哪里，哪里就是栈  
 3. fp为栈基址寄存，用于保存栈底地址  
@@ -174,7 +174,11 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly19.jpg" height="300" />  
 
+**`STR`**
+1. 将数据从寄存器中读出来 存到内存中
 
+**`LDR`**
+1. 将数据从内存中读出来 存到寄存器中
 
 #### 状态寄存器 CPSR
 
@@ -183,6 +187,11 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 #### `ARM 寄存器（这里不谈，首先我不熟悉，ARM64大同小异）` 
 
 ### 汇编指令
+
+**`BL指令(转移跳转指令)`**
+
+
+
 
 
 
