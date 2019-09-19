@@ -123,12 +123,29 @@ catagories:
 
 #### 通用寄存器 
 当使用 `x0` - `x30` 访问时，是一个 64位的数；当使用 `w0` - `w30`访问时，是一个 32 位的数，访问的是寄存器的 低 32 位，如图：
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly14.png" height="80" /> 
 
-向量寄存器
+我们在项目实际打个breakpoint来看下 `X[n]` `W[n]` 寄存器的区别，下面直接上截图为了说明这，我一开始也是一脸懵逼，因为在`arm_v7`等非64位的指令集，都是`R[n]`的寄存器，当我用`arm64` 指令集发现一会 `w[n]` `x[n]` 始终不知道差别，所以就做了下面的测试。
 
-特殊寄存器
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly15.png" height="80" />   
 
-状态寄存器 CPSR
+<br>
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly16.png" height="80" />   
+
+<br>
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly17.png" height="80" />   
+
+
+
+
+
+#### 向量寄存器
+
+#### 特殊寄存器
+
+#### 状态寄存器 CPSR
 
 
 
