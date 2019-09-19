@@ -51,7 +51,7 @@ catagories:
 再进一步说话，说句实话对于咱们新手来说，真的，了解`ARM64`和`ARMv7`就可以了，`X86`都没啥必要，毕竟是模拟器，不是真正跑在客户手机上的指令集。
 
 #### 向下兼容
-这里需要指明的是，新的指令集是对旧的的指令集有兼容的，比如ARMV7就会对ARMV7之前的指令集兼容。
+这里需要指明的是，新的指令集是对旧的的指令集有兼容的，比如`ARMV7`就会对`ARMV7`之前的指令集兼容。
 
 #### ARM64
 `ARM64`的指令集，比如`ARM64` `ARM64e`是要在设备运行在64位操作系统
@@ -60,7 +60,7 @@ catagories:
 `ARM`的指令集，比如`ARMV7` `ARMV7s`是要在设备运行在32位操作系统
 
 #### X86
-`X86`的指令集，是要在设备运行在AMD和Intel的处理器上。
+`X86`的指令集，是要在设备运行在`AMD`和`Intel`的处理器上。
 
 #### 看看编译出来的文件
 这里以iOS应用为例，我们看下我们编译出来的可执行文件指令集是怎样的，接入看图环节。
@@ -83,6 +83,18 @@ catagories:
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly7.png" height="200" />
 
 从上图可以看出，我们在操作系统12.2以上的版本下，选择真机，编译出来的可执行文件，只有`ARM64`，因为我们的操作系统是64位的，所以是`ARM64` 不是`ARM其他`，`这时有的同学可能会问为什么我的项目编译出来的可执行文件是两种架构呢，请继续往下看，下面就是为什么会有俩中架构。`
+
+
+`三: 再看看真机在最低系统版本10.0以上编译的是什么样子`  
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly11.png" height="200" />
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly4.png" height="150" />   
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly8.png" height="200" />
+
+从上图可以看出，我们在操作系统`10.0`以上的版本，选择真机进行编译可以看到有两种编译指令分别是`arm64`和`arm_v7`，前者是`64bit`操作系统使用，后者是`32bit`操作系统使用，其实调最低支持操作系统版本可知，当最低系统版本小于`11.0`的时候就会打出`arm64`和`arm_v7`两个指令集的可执行文件，当最低系统版本大于等于`11.0`的时候只会打出`arm64`指令集的可执行文件。`iOS11`操作系统，以及以后的操作系统都是64位操作系统，所以只需要`arm64`就可以了，但是如果你的最低版本选择的是`10.0`
+
+`四: 多个指令集的可执行文件对包大小的影响`  
 
 ### 不同指令集下的寄存器
    
