@@ -92,7 +92,11 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly8.png" height="200" />
 
-从上图可以看出，我们在操作系统`10.0`以上的版本，选择真机进行编译可以看到有两种编译指令分别是`arm64`和`arm_v7`，前者是`64bit`操作系统使用，后者是`32bit`操作系统使用，其实调最低支持操作系统版本可知，当最低系统版本小于`11.0`的时候就会打出`arm64`和`arm_v7`两个指令集的可执行文件，当最低系统版本大于等于`11.0`的时候只会打出`arm64`指令集的可执行文件。`iOS11`操作系统，以及以后的操作系统都是64位操作系统，所以只需要`arm64`就可以了，但是如果你的最低版本选择的是`10.0`
+从上图可以看出，我们在操作系统`10.0`以上的版本，选择真机进行编译可以看到有两种编译指令分别是`arm64`和`arm_v7`，前者是`64bit`操作系统使用，后者是`32bit`操作系统使用，其实调最低支持操作系统版本可知，当最低系统版本小于`11.0`的时候就会打出`arm64`和`arm_v7`两个指令集的可执行文件，当最低系统版本大于等于`11.0`的时候只会打出`arm64`指令集的可执行文件。`iOS11`操作系统，以及以后的操作系统都是64位操作系统，所以只需要`arm64`就可以了，但是如果你的最低版本选择的是`10.0`，意味着你的包要支持最低`10.0`~`13.0(目前最高)`的版本，其中`10.0 ~ 10.xxx`用的`32位ARM指令集`，`11.0~13.0`用的`64位ARM指令集`，所以我们看到包里面有两种指令集，因为指令集的兼容性，其实你可以`10.0~13.0`都使用`arm64`指令集也可以，看下面的截图。
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly12.png" height="200" />  
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly8.png" height="200" />
 
 `四: 多个指令集的可执行文件对包大小的影响`  
 
