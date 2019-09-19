@@ -194,7 +194,9 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 
 **`一，STR`**
-1. 将数据从寄存器中读出来 存到内存中
+> 将寄存器的数据存入栈里面 看下面例子
+
+1. 先看一个例子
 
     <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly24.png" height="200" />
 
@@ -220,7 +222,26 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 
 **`二，LDR`**
-1. 将数据从内存中读出来 存到寄存器中
+> 是从栈里面取值赋值给寄存器。
+
+这里我想说的是，请一定把 STR命令 看懂，看懂STR命令 这个就很简单了 一样的道理。
+
+ ```s
+ _A:
+ sub sp,sp,#0x30
+ mov x0,#0x0a
+ mov x1,#0x0b
+ str x0,[sp,#0x10]
+ str x1,[sp,#0x20]
+ stp x0,x1,[sp,#0x10]
+ ldp x1,x0,[sp,#0x10]
+ add sp,sp,#0x20
+ ret
+ ```
+
+ <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly28.png" height="200" />
+
+
 
 **`三，BL(跳转指令)`**
 1. CPU从何处执行指令是由pc中的内容决定的，我们可以通过改变pc的内容来控制CPU执行目标指令
