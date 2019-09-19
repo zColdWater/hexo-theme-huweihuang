@@ -12,7 +12,7 @@ catagories:
 ---
 
 
-# 如何在iTerm2中ssh保持连接不断开
+# 保持在iTerm2中ssh连接不断开
 
 1. 在客户端输入 `vim ~/.ssh/config` 编辑config文件
 2. 添加 Host * 和属性 ServerAliveInterval 60， * 代表连接所有的ssh都适用，60代表 60s给Server发一次心跳包保持不断。
