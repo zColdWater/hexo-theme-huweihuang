@@ -100,12 +100,15 @@ catagories:
 
 `四: 多个指令集的可执行文件对包大小的影响`  
 
-### `不同指令集下的寄存器`
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly9.png" height="200" />  
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly10.png" height="200" />  
 
 从上图可以看出来两个架构的包比一个架构的包要大`100多KB`
+
+
+### `不同指令集下的寄存器`
+
 
 ### 汇编指令
 
