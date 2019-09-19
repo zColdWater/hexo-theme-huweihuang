@@ -202,6 +202,22 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
     <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly26.png" height="200" />
 
+2. 再来看一个 例子
+    ```s
+    _A:
+    sub sp,sp,#0x30
+    mov x0,#0x0a
+    mov x1,#0x0b
+    str x0,[sp,#0x10]
+    str x1,[sp,#0x20]
+    stp x0,x1,[sp,#0x10]
+    ldp x1,x0,[sp,#0x10]
+    add sp,sp,#0x20
+    ret
+    ```
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly27.png" height="200" />
+
+
 
 **`二，LDR`**
 1. 将数据从内存中读出来 存到寄存器中
