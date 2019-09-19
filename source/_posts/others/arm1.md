@@ -148,8 +148,28 @@ catagories:
 
 向量寄存器 128位:V0-V31
 
-
 #### 特殊寄存器
+
+**PC:(Program Counter)**   
+1. 为指令指针寄存器，它指示了CPU当前要读取指令的地址
+2. 在内存或者磁盘上，指令和数据没有任何区别，都是二进制信息  
+3. CPU在工作的时候把有的信息看做指令，有的信息看做数据，为同样的信息赋予了不同的意义。
+4. CPU根据什么将内存中的信息看做指令？
+   * CPU将pc指向的内存单元的内容看做指令
+   * 如果内存中的某段内容曾被CPU执行过，那么它所在的内存单元必然被pc指向过
+
+保存将要执行的指令的地址（pc就是指令 读/写等）  
+pc指向那里就是读那里，它读的是内存地址 （指令保存到高速缓存中）首先去高速缓存映射关系表中找，如果有就直接在高速读，如果没有把内存一堆copy到高速缓存中。
+
+实践:   
+1. 如果把pc寄存器改了下一个即将执行 可以使用 `register write pc 0x100a0ab20`
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly18.png" height="300" />   
+
+<!-- sp： (Stack Pointer)，栈顶寄存器，用于保存栈顶地址；
+fp(x29)： (Frame Pointer)为栈基址寄存，用于保存栈底地址；
+lr(x30)： (Link Register) ，保存调用跳转指令 bl 指令的下一条指令的内存地址；
+zr(x31)： (Zero Register)，xzr/wzr分别代表 64/32 位，其作用就是 0，写进去代表丢弃结果，读出来是 0； -->
+
 
 #### 状态寄存器 CPSR
 
