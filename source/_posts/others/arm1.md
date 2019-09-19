@@ -31,9 +31,19 @@ catagories:
 为了让大家比较形象的了解汇编，我们看下汇编的代码。  
 .s文件结尾的，代码就长这个样子，没学过这东西 谁也不知道它写的是个啥，我们接着往下看。
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly1.png" height="250" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly1.png" height="200" />
 
 
-# 咋能看懂呢
+# 一定先搞懂下面的
+
+**各位童鞋，如果你现在也和我一样，看到汇编代码一脸懵逼，变量也不知道，命令也不懂，那么一定把下面的这几个东西看懂，如果看我的文章描述不明白，自己去Google也搞明白再看汇编代码才能看的明白哈。**
+
+1. cpu指令集有哪些
+   
+2. 不同指令集下的寄存器
+3. 汇编指令
+
+
+
 
 
