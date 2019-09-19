@@ -154,8 +154,6 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly22.png" height="300" />   
 
-
-
 **`PC:(Program Counter)`**   
 1. 为指令指针寄存器，它指示了CPU当前要读取指令的地址
 2. 在内存或者磁盘上，指令和数据没有任何区别，都是二进制信息  
