@@ -174,12 +174,6 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly19.jpg" height="300" />  
 
-**`STR`**
-1. 将数据从寄存器中读出来 存到内存中
-
-**`LDR`**
-1. 将数据从内存中读出来 存到寄存器中
-
 #### 状态寄存器 CPSR
 
 
@@ -187,6 +181,13 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 #### `ARM 寄存器（这里不谈，首先我不熟悉，ARM64大同小异）` 
 
 ### 汇编指令
+
+
+**`STR`**
+1. 将数据从寄存器中读出来 存到内存中
+
+**`LDR`**
+1. 将数据从内存中读出来 存到寄存器中
 
 **`BL指令(转移跳转指令)`**
 1. CPU从何处执行指令是由pc中的内容决定的，我们可以通过改变pc的内容来控制CPU执行目标指令
@@ -217,8 +218,9 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
     int main()
     { A(); }
     ```
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly20.png" height="200" /> 
 
-
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly21.png" height="200" /> 
 
 
 
