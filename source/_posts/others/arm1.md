@@ -150,6 +150,12 @@ catagories:
 
 #### 特殊寄存器
 
+小伙伴们如果想知道一共有哪些寄存器，可以断点使用`lldb`的命令`register read`来查看。
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly22.png" height="300" />   
+
+
+
 **`PC:(Program Counter)`**   
 1. 为指令指针寄存器，它指示了CPU当前要读取指令的地址
 2. 在内存或者磁盘上，指令和数据没有任何区别，都是二进制信息  
@@ -182,6 +188,7 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 ### 汇编指令
 
+> 上面
 
 **`STR`**
 1. 将数据从寄存器中读出来 存到内存中
