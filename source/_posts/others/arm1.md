@@ -50,19 +50,19 @@ catagories:
 
 再进一步说话，说句实话对于咱们新手来说，真的，了解`ARM64`和`ARMv7`就可以了，`X86`都没啥必要，毕竟是模拟器，不是真正跑在客户手机上的指令集。
 
-#### 向下兼容
+#### `向下兼容`
 这里需要指明的是，新的指令集是对旧的的指令集有兼容的，比如`ARMV7`就会对`ARMV7`之前的指令集兼容。
 
-#### ARM64
+#### `ARM64`
 `ARM64`的指令集，比如`ARM64` `ARM64e`是要在设备运行在64位操作系统
 
-#### ARM
+#### `ARM`
 `ARM`的指令集，比如`ARMV7` `ARMV7s`是要在设备运行在32位操作系统
 
-#### X86
+#### `X86`
 `X86`的指令集，是要在设备运行在`AMD`和`Intel`的处理器上。
 
-#### 看看编译出来的文件
+#### `看看编译出来的文件`
 这里以iOS应用为例，我们看下我们编译出来的可执行文件指令集是怎样的，接入看图环节。
 
 
@@ -100,12 +100,14 @@ catagories:
 
 `四: 多个指令集的可执行文件对包大小的影响`  
 
-### 不同指令集下的寄存器
-   
+### `不同指令集下的寄存器`
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly9.png" height="200" />  
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly10.png" height="200" />  
+
+从上图可以看出来两个架构的包比一个架构的包要大`100多KB`
 
 ### 汇编指令
-
-
 
 
 
