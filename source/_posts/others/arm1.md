@@ -113,7 +113,7 @@ CPU指令集有哪些 我们看看维基百科上查到的典型的指令集:
 
 从上图可以看出来两个架构的包比一个架构的包要大`100多KB`
 
-### `2.0.2寄存器`
+### 2.0.2寄存器
 
 咱们先聊一下，为啥要知道寄存器。
 
@@ -184,6 +184,7 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 #### 状态寄存器 CPSR
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly23.png" height="150" /> 
 
 ### 2.0.3指令
 
@@ -194,6 +195,13 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 
 **`一，STR`**
 1. 将数据从寄存器中读出来 存到内存中
+
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly24.png" height="200" />
+
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly25.png" height="200" />
+
+    <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly26.png" height="200" />
+
 
 **`二，LDR`**
 1. 将数据从内存中读出来 存到寄存器中
