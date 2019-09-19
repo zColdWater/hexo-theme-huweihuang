@@ -114,8 +114,6 @@ catagories:
 
 上面标注的就是寄存器，其实我们看到的汇编代码都是在操作寄存器，所以我们得知道有哪些寄存器，这玩意咋使唤，注意点啥，才能看得懂汇编代码，你说是不是这个理。
 
-#### `ARM 寄存器` 
-
 
 #### `ARM64 寄存器` 
 
@@ -127,18 +125,15 @@ catagories:
 
 我们在项目实际打个breakpoint来看下 `X[n]` `W[n]` 寄存器的区别，下面直接上截图为了说明这，我一开始也是一脸懵逼，因为在`arm_v7`等非64位的指令集，都是`R[n]`的寄存器，当我用`arm64` 指令集发现一会 `w[n]` `x[n]` 始终不知道差别，所以就做了下面的测试。
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly15.png" height="80" />   
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly15.png" height="300" />   
 
 <br>
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly16.png" height="80" />   
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly16.png" height="300" />   
 
 <br>
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly17.png" height="80" />   
-
-
-
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly17.png" height="300" />   
 
 
 #### 向量寄存器
@@ -148,10 +143,8 @@ catagories:
 #### 状态寄存器 CPSR
 
 
-
-
-#### `X86 寄存器 (这里不谈，首先我不熟悉，其次和ARM，ARM64大同小异)` 
-
+#### `X86 寄存器 (这里不谈，首先我不熟悉，ARM64大同小异)` 
+#### `ARM 寄存器（这里不谈，首先我不熟悉，ARM64大同小异）` 
 
 ### 汇编指令
 
