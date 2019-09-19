@@ -63,11 +63,30 @@ catagories:
 `X86`的指令集，是要在设备运行在AMD和Intel的处理器上。
 
 #### 看看编译出来的文件
-这里以iOS应用为例，我们看下我们编译出来的可执行文件指令集是怎样的。
+这里以iOS应用为例，我们看下我们编译出来的可执行文件指令集是怎样的，接入看图环节。
 
+
+`一: 先看看模拟器下编译的是什么样子`
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly3.png" height="200" />  
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly4.png" height="150" />   
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly5.png" height="150" />   
+
+从上图可以看出，我们在操作系统12.2以上的版本下，选择模拟器，编译出来的可执行文件，由于我们的操作系统是64位的，所以是`X86_64`  正是我们之前提到的`X86`指令集系列。 
+
+`二: 再看看真机在最低系统版本12.2以上编译的是什么样子`
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly6.png" height="200" />  
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly4.png" height="150" />  
+  
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly7.png" height="200" />
+
+从上图可以看出，我们在操作系统12.2以上的版本下，选择真机，编译出来的可执行文件，只有`ARM64`，因为我们的操作系统是64位的，所以是`ARM64` 不是`ARM其他`，`这时有的同学可能会问为什么我的项目编译出来的可执行文件是两种架构呢，请继续往下看，下面就是为什么会有俩中架构。`
 
 ### 不同指令集下的寄存器
    
+
 ### 汇编指令
 
 
