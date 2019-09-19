@@ -136,7 +136,18 @@ catagories:
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly17.png" height="300" />   
 
 
-#### 向量寄存器
+#### 向量和浮点寄存器
+
+**浮点寄存器**
+> 因为浮点数的存储以及其运算的特殊性 CPU中专门提供浮点数寄存器来处理浮点数  
+
+浮点寄存器 64位: D0 – D31 32位: S0 – S31
+
+**向量寄存器**
+> 现在的CPU支持向量运算.(向量运算在图形处理相关的领域用得非常的多)为了支持向量计算系统了也提供了众多的向量寄存器.  
+
+向量寄存器 128位:V0-V31
+
 
 #### 特殊寄存器
 
