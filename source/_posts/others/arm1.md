@@ -166,19 +166,14 @@ pc指向那里就是读那里，它读的是内存地址 （指令保存到高�
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly18.png" height="300" />   
 
 
-**SP:(Stack Pointer)**   
+**SP/FP:**   
 1. sp寄存器在任意时刻会保存我们栈顶的地址
 2. sp寄存器指向哪里，哪里就是栈  
-
+3. fp为栈基址寄存，用于保存栈底地址  
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly19.png" height="300" />  
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/assembly19.jpg" height="300" />  
 
-
-<!-- sp： (Stack Pointer)，栈顶寄存器，用于保存栈顶地址；
-fp(x29)： (Frame Pointer)为栈基址寄存，用于保存栈底地址；
-lr(x30)： (Link Register) ，保存调用跳转指令 bl 指令的下一条指令的内存地址；
-zr(x31)： (Zero Register)，xzr/wzr分别代表 64/32 位，其作用就是 0，写进去代表丢弃结果，读出来是 0； -->
 
 
 #### 状态寄存器 CPSR
