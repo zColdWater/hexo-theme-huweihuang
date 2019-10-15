@@ -1,5 +1,5 @@
 ---
-title: "[iOS] Aspect Hook"
+title: "[iOS] 解读AspectHook原理"
 catalog: true
 toc_nav_num: true
 date: 2019-10-12 14:23:30
@@ -19,7 +19,9 @@ catagories:
 # 使用
 > 如何使用 Aspect 库来实现 Hook 一些函数。
 
-首先引入 Aspect 支持Cocoapds安装，添加`pod "Aspects"`即可。
+首先引入 Aspect 支持Cocoapds安装，添加`pod "Aspects"`即可。  
+
+这里需要说明的是Aspect维护了一个黑名单的方法是不允许`hook`的，名单如下: ["retain" "release" "autorelease" "forwardInvocation:"]，这个名单下的方法是不允许hook的。
 
 示例代码:
 ```ObjectiveC
@@ -62,22 +64,37 @@ catagories:
     NSLog(@"viewWillAppear");
 }
 
-
 @end
 ```
 
-
-
 # 原理
-说实话，我一开始是想看别人的原理解读，再来自己看原理的，后来发现，大部分文章太啰嗦，讲了一堆没有说核心部分，我想问了以后我自己再看不懵逼，也为了帮助别人去了解，我准备用图解的方式，来表达核心实现原理。
+说实话，我一开始是想看别人的原理解读，再来自己看原理的，后来发现，大部分文章太啰嗦，讲了一堆没有说核心部分，我想为了以后我自己再看不懵逼，也为了帮助别人去了解，我准备用图解的方式，直接了当的方式来表达核心实现原理。  
+
+这里我来阐明它能工作最核心的原理，其余一些逻辑我就不放在这里了，并且我会附上一个Demo，在这里Demo中必要源码我基本都有注解。
 
 
+## 未使用 Aspect Hook
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect1.png" height="100" />
 
+## 使用 Aspect Hook  
 
+下图描述的是他的核心功能如何实现的，其实还包括很多铺垫，比如检查方法hook的block方法签名与被hook的方法签名能否兼容，参数类型等，还有一些吧，在我都看完的情况下，如果全部展开会让大家感觉很难看下去，因为文字组织确实需要一些功力的，否则后面自己看都费劲，所以就可核心的展示，剩下注释我都写在Demo中，有兴趣可以看下。
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect2.png" height="250" />
 
+步骤1.1:  
+```
+```
 
+步骤1.2:  
+```
+```
 
+步骤2.1:  
+```
+```
 
-
+步骤2.2:  
+```
+```
