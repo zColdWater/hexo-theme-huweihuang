@@ -19,6 +19,10 @@ catagories:
 
 # 消息转发流程
 
+消息转发流程的触发是: 调用一个没有实现的方法系统SDK就会触发消息转发机制。   
+
+消息转发的流程是:   
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/msgforward1.png" height="350" />
 
 
 
