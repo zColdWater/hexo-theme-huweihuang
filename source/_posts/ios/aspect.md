@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-12 14:23:30
 subtitle: "AspectHook 使用和原理"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
 tags:
 - iOS
 catagories:
@@ -75,6 +75,8 @@ catagories:
 
 ## 未使用 Aspect Hook
 
+这没啥说的正常结构，主要是下面使用Aspect后的结构。
+
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect1.png" height="100" />
 
 ## 使用 Aspect Hook  
@@ -83,18 +85,12 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect2.png" height="250" />
 
-步骤1.1:  
-```
-```
+步骤 1.1 / 1.2:    
 
-步骤1.2:  
-```
-```
+
 
 步骤2.1:  
-```
-```
 
 步骤2.2:  
-```
-```
+
+
