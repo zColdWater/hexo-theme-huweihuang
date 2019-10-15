@@ -11,7 +11,7 @@ catagories:
 - iOS
 ---
 
-> 当前环境 Xcode11.1 
+> 当前环境 Xcode11.1 Demo: https://github.com/zColdWater/aspectDemo/tree/master 
 
 # 初衷 
 最新在看 iOS `Hook` 相关的一些东西，我寻思正好 我就好好看下，把一些常见的库的使用和原理做一个整理，方便以后自己看和其他人查看。
@@ -70,7 +70,7 @@ catagories:
 # 原理
 说实话，我一开始是想看别人的原理解读，再来自己看原理的，后来发现，大部分文章太啰嗦，讲了一堆没有说核心部分，我想为了以后我自己再看不懵逼，也为了帮助别人去了解，我准备用图解的方式，直接了当的方式来表达核心实现原理。  
 
-这里我来阐明它能工作最核心的原理，其余一些逻辑我就不放在这里了，并且我会附上一个Demo，在这里Demo中必要源码我基本都有注解。
+这里我来阐明它能工作最核心的原理，其余一些逻辑我就不放在这里了，并且我会附上一个[Demo](https://github.com/zColdWater/aspectDemo/tree/master)，在这里[Demo](https://github.com/zColdWater/aspectDemo/tree/master)中必要源码我基本都有注解。
 
 
 ## 未使用 Aspect Hook
@@ -192,6 +192,6 @@ static void __ASPECTS_ARE_BEING_CALLED__(__unsafe_unretained NSObject *self, SEL
 
 
 # 总结
-希望可以通过图解的形式最直观的给大家展示aspect的实现原理，一些其他细节可以查看本篇文章Demo，Demo中有对其他方法的详细注释。
+希望可以通过图解的形式最直观的给大家展示aspect的实现原理，一些其他细节可以查看本篇文章[Demo](https://github.com/zColdWater/aspectDemo/tree/master)，[Demo](https://github.com/zColdWater/aspectDemo/tree/master)中有对其他方法的详细注释。
 
 
