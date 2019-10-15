@@ -25,6 +25,12 @@ catagories:
 消息转发的流程是:   
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/msgforward1.png" height="350" />
 
+# 补充  
+
+`_objc_msgForward`是`IMP`类型的也就是函数实现，它是用于消息转发的，当像一个对象发送消息，但他没有实现的时候，`_objc_msgForward`会尝试做消息转发。  
+
+其实`Aspect`就是利用替换函数实现成 `_objc_msgForward` 来触发的消息转发流程，而实现的，有兴趣的童鞋可以找找我的关于Aspect的文章。
+
 # 总结
 了解消息转发机制可以更好的帮我们做一些很不可思议的事情，比如`Aspect`等库的实现原理都用到了消息转发。  
 
