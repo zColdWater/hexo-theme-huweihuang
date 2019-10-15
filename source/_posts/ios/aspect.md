@@ -87,10 +87,111 @@ catagories:
 
 步骤 1.1 / 1.2:    
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect3.jpeg" height="250" />
+
+步骤 2.1 / 2.2:  
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/aspect4.png" height="250" />
 
 
-步骤2.1:  
 
-步骤2.2:  
+## 核心逻辑 __ASPECTS_ARE_BEING_CALLED__ 方法
+
+```ObjectiveC
+// This is the swizzled forwardInvocation: method.
+static void __ASPECTS_ARE_BEING_CALLED__(__unsafe_unretained NSObject *self, SEL selector, NSInvocation *invocation) {
+    
+    // 这里解释一下，为什么会执行到这里。
+    // 因为 aspect 替换了原函的实现，换成objc_msgForward，所以再调被hook函数会好触发消息转发流程
+    // 又因为 aspect 用 __ASPECTS_ARE_BEING_CALLED__ 替换了 消息转发流程中的 forwardInvocation 函数 
+    // 所以就调用到这里面来了
+    
+    // 断言参数 self invocation 不为空
+    NSCParameterAssert(self);
+    NSCParameterAssert(invocation);
+    
+    // 获取 invocation 的SEL方法名
+    SEL originalSelector = invocation.selector;
+    // 拼接 别名方法 通过 SEL
+	SEL aliasSelector = aspect_aliasForSelector(invocation.selector);
+    
+    // 替换invocation中的调用方法
+    invocation.selector = aliasSelector;
+    
+    // 通过aspect别名方法获取关联对象 AspectsContainer
+    AspectsContainer *objectContainer = objc_getAssociatedObject(self, aliasSelector);
+    
+    // 通过aspect别名方法获取关联对象 AspectsContainer
+    // object_getClass(self) 是 self的isa指向的位置，如果 self 是实例 就指向 类，如果 self 是类 就指向 元类。
+    AspectsContainer *classContainer = aspect_getContainerForClass(object_getClass(self), aliasSelector);
+    
+    // 创建 AspectInfo 对象通过 self 和 invocation
+    AspectInfo *info = [[AspectInfo alloc] initWithInstance:self invocation:invocation];
+    
+    // 创建 aspectsToRemove变量 待用
+    NSArray *aspectsToRemove = nil;
+
+    
+    
+    // Before hooks.
+    // 从名字就应该可以猜出，这是我们挂的回调，option = before 在原函数执行之前执行。
+    aspect_invoke(classContainer.beforeAspects, info);
+    aspect_invoke(objectContainer.beforeAspects, info);
+
+    
+    // Instead hooks.
+    BOOL respondsToAlias = YES;
+    if (objectContainer.insteadAspects.count || classContainer.insteadAspects.count) { // 如果 option=instead替换 走这里
+        aspect_invoke(classContainer.insteadAspects, info);
+        aspect_invoke(objectContainer.insteadAspects, info);
+    }else {
+        
+        // 这里解释一下，这里是调用原函数的实现，如果你看了上面的图解，你就可以完全看懂下面的代码。
+
+        // 获取invoke对象
+        Class klass = object_getClass(invocation.target);
+        
+        // 如果可以响应 别名函数，循环调用。
+        // 这里invoke是调用的原函数
+        do {
+            if ((respondsToAlias = [klass instancesRespondToSelector:aliasSelector])) {
+                [invocation invoke];
+                break;
+            }
+        }while (!respondsToAlias && (klass = class_getSuperclass(klass)));
+    }
+
+    
+    
+    // After hooks.
+    // 这里是 option = after 的hook 被调用
+    aspect_invoke(classContainer.afterAspects, info);
+    aspect_invoke(objectContainer.afterAspects, info);
+
+    
+    
+    // If no hooks are installed, call original implementation (usually to throw an exception)
+    // 如果不响应别名函数，调用原函数实现。
+    if (!respondsToAlias) {
+        
+        invocation.selector = originalSelector;
+        SEL originalForwardInvocationSEL = NSSelectorFromString(AspectsForwardInvocationSelectorName);
+        if ([self respondsToSelector:originalForwardInvocationSEL]) { // 可以响应原函数
+            // 用 objc_msgSend 给自己发送 originalForwardInvocationSEL 消息携带参数 invocation
+            ((void( *)(id, SEL, NSInvocation *))objc_msgSend)(self, originalForwardInvocationSEL, invocation);
+        }else {
+            // 无法响应原函数，调用不识别方法。
+            [self doesNotRecognizeSelector:invocation.selector];
+        }
+    }
+
+    // Remove any hooks that are queued for deregistration.
+    [aspectsToRemove makeObjectsPerformSelector:@selector(remove)];
+}
+```
+
+
+
+# 总结
+希望可以通过图解的形式最直观的给大家展示aspect的实现原理，一些其他细节可以查看本篇文章Demo，Demo中有对其他方法的详细注释。
 
 
