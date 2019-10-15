@@ -16,6 +16,7 @@ catagories:
 # 前言
 开发iOS应用的小伙伴对消息转发机制肯定是再熟悉不过了，尤其是之前`OC`语言的年代。 下面就好好整理下消息转发。
 
+特意为文章写了[Demo](https://github.com/zColdWater/MsgForwardDemo/tree/master )，更好的去理解。
 
 # 消息转发流程
 
@@ -24,7 +25,8 @@ catagories:
 消息转发的流程是:   
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/msgforward1.png" height="350" />
 
-
+# 总结
+了解消息转发机制可以更好的帮我们做一些很不可思议的事情，比如`Aspect`等库的实现原理都用到了消息转发。  
 
 
 
