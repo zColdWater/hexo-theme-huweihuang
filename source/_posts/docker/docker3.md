@@ -56,4 +56,45 @@ $ docker rm container_name/container_id
 
 # 仓库的基础操作
 
+Docker官方维护了一个DockerHub的公共仓库，里边包含有很多平时用的较多的镜像。除了从上边下载镜像之外，我们也可以将自己自定义的镜像发布（push）到DockerHub上。
+
+在镜像操作章节中，我们新建了一个xianhu/centos:git镜像。
+
+（1）访问https://hub.docker.com/，如果没有账号，需要先注册一个。
+
+（2）利用命令docker login登录DockerHub，输入用户名、密码即可登录成功：
+
+```
+[root@xxx ~]# docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: xianhu
+Password:
+Login Succeeded
+```
+
+（3）将本地的镜像推送到DockerHub上，这里的xianhu要和登录时的username一致：
+
+```
+[root@xxx ~]# docker push xianhu/centos:git    # 成功推送
+[root@xxx ~]# docker push xxx/centos:git    # 失败
+The push refers to a repository [docker.io/xxx/centos]
+unauthorized: authentication required
+```
+
+（4）以后别人就可以从你的仓库中下载合适的镜像了。
+
+```
+[root@xxx ~]# docker pull xianhu/centos:git
+```
+
+对应于镜像的两种创建方法，镜像的更新也有两种：
+
+* 创建容器之后做更改，之后commit生成镜像，然后push到仓库中。  
+* 更新Dockerfile。在工作时一般建议这种方式，更简洁明了。
+
+这里再一次回顾一下三个重要的概念：镜像、容器、仓库：
+
+> 从仓库（一般为DockerHub）下载（pull）一个镜像，Docker执行run方法得到一个容器，用户在容器里执行各种操作。Docker执行commit方法将一个容器转化为镜像。Docker利用login、push等命令将本地镜像推送（push）到仓库。其他机器或服务器上就可以使用该镜像去生成容器，进而运行相应的应用程序了。
+
+
 
