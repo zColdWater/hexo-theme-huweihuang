@@ -148,8 +148,8 @@ sha256:d68d34e1e7a48070dcdcdd3984b1157dec85ba80c1da21a2bddf970183e9723d
 
 `$ docker images` 查看现在的镜像，可以看到TAG是git，CREATED是5 minutes。  
 
-```
-➜  ~ docker images
+```  
+
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
 henry/dreamy_golick   git                 d68d34e1e7a4        5 minutes ago       346MB
 centos                latest              0f3e07c0138f        2 weeks ago         220MB
