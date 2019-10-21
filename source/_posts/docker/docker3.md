@@ -35,15 +35,15 @@ $ docker run -d centos:latest /bin/bash -c "while true; do echo hello; sleep 1; 
 启动、停止、重启容器命令：
 
 ```
-$ docker start container_name/container_id
-$ docker stop container_name/container_id
-$ docker restart container_name/container_id
+$ docker start container_name或者container_id
+$ docker stop container_name或者container_id
+$ docker restart container_name或者container_id
 ```  
 
 后台启动一个容器后，如果想进入到这个容器，可以使用`attach`命令   
 
 ```
-$ docker attach container_name/container_id #进入后台运行的容器
+$ docker attach <container_name或者container_id> #进入后台运行的容器
 ```
 
 删除容器的命令前边已经提到过了:

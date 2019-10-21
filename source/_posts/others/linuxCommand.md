@@ -37,8 +37,8 @@ catagories:
 24. df `df查看文件系统中磁盘的使用情况–硬盘已用和可用的存储空间以及其它存储设备。你可以使用df -h将结果以人类可读的方式显示。`
 25. ps `ps显示系统的运行进程。`
 26. top `top命令会默认按照CPU的占用情况，显示占用量较大的进程,可以使用top -u 查看某个用户的CPU使用排名情况。`
-27. shutdown `shutdown用于关闭计算机，而shutdown -r用于重启计算机`
-
+27. shutdown `shutdown用于关闭计算机，而shutdown -r用于重启计算机`  
+28. `cat /etc/os-release` 查看系统版本  
 
 
 
