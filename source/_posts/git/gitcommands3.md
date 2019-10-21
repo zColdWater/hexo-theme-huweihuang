@@ -124,7 +124,7 @@ catagories:
     $ git branch --set-upstream [branch] [remote-branch]
 
     # 合并指定分支到当前分支
-    $ git merge [branch]
+    $ git merge [branch] // 例如: 将远端分支合并到本地 git merge origin/master 这条意思是将远程分支 origin/master 合并到 当前本地分支
 
     # 选择一个commit，合并进当前分支
     $ git cherry-pick [commit]
