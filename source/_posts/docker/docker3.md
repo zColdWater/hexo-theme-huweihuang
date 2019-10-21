@@ -52,6 +52,23 @@ $ docker attach container_name/container_id #进入后台运行的容器
 $ docker rm container_name/container_id
 ```
 
+# 容器内外文件传输
+
+Docker容器向宿主机传送文件  
+
+格式:
+> docker cp container_id:<docker容器内的路径> <本地保存文件的路径>
+
+比如:
+> docker cp 10704c9eb7bb:/root/test.text /home/vagrant/test.txt
+
+宿主机向Docker容器传送文件
+
+格式:
+> docker cp 本地文件的路径 container_id:<docker容器内的路径>
+
+比如:
+> docker cp  /home/vagrant/test.txt 10704c9eb7bb:/root/test.text
 
 
 # 仓库的基础操作
@@ -95,6 +112,5 @@ unauthorized: authentication required
 这里再一次回顾一下三个重要的概念：镜像、容器、仓库：
 
 > 从仓库（一般为DockerHub）下载（pull）一个镜像，Docker执行run方法得到一个容器，用户在容器里执行各种操作。Docker执行commit方法将一个容器转化为镜像。Docker利用login、push等命令将本地镜像推送（push）到仓库。其他机器或服务器上就可以使用该镜像去生成容器，进而运行相应的应用程序了。
-
 
 
