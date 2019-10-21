@@ -146,7 +146,8 @@ sha256:d68d34e1e7a48070dcdcdd3984b1157dec85ba80c1da21a2bddf970183e9723d
 其中，-m指定说明信息；-a指定用户信息；89937c8d3a30代表容器的id；henry/dreamy_golick:git指定目标镜像的用户名、仓库名和 tag 信息。注意这里的用户名henry，后边会用到。
 
 
-`$ docker images` 查看现在的镜像，可以看到TAG是git，CREATED是5 minutes。
+`$ docker images` 查看现在的镜像，可以看到TAG是git，CREATED是5 minutes。  
+
 ```
 ➜  ~ docker images
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
@@ -154,6 +155,7 @@ henry/dreamy_golick   git                 d68d34e1e7a4        5 minutes ago     
 centos                latest              0f3e07c0138f        2 weeks ago         220MB
 jenkins/jenkins       latest              08b7b3e99b5a        4 months ago        566MB
 jenkins               latest              cd14cecfdb3a        15 months ago       696MB
+
 ```  
 
 `$ docker run -it henry/dreamy_golick:git /bin/bash` 进入刚提交的镜像
@@ -174,6 +176,13 @@ a7665b026a60        centos:latest             "/bin/bash"              35 minute
 
 
 2.利用Dockerfile创建镜像    
+
+`Dockerfile`可以理解为一种配置文件，用来告诉`docker build`命令应该执行哪些操作，一个简易的`Dockerfile`文件如下所示 [官方传送门](https://docs.docker.com/engine/reference/builder/)  
+
+
+
+
+
 
 
 
