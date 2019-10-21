@@ -51,6 +51,8 @@ $ sudo systemctl restart docker
 
 装完Docker后，就可以操作镜像了(`Image`)。
 
+## 搜索下载查看镜像
+
 `$docker search centos`    # 查看centos镜像是否存在
 
 ```
@@ -82,4 +84,67 @@ pivotaldata/centos7-dev            CentosOS 7 image for GPDB development        
 smartentry/centos                  centos with smartentry                          0                                       [OK]
 pivotaldata/centos6.8-dev          CentosOS 6.8 image for GPDB development         0
 ```
+
+`$docker pull centos`    # 利用pull命令获取镜像
+
+```
+➜  ~ docker pull centos
+Using default tag: latest
+latest: Pulling from library/centos
+729ec3a6ada3: Pull complete
+Digest: sha256:f94c1d992c193b3dc09e297ffd54d8a4f1dc946c37cbeceb26d35ce1647f88d9
+Status: Downloaded newer image for centos:latest
+```
+
+`$docker images`    # 查看当前系统中的images信息
+```
+➜  ~ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              latest              0f3e07c0138f        2 weeks ago         220MB
+jenkins/jenkins     latest              08b7b3e99b5a        4 months ago        566MB
+jenkins             latest              cd14cecfdb3a        15 months ago       696MB
+```
+
+以上是下载一个已有镜像，此外有两种方法可以帮助你新建自有镜像。   
+
+
+## 制作自己的镜像
+
+1.利用已有镜像然后修改提交更改称为自己的镜像    
+
+`docker run -it centos:latest /bin/bash` # 启动一个容器
+```
+➜  ~ docker run -it centos:latest /bin/bash
+[root@a7665b026a60 /]# 
+```
+
+`yum install git` # 利用yum安装git  
+`git --version` # 此时的容器中已经装有git了
+```
+[root@89937c8d3a30 /]# git --version
+git version 2.18.1
+```
+
+此时利用`exit`退出该容器，然后查看docker中运行的程序容器。  
+
+```
+➜  ~ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+89937c8d3a30        centos:latest       "/bin/bash"              10 minutes ago      Exited (127) 2 seconds ago                        dreamy_golick
+a7665b026a60        centos:latest       "/bin/bash"              11 minutes ago      Exited (127) 11 minutes ago                       naughty_mccarthy
+392ce9134f0e        jenkins/jenkins     "/sbin/tini -- /usr/…"   4 months ago        Created
+```
+
+这里将容器转化为一个镜像，即执行`commit`操作，完成后可使用`docker images`查看:  
+`docker commit -m "centos install git" -a "henry" 89937c8d3a30 henry/dreamy_golick:git`  
+
+其中，-m指定说明信息；-a指定用户信息；89937c8d3a30代表容器的id；henry/dreamy_golick:git指定目标镜像的用户名、仓库名和 tag 信息。注意这里的用户名henry，后边会用到。
+
+
+
+```
+➜  ~ docker commit -m "centos install git" -a "henry" 89937c8d3a30 henry/dreamy_golick:git
+sha256:d68d34e1e7a48070dcdcdd3984b1157dec85ba80c1da21a2bddf970183e9723d
+```
+
 
