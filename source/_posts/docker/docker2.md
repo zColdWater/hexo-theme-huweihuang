@@ -1,5 +1,5 @@
 ---
-title: "[Docker] Docker 基础使用 "
+title: "[Docker] Docker 基础使用<一>  "
 catalog: true
 toc_nav_num: true
 date: 2019-10-21 01:00:30
@@ -47,7 +47,7 @@ $ sudo systemctl restart docker
 ```
 
 
-# 镜像的基础操作
+# 镜像的制作
 
 装完Docker后，就可以操作镜像了(`Image`)。
 
@@ -165,6 +165,7 @@ jenkins               latest              cd14cecfdb3a        15 months ago     
 ```
 
 `$ docker ps -a` 列出所有容器，可以看出IMAGE是`henry/dreamy_golick:git`就是我们更新的容器。  
+
 ```
 ➜  ~ docker ps -a
 CONTAINER ID        IMAGE                     COMMAND                  CREATED              STATUS                        PORTS               NAMES
@@ -179,11 +180,49 @@ a7665b026a60        centos:latest             "/bin/bash"              35 minute
 
 `Dockerfile`可以理解为一种配置文件，用来告诉`docker build`命令应该执行哪些操作，一个简易的`Dockerfile`文件如下所示 [官方传送门](https://docs.docker.com/engine/reference/builder/)  
 
+```  
+
+# 说明该镜像以哪个镜像为基础
+FROM centos:latest
+
+# 构建者的基本信息
+MAINTAINER xianhu
+
+# 在build这个镜像时执行的操作
+RUN yum update
+RUN yum install -y git
+
+# 拷贝本地文件到镜像中
+COPY ./* /usr/share/gitdir/  
+
+```
+
+
+有了`Dockerfile`之后，就可以利用`build`命令构建镜像了  
+
+`$ docker build -t="henry/dreamy_golick:git1"`   
+
+其中`-t`用来指定新镜像的用户信息、`tag`等。最后的点表示在当前目录寻找`Dockerfile`   
+
+构建完成之后，同样可以使用`docker images`命令查看:  
 
 
 
 
+# 镜像删除 容器删除
 
+如果想删除容器或者镜像，可以使用rm命令
+
+```
+$ docker rm container_name/container_id
+$ docker rmi image_name/image_id # 删除镜像前 需要把此镜像生成的容器全部删除。
+```
+
+
+
+# 总结
+
+这篇文章 先介绍这么多，下篇继续介绍一些 Docker的 其他基础用法。
 
 
 
