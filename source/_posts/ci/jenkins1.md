@@ -38,7 +38,7 @@ catagories:
 
 步骤二 搭建Jenkins服务器，这个也不难，首先你得有一个Linux服务器，然后去jenkins官方看文档照着安装就可以了，跳过。  
 
-步骤三 jenkins安装 publish over ssh 插件，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
+步骤三/四 jenkins安装 publish over ssh 插件，配置服务器和Job，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
 
 安装 publish over ssh 插件
 
@@ -54,8 +54,11 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish6.png" height="350" />
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish7.png" height="350" />
+
 配置你job的publish over ssh插件的选项
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish8.png" height="350" />
 
 
 
