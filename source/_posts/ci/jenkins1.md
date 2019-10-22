@@ -38,7 +38,9 @@ catagories:
 
 步骤二 搭建Jenkins服务器，这个也不难，首先你得有一个Linux服务器，然后去jenkins官方看文档照着安装就可以了，跳过。  
 
-步骤三/四 jenkins安装 publish over ssh 插件，配置服务器和Job，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
+步骤三/四/五 jenkins安装 publish over ssh 插件，配置服务器和Job，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
+
+> 这里需要注意的是，由于我们的目标服务器在跳板机上，只支持 ssh key 的登录，不能用密码登录，所以这里的密码登录演示是我用自己的腾讯云服务器做的演示。
 
 安装 publish over ssh 插件
 
@@ -61,4 +63,16 @@ catagories:
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish8.png" height="350" />
 
 
+步骤六 构建测试，语言还是苍白的，直接上图最好了。
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish9.png" height="350" />
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish10.png" height="350" />
+
+可以看出 我们成功的将 build 后的jar包 同步到 目标服务器的指定目录下，通过publish over ssh插件。
+
+
+### 构建脚本
+
+### 同步到目标服务器之后的脚本
 
