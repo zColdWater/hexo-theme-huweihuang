@@ -87,6 +87,8 @@ echo 'build finish'
 
 ### 同步到目标服务器之后的脚本
 
+执行 deploy.sh 脚本的之前 需要执行 `chmod +x deploy.sh` 添加权限。
+
 ```shell
 cd cube_server_build
 sudo ./deploy.sh
