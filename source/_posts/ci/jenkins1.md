@@ -34,11 +34,11 @@ catagories:
 
 ### 具体步骤
 
-步骤一 源代码git仓库这个开发应该都会创建，直接跳过这步。      
+**步骤一** 源代码git仓库这个开发应该都会创建，直接跳过这步。      
 
-步骤二 搭建Jenkins服务器，这个也不难，首先你得有一个Linux服务器，然后去jenkins官方看文档照着安装就可以了，跳过。  
+**步骤二** 搭建Jenkins服务器，这个也不难，首先你得有一个Linux服务器，然后去jenkins官方看文档照着安装就可以了，跳过。  
 
-步骤三/四/五 jenkins安装 publish over ssh 插件，配置服务器和Job，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
+**步骤三/四/五** jenkins安装 publish over ssh 插件，配置服务器和Job，这个我放图，大家自己看图，语言有时候是苍白的，你看着也烦，我也知道，哈哈。  
 
 > 这里需要注意的是，由于我们的目标服务器在跳板机上，只支持 ssh key 的登录，不能用密码登录，所以这里的密码登录演示是我用自己的腾讯云服务器做的演示。
 
@@ -56,6 +56,8 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish6.png" height="350" />
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish13.png" height="350" />
+
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish7.png" height="350" />
 
 配置你job的publish over ssh插件的选项
@@ -63,7 +65,7 @@ catagories:
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish8.png" height="350" />
 
 
-步骤六 构建测试，语言还是苍白的，直接上图最好了。
+**步骤六** 构建测试，语言还是苍白的，直接上图最好了。
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish9.png" height="350" />
 
@@ -74,7 +76,34 @@ catagories:
 
 ### 构建脚本
 
+```shell
+echo 'build begin'
 
+# build package
+mvn package  
+
+echo 'build finish'
+```
 
 ### 同步到目标服务器之后的脚本
+
+```shell
+cd cube_server_build
+sudo ./deploy.sh
+```
+
+
+deploy.sh
+```shell
+# 杀掉8080端口程序
+sudo fuser -k -n tcp 8080
+# 部署jar包
+java -jar cube-0.0.1-SNAPSHOT.jar 1>log 2>&1 &
+echo '部署完成'
+```
+
+### 最终大功告成
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/sshpublish12.png" height="350" />
+
 
