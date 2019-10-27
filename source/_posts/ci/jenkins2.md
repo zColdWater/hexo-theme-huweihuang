@@ -111,8 +111,8 @@ xcodebuild -quiet -exportArchive -archivePath /Users/jenkins/Henry/workspace/Cub
 
 echo '#### BEGIN UPLOADING ####'
 curl -F "file=@/Users/jenkins/Henry/workspace/CubeBuild/app/Runner.ipa" \
--F "uKey=28ab08302d32d7143aa9907a04fc565d" \
--F "_api_key=9544589305162025af5444bead16151a" \
+-F "uKey=xxx" \
+-F "_api_key=xxx" \
 https://www.pgyer.com/apiv1/app/upload
 ```
 
