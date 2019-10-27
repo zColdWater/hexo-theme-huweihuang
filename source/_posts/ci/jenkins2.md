@@ -62,6 +62,61 @@ Flutter项目提交代码，就触发自动打包上传蒲公英流程。
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/slave12.png" height="150" />     
 
 
+完整的shell放在下面:   
+
+```shell
+#!/bin/bash
+
+PATH=/Users/jenkins/development/flutter/bin:/Users/jenkins/.rvm/gems/ruby-2.3.3/bin:/Users/jenkins/.rvm/gems/ruby-2.3.3@global/bin:/Users/jenkins/.rvm/rubies/ruby-2.3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jenkins/.rvm/bin
+
+export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
+export LANG=zh_CN.UTF-8
+
+export PATH
+
+set -ex
+source ~/.bashrc
+
+DevExportOptions=/Users/jenkins/Henry/workspace/CubeBuild/ExportOptions.plist
+
+cd ios 
+
+echo '#### BEGIN DELETE PODFILELOCK ####'
+rm -rf Podfile.lock
+echo '#### BEGIN UPDATE PRIVATE SOURCES ####'
+pod repo update DOMOBILE-FeiDian-FDSpec
+pod repo update nevint-domobile-feidian-fdspec
+pod repo update nevint-nio-lib-repo
+cd ..
+
+echo '#### BEGIN FLUTTER GET PACKAGES ####'
+flutter packages get 
+echo '#### BEGIN FLUTTER BUILD ####'
+flutter build ios --no-codesign --release
+echo '#### BEGIN FLUTTER CLEAN ####'
+flutter clean
+
+cd ios
+
+echo '#### BEGIN UNLOCK KEYCHAIN ####'
+security unlock-keychain -p "Aa123456" /Users/jenkins/Library/Keychains/login.keychain
+
+echo '#### BEGIN BUILD ####'
+xcodebuild -workspace Runner.xcworkspace -scheme Runner -configuration Release -archivePath /Users/jenkins/Henry/workspace/CubeBuild/app.xcarchive archive
+
+echo '#### BEGIN ARCHIVE ####'
+xcodebuild -quiet -exportArchive -archivePath /Users/jenkins/Henry/workspace/CubeBuild/app.xcarchive -exportOptionsPlist ${DevExportOptions} -exportPath /Users/jenkins/Henry/workspace/CubeBuild/app
+
+
+echo '#### BEGIN UPLOADING ####'
+curl -F "file=@/Users/jenkins/Henry/workspace/CubeBuild/app/Runner.ipa" \
+-F "uKey=28ab08302d32d7143aa9907a04fc565d" \
+-F "_api_key=9544589305162025af5444bead16151a" \
+https://www.pgyer.com/apiv1/app/upload
+```
+
+
 ### 总结
 
 自此iOS的自动化打包就做好了，我们Jenkins服务开在我们的Docker容器里，然后奴役一个macOS系统的电脑作为打包iOS的机器，现在我们更新项目提交到git仓库，jenkins就会自动轮训提交，然后为我们打包上传至蒲公英，当然可以有更完善的流程，比如ipa留存档，蒲公英发布系统私有化部署等。  
