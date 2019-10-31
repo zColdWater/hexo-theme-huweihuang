@@ -1,9 +1,9 @@
 ---
-title: "[DB] Mysql如何允许远程连接"
+title: "[DB] Mysql表结构同步以及数据同步"
 catalog: true
 toc_nav_num: true
 date: 2019-06-11 20:18:30
-subtitle: "知道Mysql如何允许通过远程连接"
+subtitle: "Mysql如何进行表结构同步以及数据同步?"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
 tags:
 - DB
@@ -11,12 +11,7 @@ catagories:
 - DB
 ---
 
-> 当前环境: mysql  Ver 8.0.16 for osx10.14 on x86_64 (Homebrew)
-
-疑问🤔️
-=======
-
-
+> 当前版本: mysql  Ver 14.14 Distrib 5.7.28, for Linux (x86_64) using  EditLine wrapper
 
 
 
