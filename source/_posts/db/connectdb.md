@@ -13,5 +13,13 @@ catagories:
 
 > 当前版本: mysql  Ver 14.14 Distrib 5.7.28, for Linux (x86_64) using  EditLine wrapper
 
+# 导出导入
+
+当我们想要复制一个数据库里面的表和数据到另外一个数据库，这个时候导入导出就可以了。  
+
+
+
+
+
 
 
