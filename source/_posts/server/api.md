@@ -140,3 +140,7 @@ RedisUtils.saveNonceStr(userTokenInfo,nonceStr,60);
 ```
 
 基于以上的方案就可以做到防止API接收的参数被篡改和防止API请求重放攻击。
+
+
+文章转载自: https://www.lanshiqin.com/ef4382ec/  
+
