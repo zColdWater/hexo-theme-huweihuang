@@ -13,7 +13,7 @@ catagories:
 
 Demo: https://github.com/zColdWater/activity-lifecycle   
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg" height="350" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/activitylifecycle1.png" height="350" />
 
 
 # 一，Activity的生命周期
