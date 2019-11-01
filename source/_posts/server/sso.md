@@ -1,20 +1,15 @@
 ---
-title: "[AI] 学习 Python 基础语法 汇总"
+title: "[Backend] SSO单点登录"
 catalog: true
 toc_nav_num: true
-date: 2018-11-10 13:30:30
-subtitle: "包含 Python基础语法的归纳总结。"
+date: 2019-11-01 14:00:30
+subtitle: "了解SSO单点登录系统"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
-- AI
+- Backend
 catagories:
-- AI
+- Backend
 ---
-
-
-
-
-
 
 
 
