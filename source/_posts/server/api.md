@@ -75,5 +75,68 @@ nonce参数作为数字签名的一部分，是无法篡改的，因为黑客不
 nonce的一次性可以解决timestamp参数60s的问题，timestamp可以解决nonce参数“集合”越来越大的问题。
 防止重放攻击一般和防止请求参数被串改一起做，请求的Headers数据如下图所示。  
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/designapi1.png" height="350" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/designapi1.png" height="250" />
 
+我们在timestamp方案的基础上，加上nonce参数，因为timstamp参数对于超过60s的请求，都认为非法请求，所以我们只需要存储60s的nonce参数的“集合”即可。
+API接口验证流程：  
+
+```java
+// 获取token
+String token = request.getHeader("token");
+// 获取时间戳
+String timestamp = request.getHeader("timestamp");
+// 获取随机字符串
+String nonceStr = request.getHeader("nonceStr");
+// 获取请求地址
+String url = request.getHeader("url");
+// 获取签名
+String signature = request.getHeader("signature");
+
+// 判断参数是否为空
+if (StringUtils.isBlank(token) || StringUtils.isBlank(timestamp) || StringUtils.isBlank(nonceStr) || StringUtils.isBlank(url) || StringUtils.isBlank(signature)) {
+    //非法请求
+    return;
+}
+
+//验证token有效性，得到用户信息
+UserTokenInfo userTokenInfo = TokenUtils.getUserTokenInfo(token);
+
+if (userTokenInfo == null) {
+    //token认证失败（防止token伪造）
+    return;
+}
+
+// 判断请求的url参数是否正确
+if (!request.getRequestURI().equals(url)){
+    //非法请求 (防止跨域攻击)
+    return;
+}
+
+// 判断时间是否大于60秒
+if(DateUtils.getSecond()-DateUtils.toSecond(timestamp)>60){
+    //请求超时(防止重放攻击)
+    return;
+}
+
+// 判断该用户的nonceStr参数是否已经在redis中
+if (RedisUtils.haveNonceStr(userTokenInfo,nonceStr)){
+    //请求仅一次有效（防止短时间内的重放攻击）
+    return;
+}
+
+// 对请求头参数进行签名
+String stringB = SignUtil.signature(token, timestamp, nonceStr, url,request);
+
+// 如果签名验证不通过
+if (!signature.equals(stringB)) {
+    //非法请求（防止请求参数被篡改）
+    return;
+}
+
+// 将本次用户请求的nonceStr参数存到redis中设置60秒后自动删除
+RedisUtils.saveNonceStr(userTokenInfo,nonceStr,60);
+
+//开始处理合法的请求
+```
+
+基于以上的方案就可以做到防止API接收的参数被篡改和防止API请求重放攻击。
