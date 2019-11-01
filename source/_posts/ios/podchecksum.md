@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-29 14:10:30
 subtitle: "如何看懂Podfile.lock文件"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Pod
 catagories:

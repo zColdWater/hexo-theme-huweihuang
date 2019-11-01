@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-23 09:50:30
 subtitle: "MacOS 如何查看本地环境?"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/man_smoking.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Basic
 catagories:

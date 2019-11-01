@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-02-20 10:11:30
 subtitle: "移动文件流的读写位置"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

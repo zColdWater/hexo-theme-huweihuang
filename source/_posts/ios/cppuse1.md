@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-01-07 12:55:30
 subtitle: "如何在iOS项目中使用C++模块。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legs.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

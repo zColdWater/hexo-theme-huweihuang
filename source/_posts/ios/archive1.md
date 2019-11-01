@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-01-28 10:10:30
 subtitle: "如何使用Xcodebuild工具来自动化生成ipa"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

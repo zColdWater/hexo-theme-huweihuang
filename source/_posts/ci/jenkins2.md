@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-22 21:00:30
 subtitle: "如何使用Jenkins的Slave节点，控制其他机器进行构建？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Jenkins
 catagories:

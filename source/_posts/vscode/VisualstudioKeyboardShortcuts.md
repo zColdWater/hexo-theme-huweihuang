@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30
 subtitle: "记住这几个最常用基本的快捷键"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - VSCode
 catagories:

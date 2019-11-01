@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-8 14:50:30
 subtitle: "RunLoop是什么，它在iOS系统中起什么用？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/beach.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

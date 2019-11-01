@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-10-29 18:58:30
 subtitle: "Chinatown"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - English
 catagories:

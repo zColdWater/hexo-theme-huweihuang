@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-01-13 10:00:30
 subtitle: "什么是数字证书，干嘛用的？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Basic
 catagories:

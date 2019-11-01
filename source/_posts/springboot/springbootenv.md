@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-31 17:16:30
 subtitle: "如何给SpringBoot项目配置环境？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Spring
 catagories:

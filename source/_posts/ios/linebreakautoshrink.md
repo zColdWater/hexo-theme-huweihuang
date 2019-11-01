@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-09-11 23:00:30
 subtitle: "LineBreak & AutoShrink"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

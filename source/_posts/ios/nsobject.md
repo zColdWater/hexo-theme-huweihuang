@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-07 00:46:30
 subtitle: "我们真的了解NSObject类型么?"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

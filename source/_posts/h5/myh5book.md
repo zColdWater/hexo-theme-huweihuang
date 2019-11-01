@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-27 12:55:30
 subtitle: "这里收集我开发H5需要的文档和博客"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legs.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - H5
 catagories:

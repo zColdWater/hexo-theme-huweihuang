@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-07-05 16:19:30
 subtitle: "记录如何使用WebHook进行持续部署"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - CI
 catagories:

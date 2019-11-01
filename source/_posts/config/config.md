@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-09 21:00:30
 subtitle: "记录此博客的配置。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Basic
 catagories:

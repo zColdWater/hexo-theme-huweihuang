@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-23 01:50:30
 subtitle: "了解 SSH免密登录和实现原理"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - SSH
 catagories:

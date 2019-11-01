@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-06-30 14:00:30
 subtitle: "记录一些SHELL的小命令和小知识"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - SHELL
 catagories:

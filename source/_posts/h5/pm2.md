@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-07-05 15:55:30
 subtitle: "记录一些PM2常用的命令。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legs.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Node
 catagories:

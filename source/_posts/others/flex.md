@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-28 23:16:30
 subtitle: "什么是Flex布局"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Basic
 catagories:

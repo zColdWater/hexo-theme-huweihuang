@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-09-18 10:04:30
 subtitle: "为什么会失去精度 怎么办"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

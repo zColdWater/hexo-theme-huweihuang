@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-02-20 10:11:30
 subtitle: "在C语言中如何简单的操作文件"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

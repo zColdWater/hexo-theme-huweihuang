@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-11-05 01:00:30
 subtitle: "简单的概念和配置"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Git
 catagories:

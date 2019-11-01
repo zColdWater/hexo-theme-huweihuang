@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-02-20 11:12:30
 subtitle: "在C语言中文本文件与二进制文件区别"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

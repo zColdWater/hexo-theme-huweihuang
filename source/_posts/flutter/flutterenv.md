@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-23 23:55:30
 subtitle: "每当开始一个新的框架，都是从搭建环境开始。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Flutter
 catagories:

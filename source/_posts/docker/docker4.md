@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-21 18:00:30
 subtitle: ""
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Docker
 catagories:

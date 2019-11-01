@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-20 14:50:30
 subtitle: "如何实现H5离线包机制，以及里面使用到了哪些东西？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

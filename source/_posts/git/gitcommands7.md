@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-28 03:59:30
 subtitle: "使用Git时候如何回滚？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/man_smoking.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Git
 catagories:

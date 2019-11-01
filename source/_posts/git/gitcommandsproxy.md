@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-10 22:14:30
 subtitle: "如何给Git设置Proxy"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Git
 catagories:

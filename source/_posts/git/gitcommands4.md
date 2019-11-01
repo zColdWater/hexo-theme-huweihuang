@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-01-23 10:46:30
 subtitle: "如何在git当中使用Rebase来优化git历史?"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/man_smoking.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Git
 catagories:

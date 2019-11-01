@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2018-12-20 23:50:30
 subtitle: "如何创建常驻线程?"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

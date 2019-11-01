@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-06-04 21:00:30
 subtitle: "如何利用VPS搭建可以翻墙的站点呢？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - VPS
 catagories:

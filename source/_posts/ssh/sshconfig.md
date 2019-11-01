@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-10 23:00:30
 subtitle: "SSH的配置"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - SSH
 catagories:

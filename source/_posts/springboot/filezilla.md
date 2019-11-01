@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-06-5 16:51:30
 subtitle: "使用FileZilla连接你的服务器"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Spring
 catagories:

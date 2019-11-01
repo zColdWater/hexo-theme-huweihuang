@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-14 11:18:30
 subtitle: "掌握简单的MySQL的命令，来操作数据库。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - DB
 catagories:

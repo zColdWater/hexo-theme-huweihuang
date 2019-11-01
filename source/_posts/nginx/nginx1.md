@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-06-28 19:00:30
 subtitle: "这里介绍一些Nginx的小知识，可能比较零散，因为笔者也是新手，之所以比较零散也记的原因也是以此做笔记，日后再整理。"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Nginx
 catagories:

@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-02-20 14:07:30
 subtitle: "在C语言中如何使用FFLUSH"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

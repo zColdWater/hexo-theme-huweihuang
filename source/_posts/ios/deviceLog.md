@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-07-22 15:50:30
 subtitle: "iOS如何在App里面打印的信息输出到系统控制台里面？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

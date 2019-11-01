@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-02-18 14:00:30
 subtitle: "Bzero使用方法"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

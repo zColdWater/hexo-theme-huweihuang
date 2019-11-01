@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-05-29 21:42:30
 subtitle: "如何使用Cherry Pick?"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/man_smoking.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Git
 catagories:

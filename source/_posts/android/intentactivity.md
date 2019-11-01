@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-09-12 15:00:30
 subtitle: "如何使用Intent唤起Activity"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/computer-1245714.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Android
 catagories:

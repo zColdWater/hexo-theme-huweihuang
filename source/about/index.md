@@ -3,7 +3,7 @@ layout: "about"
 title: "About Me"
 date: 2018-10-26 22:40:33
 description: "You can be anyone that you want to be"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 aplayer: false
 fixed: false
 ---

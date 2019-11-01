@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-08 16:00:30
 subtitle: "二级指针的常见的作用"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - C
 catagories:

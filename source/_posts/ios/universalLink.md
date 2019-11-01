@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-07-22 16:07:30
 subtitle: "iOS如何在App里面配置UniversalLink的呢？"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/naked.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - iOS
 catagories:

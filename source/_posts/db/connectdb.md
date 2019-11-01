@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-06-11 20:18:30
 subtitle: "Mysql使用Navicat同步表结构"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/nature.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - DB
 catagories:

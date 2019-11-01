@@ -4,7 +4,7 @@ catalog: true
 toc_nav_num: true
 date: 2019-10-21 15:00:30
 subtitle: "一起了解和掌握使用Docker"
-header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/cover.jpg"
+header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Docker
 catagories:
