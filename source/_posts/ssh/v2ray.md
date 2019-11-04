@@ -101,11 +101,11 @@ catagories:
 会让你确认一下信息，确认无误，按回车
 
 ```
- 安装信息
- V2Ray 传输协议 = TCP
- V2Ray 端口 = 47283
- 是否配置 Shadowsocks = 未配置
- END
+安装信息
+V2Ray 传输协议 = TCP
+V2Ray 端口 = 47283
+是否配置 Shadowsocks = 未配置
+END
 按 Enter 回车键 继续....或按 Ctrl + C 取消.
 ```  
 
