@@ -140,3 +140,4 @@ const result = await axios({
 const name = result.data.name;
 ctx.response.redirect(`/welcome.html?name=${name}`);
 ```
+
