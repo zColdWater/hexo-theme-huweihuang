@@ -31,14 +31,13 @@ catagories:
 
 选择1，按回车
 
-```
-1. 安装
-2. 卸载
-请选择 [1-2]:1
-```
+1. 安装   
+2. 卸载   
+请选择 [1-2]:1   
+
 用默认的tcp就行，直接回车
 
-```
+
 请选择 V2Ray 传输协议 [1-32]
 1. TCP
 2. TCP_HTTP
@@ -71,43 +70,43 @@ catagories:
 29. QUIC_srtp_dynamicPort
 30. QUIC_wechat-video_dynamicPort
 31. QUIC_dtls_dynamicPort
-32. QUIC_wireguard_dynamicPort
-备注1: 含有 [dynamicPort] 的即启用动态端口..
-备注2: [utp | srtp | wechat-video | dtls | wireguard] 分别伪装成 [BT下载 | 视频通话 | 微信视频通话 | DTLS 1.2 数据包 | WireGuard 数据包]
-(默认协议: TCP):
+32. QUIC_wireguard_dynamicPort   
+
+备注1: 含有 [dynamicPort] 的即启用动态端口..   
+备注2: [utp | srtp | wechat-video | dtls | wireguard] 分别伪装成 [BT下载 | 视频通话 | 微信视频通话 | DTLS 1.2 数据包 | WireGuard 数据包]   
+(默认协议: TCP):   
 
 
-端口随便写一个，范围1025到65535，也可以选择默认，直接回车
+端口随便写一个，范围1025到65535，也可以选择默认，直接回车  
 
 
-请输入 V2Ray 端口 [1-65535]
-(默认端口: 47283):
+请输入 V2Ray 端口 [1-65535]   
+(默认端口: 47283):  
 
 
-这个也不知道真影响假影响，姑且相信他，使用默认，直接回车
+这个也不知道真影响假影响，姑且相信他，使用默认，直接回车   
 
 
-是否开启广告拦截(会影响性能) [Y/N]
-(默认 [N]):
+是否开启广告拦截(会影响性能) [Y/N]   
+(默认 [N]):   
 
 
-是不是顺便把ss服务也装了，这个就随便你了，我感觉用了v2ray也没必要再搭ss，毕竟s's很容易被封，所以保持默认，回车
+是不是顺便把ss服务也装了，这个就随便你了，我感觉用了v2ray也没必要再搭ss，毕竟s's很容易被封，所以保持默认，回车   
 
 
-是否配置 Shadowsocks [Y/N]
-(默认 [N]):
+是否配置 Shadowsocks [Y/N]   
+(默认 [N]):   
 
 
-会让你确认一下信息，确认无误，按回车
+会让你确认一下信息，确认无误，按回车   
 
 
-安装信息
-V2Ray 传输协议 = TCP
-V2Ray 端口 = 47283
-是否配置 Shadowsocks = 未配置
-END
-按 Enter 回车键 继续....或按 Ctrl + C 取消.
-```  
+安装信息   
+V2Ray 传输协议 = TCP   
+V2Ray 端口 = 47283   
+是否配置 Shadowsocks = 未配置   
+END   
+按 Enter 回车键 继续....或按 Ctrl + C 取消.    
 
 然后，就是等...   
 
