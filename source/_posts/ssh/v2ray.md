@@ -75,32 +75,32 @@ catagories:
 备注1: 含有 [dynamicPort] 的即启用动态端口..
 备注2: [utp | srtp | wechat-video | dtls | wireguard] 分别伪装成 [BT下载 | 视频通话 | 微信视频通话 | DTLS 1.2 数据包 | WireGuard 数据包]
 (默认协议: TCP):
-```
+
 
 端口随便写一个，范围1025到65535，也可以选择默认，直接回车
 
-```
+
 请输入 V2Ray 端口 [1-65535]
 (默认端口: 47283):
-```
+
 
 这个也不知道真影响假影响，姑且相信他，使用默认，直接回车
 
-```
+
 是否开启广告拦截(会影响性能) [Y/N]
 (默认 [N]):
-```
+
 
 是不是顺便把ss服务也装了，这个就随便你了，我感觉用了v2ray也没必要再搭ss，毕竟s's很容易被封，所以保持默认，回车
 
-```
+
 是否配置 Shadowsocks [Y/N]
 (默认 [N]):
-```
+
 
 会让你确认一下信息，确认无误，按回车
 
-```
+
 安装信息
 V2Ray 传输协议 = TCP
 V2Ray 端口 = 47283
@@ -115,38 +115,7 @@ END
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray4.png" height="150" />
 
-
-```
-V2Ray 配置信息
-
- 地址 (Address) = 45.76.12.166
-
- 端口 (Port) = 45236
-
- 用户ID (User ID / UUID) = 8a02387b-dcf6-41c8-bac0-c08716c1bd94
-
- 额外ID (Alter Id) = 233
-
- 传输协议 (Network) = tcp
-
- 伪装类型 (header type) = none
-
-END
-```
-
 也可以通过命令`v2ray url` 和 `v2ray qr` 获取`v2ray url`和`v2ray QRCode`
-
-
-```
-root@ONEVPS190911085532:~# v2ray url
-V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端
-vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8xNTIuODkuMjA4LjE0NiIsCiJhZGQiOiAiMTUyLjg5LjIwOC4xNDYiLAoicG9ydCI6ICI0NzI4MyIsCiJpZCI6ICJlZDBiNDExNy0wZjVhLTQxZTktYTczMi05NmJkYWYzNDNkMjMiLAoiYWlkIjogIjIzMyIsCiJuZXQiOiAidGNwIiwKInR5cGUiOiAibm9uZSIsCiJob3N0IjogIiIsCiJwYXRoIjogIiIsCiJ0bHMiOiAiIgp9Cg==
-root@ONEVPS190911085532:~# v2ray qr
-V2Ray 二维码链接 适用于 V2RayNG v0.4.1+ / Kitsunebi
-https://233boy.github.io/tools/qr.html#vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8xNTIuODkuMjA4LjE0NiIsCiJhZGQiOiAiMTUyLjg5LjIwOC4xNDYiLAoicG9ydCI6ICI0NzI4MyIsCiJpZCI6ICJlZDBiNDExNy0wZjVhLTQxZTktYTczMi05NmJkYWYzNDNkMjMiLAoiYWlkIjogIjIzMyIsCiJuZXQiOiAidGNwIiwKInR5cGUiOiAibm9uZSIsCiJob3N0IjogIiIsCiJwYXRoIjogIiIsCiJ0bHMiOiAiIgp9Cg==
- 友情提醒: 请务必核对扫码结果 (V2RayNG 除外)
-```
-
 
 
 # 第二步: 客户端部分
