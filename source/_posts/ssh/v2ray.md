@@ -2,7 +2,7 @@
 title: "[VPN] 搭建v2ray"
 catalog: true
 toc_nav_num: true
-date: 2019-11-01 14:00:30
+date: 2019-11-04 14:33:30
 subtitle: "如何搭建v2ray"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
