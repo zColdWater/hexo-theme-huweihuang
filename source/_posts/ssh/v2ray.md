@@ -101,11 +101,11 @@ catagories:
 会让你确认一下信息，确认无误，按回车
 
 ```
----------- 安装信息 -------------
+ 安装信息
  V2Ray 传输协议 = TCP
  V2Ray 端口 = 47283
  是否配置 Shadowsocks = 未配置
----------- END -------------
+ END
 按 Enter 回车键 继续....或按 Ctrl + C 取消.
 ```  
 
@@ -117,7 +117,7 @@ catagories:
 
 
 ```
----------- V2Ray 配置信息 -------------
+V2Ray 配置信息
 
  地址 (Address) = 45.76.12.166
 
@@ -131,7 +131,7 @@ catagories:
 
  伪装类型 (header type) = none
 
----------- END -------------
+END
 ```
 
 也可以通过命令`v2ray url` 和 `v2ray qr` 获取`v2ray url`和`v2ray QRCode`
@@ -139,10 +139,10 @@ catagories:
 
 ```
 root@ONEVPS190911085532:~# v2ray url
----------- V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------
+V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端
 vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8xNTIuODkuMjA4LjE0NiIsCiJhZGQiOiAiMTUyLjg5LjIwOC4xNDYiLAoicG9ydCI6ICI0NzI4MyIsCiJpZCI6ICJlZDBiNDExNy0wZjVhLTQxZTktYTczMi05NmJkYWYzNDNkMjMiLAoiYWlkIjogIjIzMyIsCiJuZXQiOiAidGNwIiwKInR5cGUiOiAibm9uZSIsCiJob3N0IjogIiIsCiJwYXRoIjogIiIsCiJ0bHMiOiAiIgp9Cg==
 root@ONEVPS190911085532:~# v2ray qr
----------- V2Ray 二维码链接 适用于 V2RayNG v0.4.1+ / Kitsunebi -------------
+V2Ray 二维码链接 适用于 V2RayNG v0.4.1+ / Kitsunebi
 https://233boy.github.io/tools/qr.html#vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8xNTIuODkuMjA4LjE0NiIsCiJhZGQiOiAiMTUyLjg5LjIwOC4xNDYiLAoicG9ydCI6ICI0NzI4MyIsCiJpZCI6ICJlZDBiNDExNy0wZjVhLTQxZTktYTczMi05NmJkYWYzNDNkMjMiLAoiYWlkIjogIjIzMyIsCiJuZXQiOiAidGNwIiwKInR5cGUiOiAibm9uZSIsCiJob3N0IjogIiIsCiJwYXRoIjogIiIsCiJ0bHMiOiAiIgp9Cg==
  友情提醒: 请务必核对扫码结果 (V2RayNG 除外)
 ```
