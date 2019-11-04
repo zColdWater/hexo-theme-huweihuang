@@ -113,6 +113,8 @@ catagories:
 
 安装完成，最后会提示你连接配置信息：
 
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray4.png" height="150" />
+
 ```
 ---------- V2Ray 配置信息 -------------
 
@@ -153,11 +155,69 @@ https://233boy.github.io/tools/qr.html#vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyL
 
 下载一个v2ray的软件，我以`Mac`上的软件为例：
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray1.png" height="250" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray1.png" height="250" />  
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray2.png" height="250" />
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray3.png" height="250" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray3.jpeg" height="250" />
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray4.png" height="250" />
+客户端配置完，启动`Load core`，即可完成翻越中国特设防火墙。 
+
+
+
+# 第三步: 踩坑
+
+我希望大家都能很顺利的安装完成并且使用，但是在我安装的时候就遇到了问题，我配置完成了，但是却不能使用。 
+
+## 查看V2Ray日志
+```
+# 服务端查看日志 
+v2ray log
+```
+
+下面的错误 invalid user
+```
+2019/11/04 13:40:27 117.136.119.249:50894 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:27 117.136.119.249:50895 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:27 117.136.119.249:50896 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:29 117.136.119.249:50897 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:30 117.136.119.249:50898 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:31 117.136.119.249:50899 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:31 117.136.119.249:50900 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:31 117.136.119.249:50901 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:31 117.136.119.249:50902 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+2019/11/04 13:40:47 117.136.119.249:50903 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
+```
+
+出现这个问题可能的由于下面几个问题导致:  
+
+1. id 写错了  
+2. alert 写错了  
+3. 服务器时间和本地时间相差超过90秒
+
+我的问题是`服务器时间`和`本地时间`相差90s导致的。
+
+解决办法:  
+1. 同步服务器时间: 
+
+    ```
+    网上同步时间
+
+    1.  安装ntpdate工具
+
+    # sudo apt-get install ntpdate
+
+    2.  设置系统时间与网络时间同步
+
+    # ntpdate cn.pool.ntp.org
+    ```
+2. 同步Mac本地时间:
+
+    ```
+    sudo sntp -sS time.apple.com
+    ```
+
+
+# 总结
+自此完成了搭建V2Ray来实现科学上网，如果你之前搭建过SS或SSR的童鞋，看起来会非常简单。   
 
