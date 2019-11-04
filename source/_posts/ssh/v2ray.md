@@ -115,6 +115,7 @@ catagories:
 
 <img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/v2ray4.png" height="150" />
 
+
 ```
 ---------- V2Ray 配置信息 -------------
 
@@ -135,6 +136,7 @@ catagories:
 
 也可以通过命令`v2ray url` 和 `v2ray qr` 获取`v2ray url`和`v2ray QRCode`
 
+
 ```
 root@ONEVPS190911085532:~# v2ray url
 ---------- V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------
@@ -144,6 +146,7 @@ root@ONEVPS190911085532:~# v2ray qr
 https://233boy.github.io/tools/qr.html#vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyLmNvbV8xNTIuODkuMjA4LjE0NiIsCiJhZGQiOiAiMTUyLjg5LjIwOC4xNDYiLAoicG9ydCI6ICI0NzI4MyIsCiJpZCI6ICJlZDBiNDExNy0wZjVhLTQxZTktYTczMi05NmJkYWYzNDNkMjMiLAoiYWlkIjogIjIzMyIsCiJuZXQiOiAidGNwIiwKInR5cGUiOiAibm9uZSIsCiJob3N0IjogIiIsCiJwYXRoIjogIiIsCiJ0bHMiOiAiIgp9Cg==
  友情提醒: 请务必核对扫码结果 (V2RayNG 除外)
 ```
+
 
 
 # 第二步: 客户端部分
@@ -169,25 +172,16 @@ https://233boy.github.io/tools/qr.html#vmess://ewoidiI6ICIyIiwKInBzIjogIjIzM3YyL
 
 我希望大家都能很顺利的安装完成并且使用，但是在我安装的时候就遇到了问题，我配置完成了，但是却不能使用。 
 
-## 查看V2Ray日志
+## 查看V2Ray日志  
+
 ```
 # 服务端查看日志 
 v2ray log
 ```
 
 下面的错误 invalid user
-```
-2019/11/04 13:40:27 117.136.119.249:50894 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:27 117.136.119.249:50895 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:27 117.136.119.249:50896 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:29 117.136.119.249:50897 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:30 117.136.119.249:50898 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:31 117.136.119.249:50899 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:31 117.136.119.249:50900 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:31 117.136.119.249:50901 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:31 117.136.119.249:50902 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-2019/11/04 13:40:47 117.136.119.249:50903 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user
-```
+
+`2019/11/04 13:40:27 117.136.119.249:50894 rejected  v2ray.com/core/proxy/vmess/encoding: invalid user`
 
 出现这个问题可能的由于下面几个问题导致:  
 
@@ -211,6 +205,7 @@ v2ray log
 
     # ntpdate cn.pool.ntp.org
     ```
+
 2. 同步Mac本地时间:
 
     ```
