@@ -2,7 +2,7 @@
 title: "[Backend] 第三方登录原理"
 catalog: true
 toc_nav_num: true
-date: 2019-11-01 14:00:30
+date: 2019-11-04 17:00:30
 subtitle: "第三方登录原理"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
@@ -115,8 +115,6 @@ code：授权码
 
 const accessToken = tokenResponse.data.access_token;
 
-
-
 ## API 数据
 
 有了令牌以后，就可以向 API 请求数据了。
@@ -140,4 +138,15 @@ const result = await axios({
 const name = result.data.name;
 ctx.response.redirect(`/welcome.html?name=${name}`);
 ```
+
+# SSO单点登录系统
+SSO单点登录系统的目的就是为了让一个系统下的子系统都可以用一套登录系统。不需要去不同系统都要登录而设计，因为现在的应用都是集群分布式，而不是以前的巨石应用，所有的系统都在一个包里，不能因为系统的复杂而让用户也变得操作复杂，所以就有了SSO系统。
+
+## 实现原理
+
+https://www.cnblogs.com/ywlaker/p/6113927.html
+
+## 接入SSO后的授权流程
+
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/thirdlogin5.png" height="200" />
 
