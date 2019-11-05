@@ -1,9 +1,9 @@
 ---
-title: "[Backend] 第三方登录原理"
+title: "[Backend] 第三方登录原理(多平台登录)"
 catalog: true
 toc_nav_num: true
 date: 2019-11-04 17:00:30
-subtitle: "第三方登录原理"
+subtitle: "了解第三方登录原理，第三方登录也可以叫多平台登录"
 header-img: "https://raw.githubusercontent.com/zColdWater/Resources/master/Images/legend_cover.jpg"
 tags:
 - Backend
@@ -11,6 +11,15 @@ catagories:
 - Backend
 ---
  
+# 重要概念
+第三方登录也可以叫多平台登录，其实现原理基于`Oauth体系的协议`。这里容易搞混的是和SSO单点登录的区别，  
+SSO登录其实现原理基于`CAS协议`。  
+
+这里简单叙述一下两者使用场景:  
+1. 第三方登录: 多平台登录一般是Oauth体系的协议，有多种认证模式但是不具备会话管理和状态保持。
+2. SSO登录: SSO一般用于同一单位的多个站点的登陆状态保持，技术上一般参考CAS协议
+
+
 # 第三方登录的原理 
 
 所谓第三方登录，实质就是 OAuth 授权。用户想要登录 A 网站，A 网站让用户提供第三方网站的数据，证明自己的身份。获取第三方网站的身份数据，就需要 OAuth 授权
@@ -139,7 +148,7 @@ const name = result.data.name;
 ctx.response.redirect(`/welcome.html?name=${name}`);
 ```
 
-# SSO单点登录系统
+<!-- # SSO单点登录系统
 SSO单点登录系统的目的就是为了让一个系统下的子系统都可以用一套登录系统。不需要去不同系统都要登录而设计，因为现在的应用都是集群分布式，而不是以前的巨石应用，所有的系统都在一个包里，不能因为系统的复杂而让用户也变得操作复杂，所以就有了SSO系统。
 
 ## 实现原理
@@ -148,5 +157,5 @@ https://www.cnblogs.com/ywlaker/p/6113927.html
 
 ## 接入SSO后的授权流程
 
-<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/thirdlogin5.png" height="200" />
+<img src="https://raw.githubusercontent.com/zColdWater/Resources/master/Images/thirdlogin5.png" height="200" /> -->
 
